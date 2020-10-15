@@ -1,0 +1,117 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "12",
+  "SoundbankVersion": "135",
+  "RootPaths": {
+   "ProjectRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
+   "SourceFilesRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Windows\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Windows"
+  },
+  "SoundBanks": [
+   {
+    "Id": "2388762238",
+    "GUID": "{8E619E7E-9E7E-1E7E-7E7E-7E7E7E7E7E7E}",
+    "Language": "SFX",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB_79A545A6F6EC4377ACE6524FBAF170FA",
+    "ShortName": "SB_79A545A6F6EC4377ACE6524FBAF170FA",
+    "Path": "SB_79A545A6F6EC4377ACE6524FBAF170FA.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "1866025847",
+      "Name": "FootStep",
+      "ObjectPath": "\\Events\\Default Work Unit\\FootStep",
+      "GUID": "{79A545A6-F6EC-4377-ACE6-524FBAF170FA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.304312",
+      "DurationMax": "8.201792",
+      "ExcludedMemoryFiles": [
+       {
+        "Id": "192775369",
+        "Language": "SFX",
+        "ShortName": "www.fesliyanstudios.com.wav",
+        "Path": "SFX\\www.fesliyanstudios.com_10C4C929.wem"
+       },
+       {
+        "Id": "514604409",
+        "Language": "SFX",
+        "ShortName": "FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP04.wav",
+        "Path": "SFX\\FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP04_10C4C929.wem"
+       },
+       {
+        "Id": "777120563",
+        "Language": "SFX",
+        "ShortName": "FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP02.wav",
+        "Path": "SFX\\FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP02_10C4C929.wem"
+       },
+       {
+        "Id": "822769199",
+        "Language": "SFX",
+        "ShortName": "FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP03.wav",
+        "Path": "SFX\\FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP03_10C4C929.wem"
+       },
+       {
+        "Id": "880829804",
+        "Language": "SFX",
+        "ShortName": "FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP08.wav",
+        "Path": "SFX\\FOOTSTEPS_FOOTBALL_BOOTS_CONCRETE_STEP08_10C4C929.wem"
+       }
+      ],
+      "SwitchContainers": [
+       {
+        "SwitchValue": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}",
+        "Media": [
+         {
+          "Id": "880829804"
+         },
+         {
+          "Id": "514604409"
+         },
+         {
+          "Id": "822769199"
+         },
+         {
+          "Id": "777120563"
+         }
+        ]
+       },
+       {
+        "SwitchValue": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}",
+        "Media": [
+         {
+          "Id": "192775369"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3865314626",
+      "Name": "Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "GUID": "{E72C5257-77A4-41FF-83F3-EDECABB6577D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Concrete",
+        "GUID": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Metal",
+        "GUID": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

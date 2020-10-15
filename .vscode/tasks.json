@@ -1,0 +1,977 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "ProjectAlpha Win32 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win32 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win32 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win32 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win32 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win32 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win32 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win32",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"Win64",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Shipping",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlpha IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlpha IOS Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlpha",
+				"IOS",
+				"Test",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlphaEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Debug",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlphaEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"DebugGame",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"ProjectAlphaEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		},
+		{
+			"label": "ProjectAlphaEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"ProjectAlphaEditor",
+				"Win64",
+				"Development",
+				"D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_4.25"
+			}
+		}
+	]
+}

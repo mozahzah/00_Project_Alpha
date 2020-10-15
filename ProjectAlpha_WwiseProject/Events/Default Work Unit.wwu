@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Ambience" ID="{FC596E50-4716-43E1-B361-9367590A5DAA}">
+					<ChildrenList>
+						<Action Name="" ID="{6C69B40D-F240-4758-B1D6-633904E0F5C1}" ShortID="268392604">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProjectAlphaAudio_SFX_Background" ID="{4F27736A-C105-40F7-AB93-222DBA037319}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Telekinesis" ID="{B1C282CE-D395-4AAA-B69E-9A20DE3FD1C8}">
+					<ChildrenList>
+						<Action Name="" ID="{B6EB1C6F-09A7-4575-9E69-D63A8182CF5F}" ShortID="317626519">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProjectAlphaAudio_Telekinesis_Impact" ID="{C586ACD9-D99D-4888-924D-935DFB772F29}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{367F200A-7CF7-45AA-BDA0-38F9C5CA67AE}" ShortID="581833059">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProjectAlphaAudio_Telekinesis_Loop" ID="{D1565121-8980-411F-A561-11CA9DB79431}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LightSFX" ID="{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}">
+					<ChildrenList>
+						<Action Name="" ID="{BBC49F01-34B3-4DC4-B8F4-44518146DA06}" ShortID="63471061">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Light" ID="{AE4EA97C-D817-469F-B5BA-060607B71895}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FootStep" ID="{79A545A6-F6EC-4377-ACE6-524FBAF170FA}">
+					<ChildrenList>
+						<Action Name="" ID="{690B91AC-055F-4C93-A86A-94810ACC2BCA}" ShortID="732565763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surface" ID="{C9D5A189-5EA2-4DB6-8310-EB52E636AECE}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ItemDrop" ID="{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}">
+					<ChildrenList>
+						<Action Name="" ID="{982DF017-6728-49F7-84AE-CB2EC513FCDF}" ShortID="944982055">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ItemDrop" ID="{6B681D96-18D6-4150-8F4B-B47CC4D00E77}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FingerSnap" ID="{FB01B18F-1B92-4B8E-B7C0-831183A8BC7C}">
+					<ChildrenList>
+						<Action Name="" ID="{CA9AAE0D-89BC-4C27-9663-AD2D1AE76099}" ShortID="315497363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Finger Snap Sound Effect" ID="{30A970A2-418E-489C-AB53-7C52E3E24FFD}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SpeechTest" ID="{BBBDB2A8-AF90-4696-B1CF-CC22B8379BDB}">
+					<ChildrenList>
+						<Action Name="" ID="{E4A2A06B-F810-4FB9-9ADE-516F988C252F}" ShortID="714938022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SpeechTest" ID="{09905278-9C86-40D6-B01A-209EB0709F5F}" WorkUnitID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

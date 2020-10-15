@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4708F2AB-6F8C-4C5C-B91F-3F5AFB0BA907}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{4708F2AB-6F8C-4C5C-B91F-3F5AFB0BA907}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Master" ID="{759BE17C-EAD1-4047-8EF6-C7F4A953DD31}">
+					<ObjectInclusionList>
+						<ObjectRef Name="LightSFX" ID="{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="FootStep" ID="{79A545A6-F6EC-4377-ACE6-524FBAF170FA}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{FC596E50-4716-43E1-B361-9367590A5DAA}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Telekinesis" ID="{B1C282CE-D395-4AAA-B69E-9A20DE3FD1C8}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ItemDrop" ID="{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

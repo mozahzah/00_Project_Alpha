@@ -1,0 +1,39 @@
+Event	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
+	1866025847	FootStep			\Default Work Unit\FootStep	
+	3684409175	ItemDrop			\Default Work Unit\ItemDrop	
+	3797766864	LightSFX			\Default Work Unit\LightSFX	
+	4167017725	Telekinesis			\Default Work Unit\Telekinesis	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	Material			
+	2473969246	Metal	Material			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	630539344	Dry			\Default Work Unit\Dry	
+	841620460	Concrete			\Default Work Unit\Concrete	
+	1685747766	LowPass			\Default Work Unit\LowPass	
+	2449969375	Glass			\Default Work Unit\Glass	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	56716675	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5		141028
+	99457708	ProjectAlphaAudio_Telekinesis_Impact	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ProjectAlphaAudio_Telekinesis_Impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ProjectAlphaAudio_Telekinesis_Impact		540992
+	248974480	ESM_Builder_Game_Footstep_Walk_Stone_3	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_3		47744
+	484107945	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3		155156
+	583869673	ProjectAlphaAudio_SFX_Background	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ProjectAlphaAudio_SFX_Background_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ProjectAlphaAudio_SFX_Background		11539840
+	636159382	ESM_Builder_Game_Footstep_Walk_Stone_2	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_2		47744
+	636893504	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1		278016
+	653846415	ESM_Builder_Game_Footstep_Walk_Stone_6	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_6		44906
+	710239269	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8		137088
+	752986300	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6		100948
+	775423440	ESM_Builder_Game_Footstep_Walk_Stone_1	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_1		46318
+	903583296	ProjectAlphaAudio_Telekinesis_Loop	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ProjectAlphaAudio_Telekinesis_Loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ProjectAlphaAudio_Telekinesis_Loop		1442536
+	965223685	ESM_Builder_Game_Footstep_Walk_Stone_4	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_4		41500
+	985774628	ItemDrop	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\www.fesliyanstudios.com_78E655E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemDrop		99160
+	1001190631	ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Metal\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2		135756
+	1013597397	Light	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\Light02_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnvironmentSFX\Light		305844
+	1042562609	ESM_Builder_Game_Footstep_Walk_Stone_5	D:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\ESM_Builder_Game_Footstep_Walk_Stone_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Surface\Concrete\ESM_Builder_Game_Footstep_Walk_Stone_5		55124
+

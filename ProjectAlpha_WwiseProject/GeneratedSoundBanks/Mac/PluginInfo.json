@@ -1,0 +1,24 @@
+{
+ "PluginInfo": {
+  "Project": "ProjectAlpha_WwiseProject",
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "Plugins": [
+   {
+    "Name": "Wwise RoomVerb",
+    "ID": "7733251",
+    "DLL": "AkRoomVerb"
+   },
+   {
+    "Name": "System",
+    "ID": "11403271",
+    "DLL": "DefaultSink"
+   },
+   {
+    "Name": "No Output",
+    "ID": "11862023",
+    "DLL": "DefaultSink"
+   }
+  ]
+ }
+}

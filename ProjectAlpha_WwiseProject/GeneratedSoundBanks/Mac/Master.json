@@ -1,0 +1,299 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "12",
+  "SoundbankVersion": "135",
+  "RootPaths": {
+   "ProjectRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
+   "SourceFilesRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Mac\\",
+   "SoundBanksRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac"
+  },
+  "SoundBanks": [
+   {
+    "Id": "4056684167",
+    "GUID": "{759BE17C-EAD1-4047-8EF6-C7F4A953DD31}",
+    "Language": "SFX",
+    "Hash": "1297619287",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
+    "ShortName": "Master",
+    "Path": "Master.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambience",
+      "GUID": "{FC596E50-4716-43E1-B361-9367590A5DAA}",
+      "DurationType": "Infinite",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "583869673",
+        "Language": "SFX",
+        "ShortName": "ProjectAlphaAudio_SFX_Background.wav",
+        "Path": "SFX\\ProjectAlphaAudio_SFX_Background_D79FB2B7.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1866025847",
+      "Name": "FootStep",
+      "ObjectPath": "\\Events\\Default Work Unit\\FootStep",
+      "GUID": "{79A545A6-F6EC-4377-ACE6-524FBAF170FA}",
+      "MaxAttenuation": "3000.000000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.215813",
+      "DurationMax": "1.447677",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "56716675",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5_10C4C929.wem"
+       },
+       {
+        "Id": "248974480",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_3.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_3_10C4C929.wem"
+       },
+       {
+        "Id": "484107945",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3_10C4C929.wem"
+       },
+       {
+        "Id": "636159382",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_2.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_2_10C4C929.wem"
+       },
+       {
+        "Id": "636893504",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1_10C4C929.wem"
+       },
+       {
+        "Id": "653846415",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_6.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_6_10C4C929.wem"
+       },
+       {
+        "Id": "710239269",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8_10C4C929.wem"
+       },
+       {
+        "Id": "752986300",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6_10C4C929.wem"
+       },
+       {
+        "Id": "775423440",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_1.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_1_10C4C929.wem"
+       },
+       {
+        "Id": "965223685",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_4.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_4_10C4C929.wem"
+       },
+       {
+        "Id": "1001190631",
+        "Language": "SFX",
+        "ShortName": "ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2.wav",
+        "Path": "SFX\\ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2_10C4C929.wem"
+       },
+       {
+        "Id": "1042562609",
+        "Language": "SFX",
+        "ShortName": "ESM_Builder_Game_Footstep_Walk_Stone_5.wav",
+        "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_5_10C4C929.wem"
+       }
+      ],
+      "DefaultSwitchValue": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}",
+      "SwitchContainers": [
+       {
+        "SwitchValue": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}",
+        "Media": [
+         {
+          "Id": "775423440"
+         },
+         {
+          "Id": "636159382"
+         },
+         {
+          "Id": "248974480"
+         },
+         {
+          "Id": "965223685"
+         },
+         {
+          "Id": "1042562609"
+         },
+         {
+          "Id": "653846415"
+         }
+        ]
+       },
+       {
+        "SwitchValue": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}",
+        "Media": [
+         {
+          "Id": "636893504"
+         },
+         {
+          "Id": "1001190631"
+         },
+         {
+          "Id": "484107945"
+         },
+         {
+          "Id": "56716675"
+         },
+         {
+          "Id": "752986300"
+         },
+         {
+          "Id": "710239269"
+         }
+        ]
+       }
+      ],
+      "AuxBusSends": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Concrete",
+        "GUID": "{F2A21CC9-2571-45DD-A803-262235E2F5F8}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Glass",
+        "GUID": "{A3FB0749-A4F8-4F62-A97E-DA3D1F38E396}"
+       },
+       {
+        "Id": "3733859656",
+        "Name": "ReflectTest",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\ReflectTest",
+        "GUID": "{78B95B2A-9BE5-4D6B-BF51-A1353A744BAE}"
+       }
+      ]
+     },
+     {
+      "Id": "3684409175",
+      "Name": "ItemDrop",
+      "ObjectPath": "\\Events\\Default Work Unit\\ItemDrop",
+      "GUID": "{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}",
+      "MaxAttenuation": "10000.000000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.259063",
+      "DurationMax": "0.259063",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "985774628",
+        "Language": "SFX",
+        "ShortName": "www.fesliyanstudios.com.wav",
+        "Path": "SFX\\www.fesliyanstudios.com_78E655E8.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3797766864",
+      "Name": "LightSFX",
+      "ObjectPath": "\\Events\\Default Work Unit\\LightSFX",
+      "GUID": "{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}",
+      "MaxAttenuation": "3000.000000",
+      "DurationType": "Infinite",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "1013597397",
+        "Language": "SFX",
+        "ShortName": "Light02.WAV",
+        "Path": "SFX\\Light02_D79FB2B7.wem"
+       }
+      ]
+     },
+     {
+      "Id": "4167017725",
+      "Name": "Telekinesis",
+      "ObjectPath": "\\Events\\Default Work Unit\\Telekinesis",
+      "GUID": "{B1C282CE-D395-4AAA-B69E-9A20DE3FD1C8}",
+      "DurationType": "Infinite",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "99457708",
+        "Language": "SFX",
+        "ShortName": "ProjectAlphaAudio_Telekinesis_Impact.wav",
+        "Path": "SFX\\ProjectAlphaAudio_Telekinesis_Impact_10C4C929.wem"
+       },
+       {
+        "Id": "903583296",
+        "Language": "SFX",
+        "ShortName": "ProjectAlphaAudio_Telekinesis_Loop.wav",
+        "Path": "SFX\\ProjectAlphaAudio_Telekinesis_Loop_D79FB2B7.wem"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "630539344",
+      "Name": "Dry",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Dry",
+      "GUID": "{E34131DC-1E72-414B-B649-D7B48F01158C}"
+     },
+     {
+      "Id": "841620460",
+      "Name": "Concrete",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Concrete",
+      "GUID": "{99324B23-9678-473C-9C2A-A06D5749CF2C}"
+     },
+     {
+      "Id": "1685747766",
+      "Name": "LowPass",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\LowPass",
+      "GUID": "{3D32F5FB-4DD6-4CC9-8DD9-54CCCDD677E9}"
+     },
+     {
+      "Id": "2449969375",
+      "Name": "Glass",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Glass",
+      "GUID": "{D929DB94-45FA-48E7-89EB-10E6F239DE64}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3865314626",
+      "Name": "Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "GUID": "{E72C5257-77A4-41FF-83F3-EDECABB6577D}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Concrete",
+        "GUID": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Metal",
+        "GUID": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

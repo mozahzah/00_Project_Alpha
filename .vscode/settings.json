@@ -1,0 +1,16 @@
+{
+	"files.exclude": {
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/.git": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/.idea": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/.vs": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/.vscode": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Content": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/DerivedDataCache": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Intermediate": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/ProjectAlpha_WwiseProject": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Saved": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Plugins/Wwise/Content": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Plugins/Wwise/Intermediate": true,
+		"D:/REPOS/UE_REPOS/00-ProjectAlpha/ProjectAlpha/Plugins/Wwise/ThirdParty": true
+	}
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3797766864	LightSFX			\Default Work Unit\LightSFX	
+

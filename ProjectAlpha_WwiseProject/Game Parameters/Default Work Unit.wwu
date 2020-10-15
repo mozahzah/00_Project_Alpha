@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{718270F0-495C-4142-9FE2-E770CF986392}" SchemaVersion="97">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{718270F0-495C-4142-9FE2-E770CF986392}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="LowPass" ID="{3D32F5FB-4DD6-4CC9-8DD9-54CCCDD677E9}"/>
+				<GameParameter Name="FootStepLowPass" ID="{27A5DCC8-2ECB-4013-86BB-21591340F8C4}"/>
+				<GameParameter Name="Distance" ID="{766C7493-E637-4CB0-809D-E0DE01D555CE}"/>
+				<GameParameter Name="Concrete" ID="{99324B23-9678-473C-9C2A-A06D5749CF2C}"/>
+				<GameParameter Name="Dry" ID="{E34131DC-1E72-414B-B649-D7B48F01158C}"/>
+				<GameParameter Name="Glass" ID="{D929DB94-45FA-48E7-89EB-10E6F239DE64}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
