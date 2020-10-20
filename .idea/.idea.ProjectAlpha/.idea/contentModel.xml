@@ -44472,6 +44472,8 @@
           <e p="EnvironmentActor.h" t="Include" />
           <e p="OcclusionManager.cpp" t="Include" />
           <e p="OcclusionManager.h" t="Include" />
+          <e p="PreSmokeActor.cpp" t="Include" />
+          <e p="PreSmokeActor.h" t="Include" />
           <e p="ProjectAlpha.Build.cs" t="Include" />
           <e p="ProjectAlpha.cpp" t="Include" />
           <e p="ProjectAlpha.h" t="Include" />

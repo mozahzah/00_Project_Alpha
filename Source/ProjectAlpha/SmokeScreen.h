@@ -25,7 +25,8 @@ public:
 	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-
+	
+	
 	class ASmokeScreenActor* SmokeScreenActor;
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<ASmokeScreenActor> SmokeBlueprint;	

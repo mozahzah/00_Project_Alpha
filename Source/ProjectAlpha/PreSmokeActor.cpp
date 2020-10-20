@@ -1,10 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "TextActor.h"
+#include "PreSmokeActor.h"
+
 
 // Sets default values
-ATextActor::ATextActor()
+APreSmokeActor::APreSmokeActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,24 +13,17 @@ ATextActor::ATextActor()
 }
 
 // Called when the game starts or when spawned
-void ATextActor::BeginPlay()
+void APreSmokeActor::BeginPlay()
 {
 	Super::BeginPlay();
-	Height = FMath::RandRange(0.1f, 0.4f);
-	Speed = FMath::RandRange(2, 3);
+	//PreSmokeParticle->Activate();
+	
 }
 
 // Called every frame
-void ATextActor::Tick(float DeltaTime)
+void APreSmokeActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (bisFloating)
-	{
-		;
-		SetActorLocation(GetActorLocation() + FVector(0, 0, Height) * FMath::Sin(GetWorld()->GetRealTimeSeconds() *Speed));
-	}
-
 
 }
 

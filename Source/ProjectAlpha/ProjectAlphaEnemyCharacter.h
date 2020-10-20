@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintPure)
 	float GetHealthPercent();
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bIsDead = false;
 
 	UFUNCTION(BlueprintCallable)

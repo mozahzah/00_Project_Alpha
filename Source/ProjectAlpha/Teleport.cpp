@@ -43,7 +43,6 @@ void UTeleport::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (1 * 0.5))
 		{
 			Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(false);
-			
 		}
 		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (2 * 0.5))
 		{
@@ -59,8 +58,6 @@ void UTeleport::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 void UTeleport::Teleport(FVector Destination)
 {
 	bTeleportIsActive = true;
-	
-	
 	GetWorld()->GetWorldSettings()->SetTimeDilation(0.5);
 	TeleportEndParticleSystem->Deactivate();
 	TeleportStartParticleSystem->Activate();
@@ -80,7 +77,6 @@ void UTeleport::SpawnPlayer(FVector Destination)
 	Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(true);
 	bWeHaveTeleported = false;
 	bTeleportIsActive = false;
-	
 }
 
 

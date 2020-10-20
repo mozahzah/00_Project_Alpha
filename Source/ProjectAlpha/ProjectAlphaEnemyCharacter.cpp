@@ -23,6 +23,8 @@ void AProjectAlphaEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	AkMainComponent = FindComponentByClass<UAkComponent>();
+	GetMesh()->SetRenderCustomDepth(true);
+	GetMesh()->SetCustomDepthStencilValue(2);
 	
 }
 
@@ -32,6 +34,7 @@ void AProjectAlphaEnemyCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (bIsDead == true) {
 		GetController()->StopMovement();
+		SetActorEnableCollision(false);
 	}
 
 }

@@ -5,9 +5,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "PreSmokeActor.h"
 #include "ProjectAlphaMainCharacter.generated.h"
 
+
 class AWeapon;
+class APreSmokeActor;
 class UParticleSystemComponent;
 
 UCLASS()
@@ -27,6 +30,7 @@ public:
 	bool bIsSprinting = false;
 	void GetSurfaceMaterial();
 	void ApplyOcclusionAndObstruction(FHitResult Hit);
+	TSubclassOf<APreSmokeActor> GetPreSmoke();
 
 protected:
 	virtual void BeginPlay() override;
@@ -53,6 +57,10 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	UParticleSystemComponent* WeaponRightHand = nullptr;
+
+	APreSmokeActor* PreSmoke;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<APreSmokeActor> PreSmokeBlueprint;
 
 	UPROPERTY(EditAnywhere)
 	float Health = 100.f;

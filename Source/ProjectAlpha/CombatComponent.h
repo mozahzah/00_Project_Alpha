@@ -11,6 +11,7 @@ class ATelekineticObjects;
 class UTeleport;
 class AWeapon;
 class USmokeScreen;
+class APreSmokeActor;
 
 
 UENUM()
@@ -37,7 +38,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	Abilities CurrentAbility;
-
+	bool bPreSmokeisActive = false;
 	
 	float LastFireTime;
 	void SetReticle();
@@ -48,7 +49,7 @@ protected:
 	UTeleport* Teleport = nullptr;
 	USmokeScreen* SmokeScreen = nullptr;
 	AWeapon* Weapon = nullptr;
-
+	APreSmokeActor* PreSmoke;
 	TArray<ATelekineticObjects*> LevitatingObjects;
 
 public:	
@@ -70,6 +71,9 @@ public:
 	FVector EndLocation;
 	float SmokeLenght;
 
+	
+	
+
 
 
 	//Ability Activation
@@ -88,6 +92,7 @@ public:
     bool bCTelekinesisIsActive = false;
 	UPROPERTY(BlueprintReadOnly)
     bool bCTeleportIsActive = false;
+	float StartTeleportTimer = 0;
 	UPROPERTY(BlueprintReadOnly)
     bool bCWeaponIsActive = false;
 	UPROPERTY(BlueprintReadOnly)

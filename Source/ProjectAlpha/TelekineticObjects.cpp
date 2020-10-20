@@ -4,13 +4,15 @@
 #include "TelekineticObjects.h"
 
 #include "AkGameplayStatics.h"
-#include "ProjectAlphaEnemyCharacter.h"
 #include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "GameFramework/GameStateBase.h"
+#include "GameFramework/Pawn.h"
 
 ATelekineticObjects::ATelekineticObjects()
 {
-    
+    PrimaryActorTick.bCanEverTick = true;
+    PrimaryActorTick.bStartWithTickEnabled = true;
 }
 
 void ATelekineticObjects::BeginPlay()
@@ -24,6 +26,23 @@ void ATelekineticObjects::BeginPlay()
     ZValue = FMath::FRandRange(-10, 10);
     RotationDelta = FMath::FRandRange(-0.1,0.1);
 }
+
+void ATelekineticObjects::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+    auto MainPlayerLocation = Cast<AActor>(GetWorld()->GetFirstPlayerController()->GetPawn())->GetActorLocation();;
+    if (FVector::Dist(MainPlayerLocation, GetActorLocation()) < 1000)
+        {
+         GetStaticMeshComponent()->SetRenderCustomDepth(true);
+         GetStaticMeshComponent()->SetCustomDepthStencilValue(1);
+         }
+         else
+         {
+          GetStaticMeshComponent()->SetRenderCustomDepth(false);
+         }
+}
+
+
 
 void ATelekineticObjects::SetObjectLocation(FVector CharacterLocation, FKineticObjectData ObjectData, float DeltaTime)
 {

@@ -17,6 +17,7 @@
 #include "Engine/StaticMeshActor.h"
 #include "AkGameplayTypes.h"
 #include "AkAcousticPortal.h"
+#include "PreSmokeActor.h"
 
 
 AProjectAlphaMainCharacter::AProjectAlphaMainCharacter()
@@ -160,7 +161,7 @@ void AProjectAlphaMainCharacter::GetFocusPoint()
 
 	
 
-	DrawDebugSphere(GetWorld(), GetActorLocation(), 3000,40, FColor::Blue, false, 0,0,5);
+	//DrawDebugSphere(GetWorld(), GetActorLocation(), 3000,40, FColor::Blue, false, 0,0,5);
 
 	
 		
@@ -191,9 +192,9 @@ void AProjectAlphaMainCharacter::GetFocusPoint()
 				float DeltaAngle = FMath::RadiansToDegrees(FMath::Acos(FVector::DotProduct(DoorToActor.GetSafeNormal(), DoorToCenter.GetSafeNormal())));
 				float Distance = FVector::Dist(GetActorLocation(), AcousticPortal->GetActorLocation() + FVector(0,0,-300));
 				
-				UE_LOG(LogTemp, Warning, TEXT("Angle: %f"), DeltaAngle);
-				UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
-				UE_LOG(LogTemp, Warning, TEXT("Portal State: %d"), AcousticPortal->GetCurrentState());
+				//UE_LOG(LogTemp, Warning, TEXT("Angle: %f"), DeltaAngle);
+				//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
+				//UE_LOG(LogTemp, Warning, TEXT("Portal State: %d"), AcousticPortal->GetCurrentState());
 
 				if (Distance > 100) 
 				{
@@ -369,5 +370,11 @@ float AProjectAlphaMainCharacter::TakeDamage(float DamageAmount, FDamageEvent co
 		return 0;
 	}
 	return DamageAmount;
+}
+
+
+TSubclassOf<APreSmokeActor> AProjectAlphaMainCharacter::GetPreSmoke()
+{
+	return PreSmokeBlueprint;
 }
 

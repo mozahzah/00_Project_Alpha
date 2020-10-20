@@ -27,7 +27,8 @@ class PROJECTALPHA_API ATelekineticObjects : public AStaticMeshActor
 	GENERATED_BODY()
 protected:
 	ATelekineticObjects();
-	void BeginPlay();
+	virtual void BeginPlay() override;
+	
 	void GetParticleSystem();
 	
 	
@@ -38,6 +39,7 @@ protected:
 
 public:
 	
+	void Tick(float DeltaSeconds);
 	void SetObjectLocation(FVector CharacterLocation, FKineticObjectData ObjectData, float DeltaTime);
 	void ActivateParticleSystem();
 	void DeactivateParticleSystem();

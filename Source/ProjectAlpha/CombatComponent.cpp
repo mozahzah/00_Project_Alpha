@@ -9,9 +9,9 @@
 #include "Telekinesis.h"
 #include "Weapon.h"
 #include "SmokeScreen.h"
-#include "Components/SphereComponent.h"
 #include "Components/InputComponent.h"
 #include "ProjectAlphaMainCharacter.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values for this component's properties
 UCombatComponent::UCombatComponent()
@@ -36,7 +36,7 @@ void UCombatComponent::BeginPlay()
 	if (!ensure(Teleport)) return;
 	SmokeScreen = GetOwner()->FindComponentByClass<USmokeScreen>();
 	if (!ensure(SmokeScreen)) return;
-
+	
 
 
 	//Input Binding
@@ -55,16 +55,28 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	AimAt();
-
+	
 	if (bAddSmokeMousePressed) 
 	{
 		SmokeLenght += 1000*DeltaTime;
 	}
 	if (bMinusSmokeMousePressed) 
 	{
-		SmokeLenght -= 1000*DeltaTime;
+		if (SmokeLenght >= 0)
+		{	
+			SmokeLenght -= 1000*DeltaTime;
+		}
+	}
+	
+	if (bCTeleportIsActive)
+	{
+		if (GetWorld()->GetTimeSeconds() - StartTeleportTimer > 0.2 * 0.5)
+		{
+			DeactivateTeleport();
+		}
 	}
 
+	
 }
 
 
@@ -92,12 +104,14 @@ void UCombatComponent::AimAt()
 	{
 
 		EndLocation = GetOwner()->GetActorLocation() + GetOwner()->GetActorForwardVector() * SmokeLenght;
-		SmokeScreenAimAt();
-		
-		
+		SmokeScreenAimAt();		
 	}
 
 	if (CurrentAbility == Abilities::Weapon)
+	{
+		return;
+	}
+	else
 	{
 		return;
 	}
@@ -106,7 +120,17 @@ void UCombatComponent::AimAt()
 
 void UCombatComponent::SmokeScreenAimAt() 
 {
-	DrawDebugSphere(GetWorld(), EndLocation, 200, 3, FColor::Blue, false, 0, 2, 4);
+	if (Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke() != nullptr)
+	{
+		if (!bPreSmokeisActive)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("PreSmokeActive"));
+			bPreSmokeisActive = true;
+			const FActorSpawnParameters SpawnParameters;
+			PreSmoke = GetWorld()->SpawnActor<APreSmokeActor>(Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke(), GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), SpawnParameters);
+		}
+		PreSmoke->SetActorLocation(EndLocation);
+	}
 }
 
 void UCombatComponent::TelekinesisAimAt()
@@ -123,11 +147,10 @@ void UCombatComponent::TelekinesisAimAt()
 
 void UCombatComponent::TeleportAimAt()
 {
-	bCTeleportIsActive = Teleport->bTeleportIsActive;
 	//Line Tracing 1
 	FHitResult OutHit1;
 	FVector Start1 = ViewpointLocation ;
-	FVector End1 = ViewpointLocation + ViewpointRotation.Vector()*3000;
+	FVector End1 = ViewpointLocation + ViewpointRotation.Vector()*1500;
 	if (GetWorld()->LineTraceSingleByChannel(OutHit1,Start1,End1,ECollisionChannel::ECC_Visibility))
 	{
 		OutHitLocation = OutHit1.Location;
@@ -136,7 +159,7 @@ void UCombatComponent::TeleportAimAt()
 	{
 		//line Stracing 2
 		FHitResult OutHit2;
-		FVector Start2 = ViewpointLocation + ViewpointRotation.Vector()*3000;
+		FVector Start2 = ViewpointLocation + ViewpointRotation.Vector()*1500;
 		FVector End2 = Start2.DownVector*500000;
 		if (GetWorld()->LineTraceSingleByChannel(OutHit2,Start2,End2,ECollisionChannel::ECC_Visibility))
 		{
@@ -153,9 +176,11 @@ void UCombatComponent::Fire()
 {
 	if(CurrentAbility == Abilities::Teleport)
 	{
-		
+		StartTeleportTimer = GetWorld()->GetTimeSeconds();
+		bCTeleportIsActive = true;
 		OutHitLocation.Z += 50;
 		Teleport->Teleport(OutHitLocation);
+		
 	} 
 	
 	if (CurrentAbility == Abilities::Telekinesis)
@@ -184,9 +209,6 @@ void UCombatComponent::Fire()
 	{
 		bAddSmokeMousePressed = true;
 	}
-
-	
-
 }
 
 void UCombatComponent::StopFire() 
@@ -235,7 +257,6 @@ void UCombatComponent::ActivateTeleport()
 	DeactivateSmokeScreen();
 	Teleport->ActivateTeleport(OutHitLocation);
 	CurrentAbility = Abilities::Teleport;
-	
 }
 
 void UCombatComponent::DeactivateTelekinesis()
@@ -246,8 +267,9 @@ void UCombatComponent::DeactivateTelekinesis()
 
 void UCombatComponent::DeactivateTeleport()
 {
-	Teleport->DeactivateTeleport();
 	bCTeleportIsActive = false;
+	Teleport->DeactivateTeleport();
+	CurrentAbility = Abilities::None;
 }
 
 void UCombatComponent::ActivateSmokeScreen()
@@ -255,17 +277,25 @@ void UCombatComponent::ActivateSmokeScreen()
 	DeactivateTeleport();
 	DeactivateTelekinesis();
 	CurrentAbility = Abilities::SmokeScreen;
+	GetOwner()->InputComponent->RemoveActionBinding(12);
 	GetOwner()->InputComponent->BindAction(FName("ActivateSmokeScreen"), EInputEvent::IE_Pressed, this, &UCombatComponent::FireSmoke);
 	bCSmokeIsActive = true;
 }
 
 void UCombatComponent::DeactivateSmokeScreen() 
 {
+	bPreSmokeisActive = false;
+	if (PreSmoke != nullptr)
+	{
+		PreSmoke->Destroy();
+	}
 	bCSmokeIsActive = false;
+	bMinusSmokeMousePressed = false;
+	bAddSmokeMousePressed = false;
 	SmokeLenght = 0;
 	CurrentAbility = Abilities::Weapon;
-	GetOwner()->InputComponent->RemoveActionBinding(11);
-	GetOwner()->InputComponent->RemoveActionBinding(11);
+	GetOwner()->InputComponent->RemoveActionBinding(12);
+	GetOwner()->InputComponent->BindAction(FName("ActivateSmokeScreen"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateSmokeScreen);
 }
 
 void UCombatComponent::FireSmoke()
