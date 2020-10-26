@@ -24,38 +24,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10dfac6a-62d6-49b0-b8f9-de388fb36d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_PreSmokeActor.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Color_Inst1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GlassLike.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHigh.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHighlight.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/MT_Highlight.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/divider-36054.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_MainPanelWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_PhaseModel.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion_with_Walk.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Walk.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Grid_Highlight.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Grid_Highlight_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Highlight.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/FadeIn.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Maps/MainMenuGameMode.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/BP_TextActor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-BoldExtended.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-BoldExtended_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-LightCondensed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-LightCondensed_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-Regular.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-Regular_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/2ca7c4219b6a0b7e11e7813426f9ef3c.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/Glitch.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop_Video.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/MOUSE_BLACK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/MOUSE_WHITE.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SettingsLogo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/divider-36054.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainMenuMusic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAIController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/WBP_HealthBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/WBP_HealthBar.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_Weapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_Weapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Color.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Color.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHigh.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHigh.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHighlight.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MT_Highlight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MT_Highlight.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/SandBox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SandBox.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/BP_TextActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BP_TextActor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Crossair.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Crossair.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/line1png.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/line2png.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Crossair.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/divider-36054.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" afterDir="false" />
@@ -198,9 +232,6 @@
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaCharacter.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/bullet.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/bullet.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/Weapon.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.cpp" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.h" />
@@ -215,20 +246,31 @@
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.cpp" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameMode.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.cpp" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" />
         <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.h" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" />
+        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.cpp" />
       </list>
     </option>
   </component>
@@ -670,6 +712,20 @@
       <workItem from="1603154527081" duration="659000" />
       <workItem from="1603160252372" duration="217000" />
       <workItem from="1603160522936" duration="900000" />
+      <workItem from="1603163667688" duration="675000" />
+      <workItem from="1603249931422" duration="178000" />
+      <workItem from="1603250328543" duration="10926000" />
+      <workItem from="1603296821924" duration="4491000" />
+      <workItem from="1603326031832" duration="169000" />
+      <workItem from="1603326239721" duration="5866000" />
+      <workItem from="1603408692241" duration="13586000" />
+      <workItem from="1603466234989" duration="1358000" />
+      <workItem from="1603472831157" duration="711000" />
+      <workItem from="1603580698605" duration="7459000" />
+      <workItem from="1603659140975" duration="1148000" />
+      <workItem from="1603661792890" duration="1340000" />
+      <workItem from="1603684685717" duration="660000" />
+      <workItem from="1603686873024" duration="920000" />
     </task>
     <task id="LOCAL-00001" summary="AI INTRO">
       <created>1594175273611</created>
@@ -900,13 +956,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1595637409212" />
-    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1596159818876">
+    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1603257569195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1596159818876" />
-    <state x="682" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1594524054006">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="682" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594524054005" />
+    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603257569195" />
   </component>
 </project>

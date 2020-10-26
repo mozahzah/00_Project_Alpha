@@ -44470,6 +44470,12 @@
           <e p="Crossair.h" t="Include" />
           <e p="EnvironmentActor.cpp" t="Include" />
           <e p="EnvironmentActor.h" t="Include" />
+          <e p="InGameMenu.cpp" t="Include" />
+          <e p="InGameMenu.h" t="Include" />
+          <e p="LobbyMenu.cpp" t="Include" />
+          <e p="LobbyMenu.h" t="Include" />
+          <e p="MainMenu.cpp" t="Include" />
+          <e p="MainMenu.h" t="Include" />
           <e p="OcclusionManager.cpp" t="Include" />
           <e p="OcclusionManager.h" t="Include" />
           <e p="PreSmokeActor.cpp" t="Include" />

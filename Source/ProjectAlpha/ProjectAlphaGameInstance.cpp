@@ -3,73 +3,84 @@
 
 #include "ProjectAlphaGameInstance.h"
 #include "Crossair.h"
+#include "MainMenu.h"
+#include "InGameMenu.h"
+#include "LobbyMenu.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Blueprint/UserWidget.h"
-//#include "Windows/MinWindows.h"
 
-//#include <AK/SoundEngine/Common/AkMemoryMgr.h> 
-//#include <AK/SoundEngine/Common/AkModule.h>                 
-//#include <AK/Tools/Common/AkPlatformFuncs.h>                    
-//#include <AK/SoundEngine/Common/AkStreamMgrModule.h>
-//#include <AK/SoundEngine/Common/AkSoundEngine.h> 
 
 
  UProjectAlphaGameInstance::UProjectAlphaGameInstance(const FObjectInitializer & ObjectInitializer)
 {
-    static ConstructorHelpers::FClassFinder<UUserWidget> CrossairBp (TEXT("/Game/UI/WBP_Crossair"));
+    static ConstructorHelpers::FClassFinder<UUserWidget> CrossairBp (TEXT("/Game/UI/BluePrints/WBP_Crossair"));
     CrossairClass = CrossairBp.Class;
+
+    static ConstructorHelpers::FClassFinder<UUserWidget> MainMenuBp (TEXT("/Game/UI/BluePrints/WBP_MainMenu"));
+    MainMenuClass = MainMenuBp.Class;
+
+    static ConstructorHelpers::FClassFinder<UUserWidget> InGameMenuBp (TEXT("/Game/UI/BluePrints/WBP_InGameMenu"));
+    InGameMenuClass = InGameMenuBp.Class;
+
+    static ConstructorHelpers::FClassFinder<UUserWidget> LobbyMenuBp (TEXT("/Game/UI/BluePrints/WBP_LobbyMenu"));
+    LobbyMenuClass = LobbyMenuBp.Class;
+
+    
 }
 
 void UProjectAlphaGameInstance::Init()
 {
     Super::Init();
-   // InitSoundEngine();
 }
 
 
 void UProjectAlphaGameInstance::AddReticle()
 {
+    FInputModeGameOnly GameOnly;
+    GetWorld()->GetFirstPlayerController()->SetInputMode(GameOnly);
     auto Crossair = CreateWidget<UCrossair>(this, CrossairClass);
     Crossair->AddToViewport();
 }
 
+void UProjectAlphaGameInstance::LoadMainMenu()
+{
+     MainMenu = CreateWidget<UMainMenu>(this, MainMenuClass);
+     MainMenu->AddToViewport();
+     FInputModeUIOnly UIOnly;
+     GetWorld()->GetFirstPlayerController()->SetInputMode(UIOnly);
+     GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true;
+}
 
-//bool UProjectAlphaGameInstance::InitSoundEngine() 
-//{
-//    AkMemSettings memSettings;
-//    AK::MemoryMgr::GetDefaultSettings(memSettings);
-//
-//    if (AK::MemoryMgr::Init(&memSettings) != AK_Success)
-//    {
-//        UE_LOG(LogTemp, Warning, TEXT("Could not create the memory manager."));
-//        return false;
-//    }
-//
-// 
-//    // Create and initialize an instance of the default streaming manager. Note
-//    // that you can override the default streaming manager with your own. 
-//
-//    AkStreamMgrSettings stmSettings;
-//    AK::StreamMgr::GetDefaultSettings(stmSettings);
-//
-//    // Customize the Stream Manager settings here.
-//    if (!AK::StreamMgr::Create(stmSettings))
-//    {
-//        UE_LOG(LogTemp, Warning, TEXT("Could not create the Stream manager."));
-//        return false;
-//    }
-//
-//    if (AK::SoundEngine::Init(NULL, NULL) != AK_Success)
-//    {
-//        UE_LOG(LogTemp, Warning, TEXT("Could not initialize the Sound Engine."));
-//
-//        return false;
-//
-//    }
-//
-//    return true;
-//
-//
-//}
+void UProjectAlphaGameInstance::LoadInGameMenu()
+ {
+     InGameMenu = CreateWidget<UInGameMenu>(this, InGameMenuClass);
+     InGameMenu->AddToViewport();
+     FInputModeGameAndUI UIOnly;
+     GetWorld()->GetFirstPlayerController()->SetInputMode(UIOnly);
+     GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true;
+     isInMenu = true;
+ }
+
+void UProjectAlphaGameInstance::UnLoadInGameMenu()
+ {
+     if (!ensure(InGameMenu)) return;    
+     InGameMenu->RemoveFromViewport();
+     FInputModeGameOnly GameOnly;
+     GetWorld()->GetFirstPlayerController()->SetInputMode(GameOnly);
+     GetWorld()->GetFirstPlayerController()->bShowMouseCursor = false;
+     isInMenu = false;
+ }
+
+void UProjectAlphaGameInstance::LoadLobbyMenu()
+{
+     MainMenu->RemoveFromViewport();
+     LobbyMenu = CreateWidget<ULobbyMenu>(this, LobbyMenuClass);
+     LobbyMenu->AddToViewport();
+     FInputModeUIOnly UIOnly;
+     GetWorld()->GetFirstPlayerController()->SetInputMode(UIOnly);
+     GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true;
+}
+
+
 
 

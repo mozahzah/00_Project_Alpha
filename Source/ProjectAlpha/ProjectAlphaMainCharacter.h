@@ -20,6 +20,10 @@ class PROJECTALPHA_API AProjectAlphaMainCharacter : public ACharacter
 
 public:
 	AProjectAlphaMainCharacter();
+	UPROPERTY(BlueprintReadOnly) bool bIsMovingFwd;
+	UPROPERTY(BlueprintReadOnly) bool bIsMovingBwd;
+	UPROPERTY(BlueprintReadOnly) bool bIsMovingRight;
+	UPROPERTY(BlueprintReadOnly) bool bIsMovingLeft;
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
 	void LookUp(float AxisValue);

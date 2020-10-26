@@ -15,8 +15,11 @@ ATextActor::ATextActor()
 void ATextActor::BeginPlay()
 {
 	Super::BeginPlay();
-	Height = FMath::RandRange(0.1f, 0.4f);
-	Speed = FMath::RandRange(2, 3);
+	Height = FMath::RandRange(0.f, 0.1f);
+	Pitch = FMath::RandRange(0.01f, 0.03f);
+	Yaw = FMath::RandRange(0.01f, 0.03f);
+	Roll = FMath::RandRange(0.01f, 0.03f);
+	Speed = 0.5f;
 }
 
 // Called every frame
@@ -26,8 +29,11 @@ void ATextActor::Tick(float DeltaTime)
 
 	if (bisFloating)
 	{
-		;
-		SetActorLocation(GetActorLocation() + FVector(0, 0, Height) * FMath::Sin(GetWorld()->GetRealTimeSeconds() *Speed));
+		SetActorLocation(GetActorLocation() + FVector(0, 0, Height) * FMath::Sin(GetWorld()->GetRealTimeSeconds() * Speed));
+		if (FindComponentByClass<UStaticMeshComponent>() != nullptr)
+		{
+			FindComponentByClass<UStaticMeshComponent>()->AddLocalRotation(FRotator(Pitch,Yaw,Roll));
+		}
 	}
 
 

@@ -168,7 +168,7 @@ void UCombatComponent::TeleportAimAt()
 	}
 	DrawDebugLine(
 	GetWorld(),	OutHitLocation
-	, OutHitLocation, FColor::Blue,false, 0, 10, 40);
+	, OutHitLocation, FColor::Blue,false, 0, 10, 10);
 }
 
 
@@ -178,7 +178,7 @@ void UCombatComponent::Fire()
 	{
 		StartTeleportTimer = GetWorld()->GetTimeSeconds();
 		bCTeleportIsActive = true;
-		OutHitLocation.Z += 50;
+		OutHitLocation.Z += 100;
 		Teleport->Teleport(OutHitLocation);
 		
 	} 

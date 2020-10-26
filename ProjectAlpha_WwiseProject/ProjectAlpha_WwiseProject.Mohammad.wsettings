@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{64F4A90A-7C60-4B72-B9E0-144AAD5BD26A}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Mohammad\Desktop\"/>
+				<Property Name="Event Action List\{562E3FA0-1610-4DA6-B454-439B680CF73B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{79A545A6-F6EC-4377-ACE6-524FBAF170FA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}\x64_Expand States" Type="string" Value=""/>
@@ -32,7 +33,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="5BuIXYDbU0KEN09kBn1Lzw=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="fOGbddHqR0CO9sf0qVPdMQ=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="bYMomkd9rUWRNxBkzDE6yQGEWD//////BQJslSbEpUKVLAw4J+rKnQGEWD//////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="bYMomkd9rUWRNxBkzDE6yQGEvHn/////BQJslSbEpUKVLAw4J+rKnQGEvHn/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -57,7 +58,7 @@
 				<Property Name="PluginUserAcknowledge\iZotope Trash Multiband Distortion" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>

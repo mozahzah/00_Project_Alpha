@@ -7,8 +7,9 @@
 #include "Engine/GameInstance.h"
 #include "ProjectAlphaGameInstance.generated.h"
 
-
-
+class UInGameMenu;
+class UMainMenu;
+class ULobbyMenu;
 class UUserWidget;
 /**
  * 
@@ -19,6 +20,9 @@ class PROJECTALPHA_API UProjectAlphaGameInstance : public UGameInstance
 	GENERATED_BODY()
 	virtual void Init() override;
 	TSubclassOf<UUserWidget> CrossairClass;
+	TSubclassOf<UUserWidget> MainMenuClass;
+	TSubclassOf<UUserWidget> InGameMenuClass;
+	TSubclassOf<UUserWidget> LobbyMenuClass;
 
 	
 	
@@ -27,9 +31,27 @@ public:
 	UProjectAlphaGameInstance(const FObjectInitializer & ObjectInitializer);
 	
 
+	UMainMenu* MainMenu;
+	UInGameMenu* InGameMenu;
+	ULobbyMenu* LobbyMenu;
+	
 	UFUNCTION(BlueprintCallable)
 	void AddReticle();
 
-	//bool InitSoundEngine();
+	UFUNCTION(BlueprintCallable)
+	void LoadMainMenu();
+
+	UFUNCTION(BlueprintCallable)
+    void LoadLobbyMenu();	
+
+	UFUNCTION(BlueprintCallable)
+    void LoadInGameMenu();
+
+	UFUNCTION(BlueprintCallable)
+    void UnLoadInGameMenu();
+
+	UPROPERTY(BlueprintReadOnly)
+	bool isInMenu;
+
 
 };

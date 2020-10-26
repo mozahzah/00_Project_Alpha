@@ -18,6 +18,7 @@ public:
 	UPROPERTY(EditAnywhere) bool bisFloating;
 	float Height;
 	float Speed;
+	float Pitch, Yaw, Roll;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

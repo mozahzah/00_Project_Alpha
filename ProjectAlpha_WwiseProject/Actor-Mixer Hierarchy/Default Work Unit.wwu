@@ -1044,6 +1044,54 @@
 						<ActiveSource Name="Loba vs Everyone Interaction Voice L" ID="{E3927F6B-35E3-4A46-8947-53BB681BEC38}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Melancholic Dance-Kabarnos" ID="{7B36DE4E-6AC2-4F29-A072-52B9C5EC7CAE}" ShortID="727457395">
+					<PropertyList>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="OutputBusLowpass" Type="int16">
+							<ValueList>
+								<Value>55</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-50</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Light" ID="{67F471F5-BB1D-4D74-B53C-04C268D4CFEA}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Melancholic Dance-Kabarnos" ID="{CCA8033C-F5B9-455E-83FD-0A357F613499}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="123.040570749509"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Melancholic Dance-Kabarnos.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="440375373"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Melancholic Dance-Kabarnos" ID="{CCA8033C-F5B9-455E-83FD-0A357F613499}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -18,6 +18,7 @@
 #include "AkGameplayTypes.h"
 #include "AkAcousticPortal.h"
 #include "PreSmokeActor.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 
 AProjectAlphaMainCharacter::AProjectAlphaMainCharacter()
@@ -56,6 +57,9 @@ void AProjectAlphaMainCharacter::BeginPlay()
 	}
 	
 	MainListener->SetRTPCValue(nullptr, 0, 0, TEXT("LowPass"));
+
+	
+	
 	//AkGameObjectID MY_DEFAULT_LISTENER = CharacterAkGameObject->GetAkGameObjectID();
 
 	
@@ -80,8 +84,21 @@ void AProjectAlphaMainCharacter::Tick(float DeltaTime)
 	
 	GetSurfaceMaterial();
 	GetFocusPoint();
+
+	float Speed;
+	FVector Direction;
+	GetCharacterMovement()->Velocity.ToDirectionAndLength(Direction,Speed);
+	if (Speed > 300)
+	{
+		GetCharacterMovement()->MaxAcceleration = 10000;
+	}
+	else
+	{
+		GetCharacterMovement()->MaxAcceleration = 700;
+	}
 	
 
+	
 }
 
 void AProjectAlphaMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -109,7 +126,6 @@ void AProjectAlphaMainCharacter::SnapFinger()
 void AProjectAlphaMainCharacter::Sprint()
 {
 	bIsSprinting = true;
-
 }
 
 void AProjectAlphaMainCharacter::NotSprint()
@@ -120,37 +136,56 @@ void AProjectAlphaMainCharacter::NotSprint()
 
 void AProjectAlphaMainCharacter::MoveForward(float AxisValue)
 {
-	if (bIsSprinting == true)
+	if (AxisValue == 1)
 	{
-		AddMovementInput(GetActorForwardVector()*AxisValue*2);
+		bIsMovingFwd = true;
 	}
-	else
+	if (AxisValue == -1)
 	{
-		AddMovementInput(GetActorForwardVector()*AxisValue);
+		bIsMovingBwd = true;
 	}
-		
+	if (AxisValue == 0)
+	{
+		bIsMovingFwd = false;
+		bIsMovingBwd = false;
+	}
+	AddMovementInput(GetActorForwardVector()*AxisValue);
 }
 
 void AProjectAlphaMainCharacter::MoveRight(float AxisValue)
 {
-	if (bIsSprinting == true)
+	if (AxisValue == 1)
 	{
-		AddMovementInput(-GetActorRightVector()*AxisValue*2);
+		bIsMovingLeft = true;
+	}
+	if (AxisValue == -1)
+	{
+		bIsMovingRight = true;
+	}
+	if (AxisValue == 0)
+	{
+		bIsMovingLeft = false;
+		bIsMovingRight = false;
+	}
+	if (bIsMovingFwd == true)
+	{
+		AddMovementInput(-GetActorRightVector()*AxisValue/2);
 	}
 	else
 	{
 		AddMovementInput(-GetActorRightVector()*AxisValue);
 	}
+	
 }
 
 void AProjectAlphaMainCharacter::LookUp(float AxisValue)
 {
-	AddControllerPitchInput(-AxisValue);
+	AddControllerPitchInput(-AxisValue/2);
 }
 
 void AProjectAlphaMainCharacter::LookRight(float AxisValue)
 {
-	AddControllerYawInput(AxisValue);
+	AddControllerYawInput(AxisValue/2);
 }
 
 void AProjectAlphaMainCharacter::GetFocusPoint()

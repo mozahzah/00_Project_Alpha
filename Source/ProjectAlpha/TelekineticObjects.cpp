@@ -7,7 +7,6 @@
 #include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "GameFramework/GameStateBase.h"
-#include "GameFramework/Pawn.h"
 
 ATelekineticObjects::ATelekineticObjects()
 {
@@ -31,15 +30,19 @@ void ATelekineticObjects::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
     auto MainPlayerLocation = Cast<AActor>(GetWorld()->GetFirstPlayerController()->GetPawn())->GetActorLocation();;
-    if (FVector::Dist(MainPlayerLocation, GetActorLocation()) < 1000)
+    if (FVector::Dist(MainPlayerLocation, GetActorLocation()) < 1000 && bIsLevitated == false)
         {
-         GetStaticMeshComponent()->SetRenderCustomDepth(true);
-         GetStaticMeshComponent()->SetCustomDepthStencilValue(1);
-         }
-         else
-         {
-          GetStaticMeshComponent()->SetRenderCustomDepth(false);
-         }
+            if (GetWorld()->GetTimeSeconds() - timer > 0.7)
+            {
+                GetStaticMeshComponent()->SetRenderCustomDepth(true);
+                GetStaticMeshComponent()->SetCustomDepthStencilValue(1);
+            }
+        }
+    else
+        {
+            GetStaticMeshComponent()->SetRenderCustomDepth(false);
+            timer = GetWorld()->GetTimeSeconds();
+        }
 }
 
 

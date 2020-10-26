@@ -114,6 +114,10 @@
 				"Linux",
 				"Mac"
 			]
+		},
+		{
+			"Name": "AnimDistanceMatching",
+			"Enabled": true
 		}
 	]
 }

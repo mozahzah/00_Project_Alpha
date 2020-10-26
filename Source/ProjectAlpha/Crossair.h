@@ -15,5 +15,8 @@ class PROJECTALPHA_API UCrossair : public UUserWidget
 	GENERATED_BODY()
 
 	bool Initialize();
-	void BeginPlay();
+	void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* Title;
 };

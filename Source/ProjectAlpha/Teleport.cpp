@@ -8,6 +8,7 @@
 #include "GameFramework/WorldSettings.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "Particles/ParticleSystemComponent.h"
 
 // Sets default values for this component's properties
@@ -38,15 +39,20 @@ void UTeleport::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 
 	if (bWeHaveTeleported) 
 	{
-		//Cast<ACharacter>(GetOwner())->GetController()->StopMovement();
-		Cast<ACharacter>(GetOwner())->GetMovementComponent()->StopMovementImmediately();
+		Cast<ACharacter>(GetOwner())->DisableInput(Cast<APlayerController>(Cast<ACharacter>(GetOwner())->GetController()));
+		
 		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (1 * 0.5))
 		{
 			Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(false);
-		}
-		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (2 * 0.5))
-		{
 			SpawnPlayer(TeleportDestination);
+			Cast<AProjectAlphaMainCharacter>(GetOwner())->AddControllerYawInput(-285 * DeltaTime);
+		}
+		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (1.5 * 0.5))
+		{
+			Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(true);
+			GetWorld()->GetWorldSettings()->SetTimeDilation(1);
+			bWeHaveTeleported = false;
+			Cast<ACharacter>(GetOwner())->EnableInput(Cast<APlayerController>(Cast<ACharacter>(GetOwner())->GetController()));
 		}
 	}
 
@@ -71,37 +77,34 @@ void UTeleport::SpawnPlayer(FVector Destination)
 {
 	if (!ensure(GetOwner())) return;	
 	GetOwner()->SetActorLocation(Destination);
-	GetWorld()->GetWorldSettings()->SetTimeDilation(1);
 	TeleportStartParticleSystem->Deactivate();
 	TeleportEndParticleSystem->Activate();
-	Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(true);
-	bWeHaveTeleported = false;
 	bTeleportIsActive = false;
 }
 
 
 void UTeleport::ActivateTeleport(FVector Destination)
 {
-	GEngine->AddOnScreenDebugMessage
+	/*GEngine->AddOnScreenDebugMessage
     (
         1,
         3.f,
         FColor::Green,
         TEXT("Teleport Active")
-    );
-	
+    );*/
+	return;
 	
 }
 
 void UTeleport::DeactivateTeleport()
 {
-	GEngine->AddOnScreenDebugMessage
+	/*GEngine->AddOnScreenDebugMessage
     (
         1,
         3.f,
         FColor::Green,
         TEXT("Teleport Inactive")
-    );
+    );*/
 	bTeleportIsActive = false;
 }
 

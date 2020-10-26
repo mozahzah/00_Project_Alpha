@@ -30,7 +30,7 @@ protected:
 	virtual void BeginPlay() override;
 	
 	void GetParticleSystem();
-	
+	float timer;
 	
 
 	
