@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{78598FC1-0FC0-497E-871D-59FC4C079AE7}" SchemaVersion="97" RootDocumentID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}">
+	<Switches>
+		<WorkUnit Name="MainPlayer" ID="{78598FC1-0FC0-497E-871D-59FC4C079AE7}" OwnerID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchGroup Name="Material" ID="{E72C5257-77A4-41FF-83F3-EDECABB6577D}">
+					<ChildrenList>
+						<Switch Name="Metal" ID="{6F67DACC-4F7E-421E-864B-76864F39BBDD}"/>
+						<Switch Name="Concrete" ID="{AF9A5C21-0842-476B-A1A8-6A492814B175}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -5,11 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Master" ID="{759BE17C-EAD1-4047-8EF6-C7F4A953DD31}">
 					<ObjectInclusionList>
-						<ObjectRef Name="LightSFX" ID="{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="FootStep" ID="{79A545A6-F6EC-4377-ACE6-524FBAF170FA}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Ambience" ID="{FC596E50-4716-43E1-B361-9367590A5DAA}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Telekinesis" ID="{B1C282CE-D395-4AAA-B69E-9A20DE3FD1C8}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="ItemDrop" ID="{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}" WorkUnitID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="FootStep" ID="{2372179C-C6C2-44B7-8F9E-746DFE9165E3}" WorkUnitID="{98377CA6-B13F-4350-92B8-1036AC755A91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="LightSFX" ID="{7CD0D308-C185-4D8C-AD0C-189AAE6C5B25}" WorkUnitID="{010AEEEB-4D13-461A-8458-49D5815E2BD3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Snap" ID="{93FE21DD-CC98-4EA7-91E6-0EB82E09EF19}" WorkUnitID="{98377CA6-B13F-4350-92B8-1036AC755A91}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

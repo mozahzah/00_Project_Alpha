@@ -13,9 +13,6 @@ AProjectAlphaEnemyCharacter::AProjectAlphaEnemyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	
-	
-
 }
 
 // Called when the game starts or when spawned
@@ -25,18 +22,17 @@ void AProjectAlphaEnemyCharacter::BeginPlay()
 	AkMainComponent = FindComponentByClass<UAkComponent>();
 	GetMesh()->SetRenderCustomDepth(true);
 	GetMesh()->SetCustomDepthStencilValue(2);
-	
 }
 
 // Called every frame
 void AProjectAlphaEnemyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (bIsDead == true) {
+	if (bIsDead == true)
+	{
 		GetController()->StopMovement();
 		SetActorEnableCollision(false);
 	}
-
 }
 
 
@@ -64,13 +60,10 @@ float AProjectAlphaEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent c
 	return DamageAmount;
 }
 
-
-void AProjectAlphaEnemyCharacter::OnFootStepEvent() {
-
-
-
+void AProjectAlphaEnemyCharacter::OnFootStepEvent()
+{
 	const FOnAkPostEventCallback PostEventCallback;
 	const FString EventName;
 	AkMainComponent->SetSwitch(CurrentSwitch, FString("Material"), SurfaceType);
-	auto PlayingId = AkMainComponent->PostAkEvent(FootStepEvent, 0, PostEventCallback, EventName);
+	AkMainComponent->PostAkEvent(FootStepEvent, 0, PostEventCallback, EventName);
 }

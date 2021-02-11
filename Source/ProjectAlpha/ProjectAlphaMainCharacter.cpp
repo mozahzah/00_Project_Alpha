@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 
 #include "ProjectAlphaMainCharacter.h"
 #include "AkComponent.h"
@@ -12,25 +10,21 @@
 #include "UObject/WeakObjectPtrTemplates.h"
 #include "CollisionShape.h"
 #include "AkGameObject.h"
-#include "Camera/PlayerCameraManager.h"
 #include "ProjectAlphaEnemyCharacter.h"
+#include "EnvironmentActor.h"
 #include "Engine/StaticMeshActor.h"
 #include "AkGameplayTypes.h"
 #include "AkAcousticPortal.h"
+#include "AkAudioEvent.h"
 #include "PreSmokeActor.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
-
+// MAIN CSTOR
 AProjectAlphaMainCharacter::AProjectAlphaMainCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	Health = 100;
-
-	
 }
-
-
-
 void AProjectAlphaMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -50,34 +44,7 @@ void AProjectAlphaMainCharacter::BeginPlay()
 	
 	AkMainComponent = FindComponentByClass<UAkComponent>();
 
-	
-	auto MainListener = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0)->FindComponentByClass<UAkComponent>();
-	if (MainListener) {
-		UE_LOG(LogTemp, Warning, TEXT("Listener Found, ID: %d"), MainListener->GetAkGameObjectID());
-	}
-	
-	MainListener->SetRTPCValue(nullptr, 0, 0, TEXT("LowPass"));
-
-	
-	
-	//AkGameObjectID MY_DEFAULT_LISTENER = CharacterAkGameObject->GetAkGameObjectID();
-
-	
-
-
-
-
-	//if (AK::SoundEngine::SetDefaultListeners(&MY_DEFAULT_LISTENER, 1) != AK_Success) 
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("Failed to Make Listner"));
-	//}
-	//else 
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("Success to  Make Listner"));
-	//}
-	
 }
-
 void AProjectAlphaMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -96,11 +63,9 @@ void AProjectAlphaMainCharacter::Tick(float DeltaTime)
 	{
 		GetCharacterMovement()->MaxAcceleration = 700;
 	}
-	
-
-	
 }
 
+// INPUT SETUP
 void AProjectAlphaMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -113,27 +78,17 @@ void AProjectAlphaMainCharacter::SetupPlayerInputComponent(UInputComponent* Play
 	PlayerInputComponent->BindAction(FName("Sprint"), EInputEvent::IE_Released, this, &AProjectAlphaMainCharacter::NotSprint);
 	PlayerInputComponent->BindAction(FName("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(FName("Snap"), EInputEvent::IE_Pressed, this, &AProjectAlphaMainCharacter::SnapFinger);
-	
 }
 
-void AProjectAlphaMainCharacter::SnapFinger() 
-{
-	const FOnAkPostEventCallback PostEventCallback;
-	const FString EventName;
-	PlayingId = AkMainComponent->PostAkEvent(FingerSnapEvent, 0, PostEventCallback, EventName);
-}
-
+// MOVEMENT
 void AProjectAlphaMainCharacter::Sprint()
 {
 	bIsSprinting = true;
 }
-
 void AProjectAlphaMainCharacter::NotSprint()
 {
 	bIsSprinting = false;
 }
-
-
 void AProjectAlphaMainCharacter::MoveForward(float AxisValue)
 {
 	if (AxisValue == 1)
@@ -151,7 +106,6 @@ void AProjectAlphaMainCharacter::MoveForward(float AxisValue)
 	}
 	AddMovementInput(GetActorForwardVector()*AxisValue);
 }
-
 void AProjectAlphaMainCharacter::MoveRight(float AxisValue)
 {
 	if (AxisValue == 1)
@@ -177,131 +131,117 @@ void AProjectAlphaMainCharacter::MoveRight(float AxisValue)
 	}
 	
 }
-
 void AProjectAlphaMainCharacter::LookUp(float AxisValue)
 {
 	AddControllerPitchInput(-AxisValue/2);
 }
-
 void AProjectAlphaMainCharacter::LookRight(float AxisValue)
 {
 	AddControllerYawInput(AxisValue/2);
 }
 
+// AUDIO
+void AProjectAlphaMainCharacter::OnFootStepEvent()
+{
+	const FOnAkPostEventCallback PostEventCallback;
+	const FString EventName;
+	AkMainComponent->SetSwitch(CurrentSwitch, FString("Material"), SurfaceType);
+	AkMainComponent->PostAkEvent(FootStepEvent, 0, PostEventCallback, EventName);
+}
+void AProjectAlphaMainCharacter::GetSurfaceMaterial()
+{
+	FHitResult Hit;
+	FCollisionQueryParams Params;
+	Params.bReturnPhysicalMaterial = true;
+	if(GetWorld()->LineTraceSingleByChannel(Hit, GetActorLocation()+GetViewRotation().Vector()*50, GetActorLocation()+GetViewRotation().Vector()+FVector(0,0,-1000), ECollisionChannel::ECC_Visibility, Params))
+	{
+		auto PhysicsMaterial = Hit.PhysMaterial->SurfaceType.GetValue();
+		
+		if (PhysicsMaterial == 2)
+		{
+			SurfaceType = FString("Metal");
+		}
+		else if(PhysicsMaterial == 1)
+		{
+			SurfaceType = FString("Concrete");
+		}
+	}
+	else
+	{
+		SurfaceType = FString("Concrete");
+	}           
+}
 void AProjectAlphaMainCharacter::GetFocusPoint()
 {
 	FVector ViewpointLocation;
 	FRotator ViewpointRotation;
 	GetController()->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
-
-	
-
 	//DrawDebugSphere(GetWorld(), GetActorLocation(), 3000,40, FColor::Blue, false, 0,0,5);
-
-	
-		
-
 	TArray<FHitResult> OutHits;
 	const auto Rotation = FQuat::Identity;
 	const FCollisionObjectQueryParams ObjectType = FCollisionObjectQueryParams::AllObjects;
 	const auto CollisionShape = FCollisionShape::MakeSphere(3000);
 	const FCollisionQueryParams ExtraParams; //FCollisionQueryParams(FName(TEXT("")), false, GetOwner());
 
-	
+	// SPHERE CAST	
 	GetWorld()->SweepMultiByObjectType(OutHits, GetActorLocation(), GetActorLocation(),
 		Rotation, ObjectType, CollisionShape, ExtraParams);
 	
-		for (auto &Hit : OutHits)
+	for (auto &Hit : OutHits)
+	{
+		// PROCESSING AUDIO ACOUSTIC PORTAL
+		if (Cast<AAkAcousticPortal>(Hit.GetActor()))
 		{
-			
-			if (Cast<AAkAcousticPortal>(Hit.GetActor()))
+			auto AcousticPortal = Cast<AAkAcousticPortal>(Hit.GetActor());
+			DrawDebugLine(GetWorld(), GetActorLocation() + FVector(0,0,-90), AcousticPortal->GetActorLocation() + FVector(0,0,-500), FColor::Red, false, 0, 0, 1);
+			auto DoorToActor = GetActorLocation() + FVector(0,0,-90) - AcousticPortal->GetActorLocation() + FVector(0,0,-500);
+			auto Dot = FVector::DotProduct(DoorToActor.GetSafeNormal(), FVector(0,1,0));
+			float DeltaAngle = FMath::RadiansToDegrees(FMath::Acos(FVector::DotProduct(DoorToActor.GetSafeNormal(),FVector(1,0,0))));
+			const UAkRtpc* RTPCValue = nullptr;
+			if (Dot <= 0)
 			{
-				
-				auto AcousticPortal = Cast<AAkAcousticPortal>(Hit.GetActor());
-				DrawDebugLine(GetWorld(), GetActorLocation(), AcousticPortal->GetActorLocation(), FColor::Red, false, 0, 0, 1);
-
-				auto DoorToActor = GetActorLocation() - AcousticPortal->GetActorLocation();
-				auto DoorToCenter = FVector(0,-600,-300);
-
-				
-				float DeltaAngle = FMath::RadiansToDegrees(FMath::Acos(FVector::DotProduct(DoorToActor.GetSafeNormal(), DoorToCenter.GetSafeNormal())));
-				float Distance = FVector::Dist(GetActorLocation(), AcousticPortal->GetActorLocation() + FVector(0,0,-300));
-				
-				//UE_LOG(LogTemp, Warning, TEXT("Angle: %f"), DeltaAngle);
-				//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
-				//UE_LOG(LogTemp, Warning, TEXT("Portal State: %d"), AcousticPortal->GetCurrentState());
-
-				if (Distance > 100) 
-				{
-					if (DeltaAngle < 53)
-					{
-						AcousticPortal->OpenPortal();
-					}
-					if (DeltaAngle > 53)
-					{
-						AcousticPortal->CurrentState = 0;
-						if (AcousticPortal->CurrentState == 0)
-						{
-							FAkAudioDevice* Dev = FAkAudioDevice::Get();
-							if (Dev != nullptr)
-							{
-								Dev->SetSpatialAudioPortal(AcousticPortal);
-							}
-						}
-					}
-				}
-				else 
-				{
-					return;
-				}
-				
-
-
+				AkMainComponent->SetRTPCValue(RTPCValue, DeltaAngle, 0, "AngleAtDoor");
 			}
-		
-			
-			if (Cast<AProjectAlphaEnemyCharacter>(Hit.GetActor())) 
+			else
 			{
-
-
-				ApplyOcclusionAndObstruction(Hit);
-
-				
-
-				auto ActorsDistance = FVector::Distance(ViewpointLocation,
-					Hit.GetActor()->GetActorLocation());
-
-				auto EndDistance = FVector::Distance(ViewpointLocation + ViewpointRotation.Vector() * ActorsDistance, Hit.GetActor()->GetActorLocation());
-				auto DRatio = EndDistance / ActorsDistance;
-				float Delta = DRatio * 70;
-
-
-				if (auto AudioComponent = Hit.GetActor()->FindComponentByClass<UAkComponent>())
+				AkMainComponent->SetRTPCValue(RTPCValue, 90, 0, "AngleAtDoor");
+			}	
+		}
+		// PROCESSING WORLD ACTORS FOCALITY
+		if (Cast<AEnvironmentActor>(Hit.GetActor()) || Cast<AProjectAlphaEnemyCharacter>(Hit.GetActor())) 
+		{
+			//ApplyOcclusionAndObstruction(Hit);
+			auto ActorsDistance = FVector::Distance(ViewpointLocation, Hit.GetActor()->GetActorLocation());
+			auto EndDistance = FVector::Distance(ViewpointLocation + ViewpointRotation.Vector() * ActorsDistance, Hit.GetActor()->GetActorLocation());
+			auto DRatio = EndDistance / ActorsDistance;
+			UE_LOG(LogTemp, Warning, TEXT("%s"), *Hit.GetActor()->GetName());
+            UE_LOG(LogTemp, Warning, TEXT("%f"), ActorsDistance);
+            const UAkRtpc* RTPCValue = nullptr;
+			if (auto AudioComponent = Hit.GetActor()->FindComponentByClass<UAkComponent>())
+			{
+				if (ActorsDistance >= 1000)
 				{
-					//if (bRVAPisOn == false) return;
-					//UE_LOG(LogTemp, Warning, TEXT("%s"), *Hit.GetActor()->GetName());
-					//UE_LOG(LogTemp, Warning, TEXT("%f"), Delta);
-					const UAkRtpc* RTPCValue = nullptr;
-
-					//AudioComponent->SetOutputBusVolume(2);
-					// if Actor Distance < 500 AudioComponent->Lowpass to 30
-
-					//if (Delta > 40) {
-						//AudioComponent->SetRTPCValue(RTPCValue, Delta, 0, TEXT("LowPass"));
-
-					//}
-
+					AudioComponent->SetRTPCValue(RTPCValue, DRatio, 0, TEXT("LowPass"));
 				}
+				else
+				{
+					AudioComponent->SetRTPCValue(RTPCValue, 0, 0, TEXT("LowPass"));
+				}
+				
 			}
 		}
+	}
 }
-
-
+void AProjectAlphaMainCharacter::SnapFinger() 
+{
+	const FOnAkPostEventCallback PostEventCallback;
+	const FString EventName;
+	AkMainComponent->PostAkEvent(SnapEvent, 0, PostEventCallback, EventName);
+	UE_LOG(LogTemp, Warning, TEXT("Posted Event: %s"), *EventName);
+}
 void AProjectAlphaMainCharacter::ApplyOcclusionAndObstruction(FHitResult Hit) 
 {
 	DrawDebugLine(GetWorld(), GetActorLocation(), Hit.GetActor()->GetActorLocation(), FColor::Red, false, 0, 0, 1);
-
-
 
 	// Raycast to 
 	FHitResult WallHit;
@@ -356,39 +296,7 @@ void AProjectAlphaMainCharacter::ApplyOcclusionAndObstruction(FHitResult Hit)
 
 }
 
-void AProjectAlphaMainCharacter::GetSurfaceMaterial()
-{
-	FHitResult Hit;
-	FCollisionQueryParams Params;
-	Params.bReturnPhysicalMaterial = true;
-	if(GetWorld()->LineTraceSingleByChannel(Hit, GetActorLocation()+GetViewRotation().Vector()*50, GetActorLocation()+GetViewRotation().Vector()+FVector(0,0,-1000), ECollisionChannel::ECC_Visibility, Params))
-	{
-		auto PhysicsMaterial = Hit.PhysMaterial->SurfaceType.GetValue();
-		
-		if (PhysicsMaterial == 2)
-		{
-			SurfaceType = FString("Metal");
-		}
-		else if(PhysicsMaterial == 1)
-		{
-			SurfaceType = FString("Concrete");
-		}
-	}
-	else
-	{
-		SurfaceType = FString("Concrete");
-	}           
-}
-
-void AProjectAlphaMainCharacter::OnFootStepEvent()
-{
-	const FOnAkPostEventCallback PostEventCallback;
-	const FString EventName;
-	AkMainComponent->SetSwitch(CurrentSwitch, FString("Material"), SurfaceType);
-	PlayingId = AkMainComponent->PostAkEvent(FootStepEvent, 0, PostEventCallback, EventName);
-}
-
-
+//LATER
 float AProjectAlphaMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
@@ -406,8 +314,6 @@ float AProjectAlphaMainCharacter::TakeDamage(float DamageAmount, FDamageEvent co
 	}
 	return DamageAmount;
 }
-
-
 TSubclassOf<APreSmokeActor> AProjectAlphaMainCharacter::GetPreSmoke()
 {
 	return PreSmokeBlueprint;

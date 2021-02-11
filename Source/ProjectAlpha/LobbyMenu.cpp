@@ -2,6 +2,7 @@
 
 
 #include "LobbyMenu.h"
+#include <string>
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 
@@ -12,7 +13,6 @@ bool ULobbyMenu::Initialize()
 
     Play->OnClicked.AddDynamic(this ,&ULobbyMenu::LoadLevel);
     Quit->OnClicked.AddDynamic(this, &ULobbyMenu::ExitGame);
-    
     return true;
 }
 
@@ -20,6 +20,8 @@ void ULobbyMenu::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
     Super::NativeTick(MyGeometry, InDeltaTime);
     Title->SetOpacity(FMath::Clamp(FMath::Abs(FMath::Sin(GetWorld()->GetTimeSeconds())), 0.3f, 1.f));
+    
+   TimerBlock->SetText(FText::FromString(FDateTime().Now().ToString()));
     
 }
 

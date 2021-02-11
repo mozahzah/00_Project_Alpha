@@ -10,20 +10,10 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AuxBus Name="BigVerb" ID="{120C655E-07E8-4EE4-877D-CA9C10CCC01B}">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Hall_Large_Dark" ID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-							</ReferenceList>
-						</AuxBus>
-						<AuxBus Name="Concrete" ID="{F2A21CC9-2571-45DD-A803-262235E2F5F8}">
+						<Bus Name="Music" ID="{FCBA2689-7292-41EB-A025-F9725C88220E}"/>
+						<Bus Name="MainPlayer" ID="{B1C00607-EB6B-4146-8339-9BDD4CCCD0F9}"/>
+						<Bus Name="Environment" ID="{1DBA1C48-74DF-4BA0-8B86-A0326952E95E}"/>
+						<AuxBus Name="RoomVerb" ID="{BFA27B8F-057F-441B-B2DE-F8F91C9C90CA}">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="CenterPercentage" Type="int32">
@@ -31,138 +21,19 @@
 										<Value>0</Value>
 									</ValueList>
 								</Property>
-								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Light" ID="{67F471F5-BB1D-4D74-B53C-04C268D4CFEA}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
-								</Reference>
-								<Reference Name="Effect0" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
-									<ObjectRef Name="My_Concrete_EQ" ID="{34CE160A-7E25-443E-A382-4440A31272F5}" WorkUnitID="{463E07D4-61C0-4FA4-B5BC-EE99CE2A8B46}"/>
-								</Reference>
-							</ReferenceList>
-							<PositioningInfo>
-								<Panner Name="" ID="{F3CD7731-8962-43A3-B0C8-7BC7A6E69226}"/>
-							</PositioningInfo>
-						</AuxBus>
-						<AuxBus Name="SmallVerb" ID="{1C94F864-0A7D-4922-82E0-45B504B4146D}">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="CenterPercentage" Type="int32">
-									<ValueList>
-										<Value>0</Value>
-									</ValueList>
-								</Property>
-								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="70"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="RoomAttenuation" ID="{261B384F-6EA9-4152-A81D-1EFBD0D6BB73}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
+									<ObjectRef Name="Room" ID="{ECCDA180-C155-4A21-A73C-AE9059FC6872}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
 								</Reference>
 								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-									<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 							<PositioningInfo>
-								<Panner Name="" ID="{A382AB6B-F3C7-4350-AB4F-FD94AA735DE9}"/>
-							</PositioningInfo>
-						</AuxBus>
-						<AuxBus Name="ReflectTest" ID="{78B95B2A-9BE5-4D6B-BF51-A1353A744BAE}">
-							<PropertyList>
-								<Property Name="BusChannelConfig" Type="int32">
-									<ValueList>
-										<Value>16641</Value>
-									</ValueList>
-								</Property>
-								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<Custom>
-										<Attenuation Name="Attenuation (Custom)" ID="{390123BB-E542-49A1-8DB0-BDCE7F7C1F3A}" ShortID="939143093">
-											<CurveUsageInfoList>
-												<VolumeDryUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{41D52071-A234-485A-8DE6-95013EBE585B}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="3"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</VolumeDryUsage>
-												<VolumeWetGameUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetGameUsage>
-												<VolumeWetUserUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetUserUsage>
-												<LowPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</LowPassFilterUsage>
-												<HighPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</HighPassFilterUsage>
-												<SpreadUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</SpreadUsage>
-												<FocusUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</FocusUsage>
-											</CurveUsageInfoList>
-										</Attenuation>
-									</Custom>
-								</Reference>
-							</ReferenceList>
-						</AuxBus>
-						<AuxBus Name="Glass" ID="{A3FB0749-A4F8-4F62-A97E-DA3D1F38E396}">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
-								<Property Name="CenterPercentage" Type="int32">
-									<ValueList>
-										<Value>0</Value>
-									</ValueList>
-								</Property>
-								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Light" ID="{67F471F5-BB1D-4D74-B53C-04C268D4CFEA}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
-								</Reference>
-								<Reference Name="Effect0" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
-									<ObjectRef Name="My_Glass_EQ" ID="{8DA70B06-A100-47F0-8BED-F60D9F69FE67}" WorkUnitID="{463E07D4-61C0-4FA4-B5BC-EE99CE2A8B46}"/>
-								</Reference>
-							</ReferenceList>
-							<PositioningInfo>
-								<Panner Name="" ID="{5EB3F161-D495-4EA6-ACC5-0BC9BE2BF260}"/>
+								<Panner Name="" ID="{7CA2737E-1347-4C1C-A628-63170879324A}"/>
 							</PositioningInfo>
 						</AuxBus>
 					</ChildrenList>

@@ -54,7 +54,7 @@ void AProjectAlphaAIController::Tick(float DeltaSeconds)
     
    // if (CurrentAIState == EAIState::Petrolling)
    // {
-        PetrolArea();
+       PetrolArea();
        
    // }
     

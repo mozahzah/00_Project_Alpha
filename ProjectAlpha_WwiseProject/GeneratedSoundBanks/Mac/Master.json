@@ -5,46 +5,31 @@
   "SchemaVersion": "12",
   "SoundbankVersion": "135",
   "RootPaths": {
-   "ProjectRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
-   "SourceFilesRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Mac\\",
-   "SoundBanksRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac\\",
+   "ProjectRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
+   "SourceFilesRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Mac\\",
+   "SoundBanksRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac\\",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "D:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac"
+   "ExternalSourcesOutputRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac"
   },
   "SoundBanks": [
    {
     "Id": "4056684167",
     "GUID": "{759BE17C-EAD1-4047-8EF6-C7F4A953DD31}",
     "Language": "SFX",
-    "Hash": "1297619287",
+    "Hash": "1582525304",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
     "ShortName": "Master",
     "Path": "Master.bnk",
     "IncludedEvents": [
      {
-      "Id": "85412153",
-      "Name": "Ambience",
-      "ObjectPath": "\\Events\\Default Work Unit\\Ambience",
-      "GUID": "{FC596E50-4716-43E1-B361-9367590A5DAA}",
-      "DurationType": "Infinite",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "583869673",
-        "Language": "SFX",
-        "ShortName": "ProjectAlphaAudio_SFX_Background.wav",
-        "Path": "SFX\\ProjectAlphaAudio_SFX_Background_D79FB2B7.wem"
-       }
-      ]
-     },
-     {
       "Id": "1866025847",
       "Name": "FootStep",
-      "ObjectPath": "\\Events\\Default Work Unit\\FootStep",
-      "GUID": "{79A545A6-F6EC-4377-ACE6-524FBAF170FA}",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainPlayer\\FootStep",
+      "GUID": "{2372179C-C6C2-44B7-8F9E-746DFE9165E3}",
       "MaxAttenuation": "3000.000000",
       "DurationType": "OneShot",
-      "DurationMin": "0.215813",
-      "DurationMax": "1.447677",
+      "DurationMin": "0.192267",
+      "DurationMax": "1.533761",
       "IncludedMemoryFiles": [
        {
         "Id": "56716675",
@@ -119,99 +104,61 @@
         "Path": "SFX\\ESM_Builder_Game_Footstep_Walk_Stone_5_10C4C929.wem"
        }
       ],
-      "DefaultSwitchValue": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}",
+      "DefaultSwitchValue": "{AF9A5C21-0842-476B-A1A8-6A492814B175}",
       "SwitchContainers": [
        {
-        "SwitchValue": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}",
+        "SwitchValue": "{AF9A5C21-0842-476B-A1A8-6A492814B175}",
         "Media": [
          {
-          "Id": "775423440"
+          "Id": "248974480"
          },
          {
           "Id": "636159382"
          },
          {
-          "Id": "248974480"
+          "Id": "653846415"
+         },
+         {
+          "Id": "775423440"
          },
          {
           "Id": "965223685"
          },
          {
           "Id": "1042562609"
-         },
-         {
-          "Id": "653846415"
          }
         ]
        },
        {
-        "SwitchValue": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}",
+        "SwitchValue": "{6F67DACC-4F7E-421E-864B-76864F39BBDD}",
         "Media": [
          {
-          "Id": "636893504"
-         },
-         {
-          "Id": "1001190631"
+          "Id": "56716675"
          },
          {
           "Id": "484107945"
          },
          {
-          "Id": "56716675"
+          "Id": "636893504"
+         },
+         {
+          "Id": "710239269"
          },
          {
           "Id": "752986300"
          },
          {
-          "Id": "710239269"
+          "Id": "1001190631"
          }
         ]
-       }
-      ],
-      "AuxBusSends": [
-       {
-        "Id": "841620460",
-        "Name": "Concrete",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Concrete",
-        "GUID": "{F2A21CC9-2571-45DD-A803-262235E2F5F8}"
-       },
-       {
-        "Id": "2449969375",
-        "Name": "Glass",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Glass",
-        "GUID": "{A3FB0749-A4F8-4F62-A97E-DA3D1F38E396}"
-       },
-       {
-        "Id": "3733859656",
-        "Name": "ReflectTest",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\ReflectTest",
-        "GUID": "{78B95B2A-9BE5-4D6B-BF51-A1353A744BAE}"
-       }
-      ]
-     },
-     {
-      "Id": "3684409175",
-      "Name": "ItemDrop",
-      "ObjectPath": "\\Events\\Default Work Unit\\ItemDrop",
-      "GUID": "{A60F42AC-5D31-4FF4-9F06-313E260EDD6E}",
-      "MaxAttenuation": "10000.000000",
-      "DurationType": "OneShot",
-      "DurationMin": "0.259063",
-      "DurationMax": "0.259063",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "985774628",
-        "Language": "SFX",
-        "ShortName": "www.fesliyanstudios.com.wav",
-        "Path": "SFX\\www.fesliyanstudios.com_78E655E8.wem"
        }
       ]
      },
      {
       "Id": "3797766864",
       "Name": "LightSFX",
-      "ObjectPath": "\\Events\\Default Work Unit\\LightSFX",
-      "GUID": "{64E3B0B1-6CC8-4065-8634-6CBB572DEDAD}",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\LightSFX",
+      "GUID": "{7CD0D308-C185-4D8C-AD0C-189AAE6C5B25}",
       "MaxAttenuation": "3000.000000",
       "DurationType": "Infinite",
       "IncludedMemoryFiles": [
@@ -224,71 +171,55 @@
       ]
      },
      {
-      "Id": "4167017725",
-      "Name": "Telekinesis",
-      "ObjectPath": "\\Events\\Default Work Unit\\Telekinesis",
-      "GUID": "{B1C282CE-D395-4AAA-B69E-9A20DE3FD1C8}",
-      "DurationType": "Infinite",
+      "Id": "1022785501",
+      "Name": "Snap",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainPlayer\\Snap",
+      "GUID": "{93FE21DD-CC98-4EA7-91E6-0EB82E09EF19}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.201370",
+      "DurationMax": "0.201370",
       "IncludedMemoryFiles": [
        {
-        "Id": "99457708",
+        "Id": "326819284",
         "Language": "SFX",
-        "ShortName": "ProjectAlphaAudio_Telekinesis_Impact.wav",
-        "Path": "SFX\\ProjectAlphaAudio_Telekinesis_Impact_10C4C929.wem"
-       },
-       {
-        "Id": "903583296",
-        "Language": "SFX",
-        "ShortName": "ProjectAlphaAudio_Telekinesis_Loop.wav",
-        "Path": "SFX\\ProjectAlphaAudio_Telekinesis_Loop_D79FB2B7.wem"
+        "ShortName": "Finger Snap Sound Effect.wav",
+        "Path": "SFX\\Finger Snap Sound Effect_BDCE1256.wem"
        }
       ]
      }
     ],
     "GameParameters": [
      {
-      "Id": "630539344",
-      "Name": "Dry",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Dry",
-      "GUID": "{E34131DC-1E72-414B-B649-D7B48F01158C}"
-     },
-     {
-      "Id": "841620460",
-      "Name": "Concrete",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Concrete",
-      "GUID": "{99324B23-9678-473C-9C2A-A06D5749CF2C}"
-     },
-     {
       "Id": "1685747766",
       "Name": "LowPass",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\LowPass",
-      "GUID": "{3D32F5FB-4DD6-4CC9-8DD9-54CCCDD677E9}"
+      "GUID": "{5207759D-B96C-450D-B2A0-4107FB2DB6AA}"
      },
      {
-      "Id": "2449969375",
-      "Name": "Glass",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Glass",
-      "GUID": "{D929DB94-45FA-48E7-89EB-10E6F239DE64}"
+      "Id": "4053556705",
+      "Name": "AngleAtDoor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\AngleAtDoor",
+      "GUID": "{DD51276D-1775-45FA-9C14-EFF5CA9E3578}"
      }
     ],
     "SwitchGroups": [
      {
       "Id": "3865314626",
       "Name": "Material",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\MainPlayer\\Material",
       "GUID": "{E72C5257-77A4-41FF-83F3-EDECABB6577D}",
       "Switches": [
        {
-        "Id": "841620460",
-        "Name": "Concrete",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Concrete",
-        "GUID": "{6150F2C0-DF89-4AAC-B12B-314BACD96048}"
-       },
-       {
         "Id": "2473969246",
         "Name": "Metal",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Metal",
-        "GUID": "{245439A6-9234-43BB-BBC2-C8902BD66BBC}"
+        "ObjectPath": "\\Switches\\Default Work Unit\\MainPlayer\\Material\\Metal",
+        "GUID": "{6F67DACC-4F7E-421E-864B-76864F39BBDD}"
+       },
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MainPlayer\\Material\\Concrete",
+        "GUID": "{AF9A5C21-0842-476B-A1A8-6A492814B175}"
        }
       ]
      }

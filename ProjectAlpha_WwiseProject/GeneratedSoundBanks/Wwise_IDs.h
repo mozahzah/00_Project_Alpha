@@ -13,11 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
-        static const AkUniqueID ITEMDROP = 3684409175U;
         static const AkUniqueID LIGHTSFX = 3797766864U;
-        static const AkUniqueID TELEKINESIS = 4167017725U;
+        static const AkUniqueID SNAP = 1022785501U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -37,11 +35,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID CONCRETE = 841620460U;
-        static const AkUniqueID DISTANCE = 1240670792U;
-        static const AkUniqueID DRY = 630539344U;
-        static const AkUniqueID FOOTSTEPLOWPASS = 1874504844U;
-        static const AkUniqueID GLASS = 2449969375U;
+        static const AkUniqueID ANGLEATDOOR = 4053556705U;
         static const AkUniqueID LOWPASS = 1685747766U;
     } // namespace GAME_PARAMETERS
 
@@ -53,16 +47,15 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
+        static const AkUniqueID MAINPLAYER = 859342445U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID BIGVERB = 2314286194U;
-        static const AkUniqueID CONCRETE = 841620460U;
-        static const AkUniqueID GLASS = 2449969375U;
-        static const AkUniqueID REFLECTTEST = 3733859656U;
-        static const AkUniqueID SMALLVERB = 117523933U;
+        static const AkUniqueID ROOMVERB = 1572913279U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

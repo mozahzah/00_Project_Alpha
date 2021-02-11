@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" SchemaVersion="97" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
+	<AudioObjects>
+		<WorkUnit Name="Environment" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" OwnerID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="EnvironmentSFX" ID="{775E89D8-FE93-4ECF-A9DB-F3D668C04FD4}" ShortID="725645629">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{44D2474D-69AB-41BC-8217-9E1A452FC212}" ShortID="865762904">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="LowPass" ID="{5207759D-B96C-450D-B2A0-4107FB2DB6AA}" WorkUnitID="{718270F0-495C-4142-9FE2-E770CF986392}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{79F1455C-E351-4039-AF19-CEFD3A0AF088}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>35</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>2</XPos>
+												<YPos>45</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Light" ID="{67F471F5-BB1D-4D74-B53C-04C268D4CFEA}" WorkUnitID="{2B9B6DB0-5504-4830-A322-70BD70CFF34E}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Environment" ID="{1DBA1C48-74DF-4BA0-8B86-A0326952E95E}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="LightSFX" ID="{AE4EA97C-D817-469F-B5BA-060607B71895}" ShortID="631041995">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Light02" ID="{93470642-CE51-484C-98D6-B15A7AB12162}">
+									<Language>SFX</Language>
+									<AudioFile>Light02.WAV</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1013597397"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Light02" ID="{93470642-CE51-484C-98D6-B15A7AB12162}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{BF52DFF6-3B3F-495A-86AC-C11AFB950291}"/>
+					</PositioningInfo>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

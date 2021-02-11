@@ -7,94 +7,112 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="10dfac6a-62d6-49b0-b8f9-de388fb36d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_MainPanelWall.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_PhaseModel.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion_with_Walk.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Walk.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Grid_Highlight.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Grid_Highlight_Inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Highlight.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/FadeIn.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Maps/MainMenuGameMode.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/BP_TextActor.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-BoldExtended.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-BoldExtended_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-LightCondensed.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-LightCondensed_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-Regular.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/ApexMk2-Regular_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/2ca7c4219b6a0b7e11e7813426f9ef3c.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/Glitch.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop_Video.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/MOUSE_BLACK.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/MOUSE_WHITE.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SettingsLogo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/divider-36054.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainMenuMusic.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.h" afterDir="false" />
+    <list default="true" id="cb9beae9-e043-44e7-8e00-7d7516ba43e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/VCR_OSD_MONO_1_001.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Font/VCR_OSD_MONO_1_001_Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitch.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitchVideo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitch_Video.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircleMedia.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircleMedia_Video.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitch.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitchVideo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitch_Video.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/VHS.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/VHS_Video.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/pngfind_com-video-play-button-png-472280.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/videoplayback__8_.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/.idea.ProjectAlpha.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/StickySelectionHighlights.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_EnvironmentActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_EnvironmentActor.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BS_Locomotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHigh.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHigh.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GridHighlight.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MT_Highlight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MT_Highlight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/SandBox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SandBox.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/BP_TextActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BP_TextActor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Crossair.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/divider-36054.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Master.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Master.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Ambience.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FootStep.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/ItemDrop.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/LightSFX.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainMenuMusic.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Telekinesis.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Concrete.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Distance.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Dry.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/FootStepLowPass.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Glass.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/LowPass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/LowPass.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectAlpha.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/BigVerb.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Bus.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Concrete.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Glass.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/ReflectTest.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/Material/Material-Concrete.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/Material/Material-Metal.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Acoustic_Banner.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Anechoic.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Brick.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Carpet.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Concrete.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Cork_Tiles.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Curtains.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Drywall.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Fabric.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Mountain.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Tile.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood_Bright.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood_Deep.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Game Parameters/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Game Parameters/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Master-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Master-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.wproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.wproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Factory Reflect Acoustic Textures.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Factory Reflect Acoustic Textures.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,179 +123,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkQueryParameters.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Editor/FoliageEdit/Private/SFoliagePalette.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CoverSpot.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Public/PrimitiveSceneProxy.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Editor/ClassViewer/Private/ClassViewerNode.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/UMG/Public/Blueprint/UserWidget.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkGameObject.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Public/CollisionQueryParams.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/SkeletalMeshSocket.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Animation/AnimInstance.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkGameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Private/UObject/Obj.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameMode.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/NavMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/InputComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Classes/AkAudioEvent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Logging/LogMacros.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Classes/AkGameplayStatics.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BlackboardComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Controller.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CoverSpot.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/PhysicsEngine/PhysicsHandleComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Private/AIController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/Plugin/AkAACFactory.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Particles/ParticleSystemComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/GameFramework/SpringArmComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.Build.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/UMG/Private/UserWidget.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/MovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Weapon.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/InputCore/Classes/InputCoreTypes.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Particles/ParticleComponents.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/PhysicsCore/Public/CollisionShape.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Templates/PointerIsConvertibleFromTo.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Math/TransformVectorized.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/DrawDebugHelpers.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AudiokineticTools/AudiokineticTools.Build.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Math/Rotator.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/WorldSettings.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/MovieSceneTracks/Public/Sections/MovieScene3DPathSection.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Classes/AkComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/IOS/IOSPlatformCompilerSetup.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Weapon.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/AIController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha.Target.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/SkinnedMeshComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlphaEditor.Target.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/PhysicsEngine/PhysicsHandleComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Editor/ViewportInteraction/ViewportInteractorData.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/winioctl.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Editor/StaticMeshEditor/Private/StaticMeshEditorViewportClient.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Math/Quat.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameMode.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/winnt.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkAudioType.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Renderer/Public/MeshPassProcessor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Streaming/StreamingTexture.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/AudioComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkTypes.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Teleport.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Windows/WIndowsPlatform.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkSoundEngine.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Classes/AkSwitchValue.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Editor/WorldBrowser/Private/StreamingLevels/StreamingLevelModel.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/PhysicsCore/Public/PhysicsInterfaceDeclaresCore.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Core/Public/Logging/LogMacros.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekenesis.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekenesis.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/MyStaticMeshActor.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CharacterPlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CharacterPlayerController.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/EAbility.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/EAbility.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/bullet.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/bullet.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Weapon.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Weapon.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.Build.cs" />
-        <option value="C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameMode.cpp" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.h" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" />
-        <option value="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.cpp" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Public/AkAudioDevice.h" />
+      <option value="$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkGameObject.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" />
+    </changedPaths>
   </component>
-  <component name="ProjectId" id="1degNVJ01bMmUlLYFdKuVCfZUHc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1kyoQou0YNCMdaTtBXmjMcF3byB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -285,14 +144,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.49241602" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.7359736" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.ProjectAlpha">
@@ -610,201 +465,18 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="10dfac6a-62d6-49b0-b8f9-de388fb36d8c" name="Default Changelist" comment="" />
-      <created>1594054800434</created>
+      <changelist id="cb9beae9-e043-44e7-8e00-7d7516ba43e6" name="Default Changelist" comment="" />
+      <created>1606682182891</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594054800434</updated>
-      <workItem from="1594054812462" duration="151000" />
-      <workItem from="1594055144989" duration="30000" />
-      <workItem from="1594055221160" duration="145000" />
-      <workItem from="1594055392781" duration="64000" />
-      <workItem from="1594083767681" duration="423000" />
-      <workItem from="1594084478661" duration="1393000" />
-      <workItem from="1594091351487" duration="4082000" />
-      <workItem from="1594144318809" duration="4285000" />
-      <workItem from="1594165114861" duration="11356000" />
-      <workItem from="1594180518960" duration="5977000" />
-      <workItem from="1594221426279" duration="3758000" />
-      <workItem from="1594244055208" duration="7541000" />
-      <workItem from="1594309682484" duration="1291000" />
-      <workItem from="1594405631314" duration="1929000" />
-      <workItem from="1594412860708" duration="1469000" />
-      <workItem from="1594484563515" duration="3453000" />
-      <workItem from="1594510400482" duration="13443000" />
-      <workItem from="1594561126072" duration="9332000" />
-      <workItem from="1594589289999" duration="7016000" />
-      <workItem from="1594601712473" duration="1369000" />
-      <workItem from="1594603224970" duration="160000" />
-      <workItem from="1594605116524" duration="4002000" />
-      <workItem from="1594609383969" duration="1446000" />
-      <workItem from="1594653379874" duration="12836000" />
-      <workItem from="1594697970765" duration="40000" />
-      <workItem from="1594740040102" duration="2859000" />
-      <workItem from="1594749899951" duration="4217000" />
-      <workItem from="1594782957544" duration="875000" />
-      <workItem from="1594783957492" duration="625000" />
-      <workItem from="1594825865439" duration="2845000" />
-      <workItem from="1594854580026" duration="1080000" />
-      <workItem from="1594859020975" duration="1512000" />
-      <workItem from="1594926294903" duration="1707000" />
-      <workItem from="1595118670596" duration="87000" />
-      <workItem from="1595211564294" duration="101000" />
-      <workItem from="1595213648987" duration="1016000" />
-      <workItem from="1595215375503" duration="160000" />
-      <workItem from="1595264175989" duration="833000" />
-      <workItem from="1595291343426" duration="6598000" />
-      <workItem from="1595301356388" duration="5022000" />
-      <workItem from="1595342251123" duration="350000" />
-      <workItem from="1595384830881" duration="3318000" />
-      <workItem from="1595391003485" duration="425000" />
-      <workItem from="1595391511531" duration="296000" />
-      <workItem from="1595391828052" duration="2146000" />
-      <workItem from="1595429983526" duration="671000" />
-      <workItem from="1595448078195" duration="1575000" />
-      <workItem from="1595449715101" duration="76000" />
-      <workItem from="1595558003711" duration="1482000" />
-      <workItem from="1595633234079" duration="5556000" />
-      <workItem from="1595977604482" duration="1184000" />
-      <workItem from="1595989190643" duration="500000" />
-      <workItem from="1596159793341" duration="3535000" />
-      <workItem from="1596339663537" duration="746000" />
-      <workItem from="1596410092588" duration="2329000" />
-      <workItem from="1597102007224" duration="5783000" />
-      <workItem from="1597245283556" duration="1736000" />
-      <workItem from="1597445828100" duration="6931000" />
-      <workItem from="1597453092910" duration="608000" />
-      <workItem from="1597454372823" duration="32000" />
-      <workItem from="1597454443270" duration="1520000" />
-      <workItem from="1597457176377" duration="948000" />
-      <workItem from="1597459003869" duration="13000" />
-      <workItem from="1597460593326" duration="134000" />
-      <workItem from="1599079264710" duration="860000" />
-      <workItem from="1601137537326" duration="641000" />
-      <workItem from="1601138210568" duration="353000" />
-      <workItem from="1601139076619" duration="1546000" />
-      <workItem from="1601168984066" duration="538000" />
-      <workItem from="1601421627386" duration="2431000" />
-      <workItem from="1601611579542" duration="12000" />
-      <workItem from="1601612108969" duration="124000" />
-      <workItem from="1602643935836" duration="584000" />
-      <workItem from="1602645708036" duration="108000" />
-      <workItem from="1602657021599" duration="106000" />
-      <workItem from="1602657240390" duration="728000" />
-      <workItem from="1602658056650" duration="1341000" />
-      <workItem from="1602705852751" duration="2380000" />
-      <workItem from="1602708293133" duration="147000" />
-      <workItem from="1602731292329" duration="175000" />
-      <workItem from="1603058751839" duration="362000" />
-      <workItem from="1603059182928" duration="7995000" />
-      <workItem from="1603067242816" duration="4035000" />
-      <workItem from="1603089245704" duration="1231000" />
-      <workItem from="1603144459966" duration="2244000" />
-      <workItem from="1603151055777" duration="1061000" />
-      <workItem from="1603152164223" duration="559000" />
-      <workItem from="1603152754494" duration="1330000" />
-      <workItem from="1603154140023" duration="347000" />
-      <workItem from="1603154527081" duration="659000" />
-      <workItem from="1603160252372" duration="217000" />
-      <workItem from="1603160522936" duration="900000" />
-      <workItem from="1603163667688" duration="675000" />
-      <workItem from="1603249931422" duration="178000" />
-      <workItem from="1603250328543" duration="10926000" />
-      <workItem from="1603296821924" duration="4491000" />
-      <workItem from="1603326031832" duration="169000" />
-      <workItem from="1603326239721" duration="5866000" />
-      <workItem from="1603408692241" duration="13586000" />
-      <workItem from="1603466234989" duration="1358000" />
-      <workItem from="1603472831157" duration="711000" />
-      <workItem from="1603580698605" duration="7459000" />
-      <workItem from="1603659140975" duration="1148000" />
-      <workItem from="1603661792890" duration="1340000" />
-      <workItem from="1603684685717" duration="660000" />
-      <workItem from="1603686873024" duration="920000" />
+      <updated>1606682182891</updated>
+      <workItem from="1606682196579" duration="1349000" />
+      <workItem from="1611504311898" duration="749000" />
+      <workItem from="1612994106087" duration="16145000" />
+      <workItem from="1613014920134" duration="2125000" />
     </task>
-    <task id="LOCAL-00001" summary="AI INTRO">
-      <created>1594175273611</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1594175273611</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update 2">
-      <created>1595391880230</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1595391880230</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update 2">
-      <created>1595392131285</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1595392131285</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update 2">
-      <created>1595392292068</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1595392292068</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update 2">
-      <created>1595392515216</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1595392515216</updated>
-    </task>
-    <task id="LOCAL-00006" summary="gitignore">
-      <created>1602657515979</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1602657515979</updated>
-    </task>
-    <task id="LOCAL-00007" summary="gitignore">
-      <created>1602657790224</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1602657790224</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Pre-Demo">
-      <created>1602659386032</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1602659386032</updated>
-    </task>
-    <task id="LOCAL-00009" summary="changelist">
-      <created>1602707941478</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1602707941478</updated>
-    </task>
-    <task id="LOCAL-00010" summary="changelist2">
-      <created>1602708039844</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1602708039844</updated>
-    </task>
-    <task id="LOCAL-00011" summary="gitignore">
-      <created>1602708089479</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1602708089479</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,154 +484,11 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="BEK_SORT_TYPE" value="1" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="init" />
-    <MESSAGE value="init 2" />
-    <MESSAGE value="Before Major Refractoring" />
-    <MESSAGE value="Telekinesis Done 99%" />
-    <MESSAGE value="PRE TELEPORT" />
-    <MESSAGE value="AI INTRO" />
-    <MESSAGE value="Update" />
-    <MESSAGE value="update 2" />
-    <MESSAGE value="Pre-Demo" />
-    <MESSAGE value="changelist" />
-    <MESSAGE value="changelist2" />
-    <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="757" y="309" key="#Web_Browsers" timestamp="1603059081049">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="757" y="309" key="#Web_Browsers/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603059081049" />
-    <state width="426" height="464" key="DebuggerActiveHint" timestamp="1594752590691">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="426" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1594752590691" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1594757628392">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628392" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1594757628392">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628392" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1594757628392">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628392" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1594757628392">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628392" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1594757628394">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628394" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1594757628393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594757628393" />
-    <state x="684" y="230" key="RollbackChangesDialog" timestamp="1602658679621">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="684" y="230" key="RollbackChangesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602658679621" />
-    <state x="0" y="206" width="1454" height="710" key="SettingsEditor" timestamp="1602706222427">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1080" y="-135" width="864" height="1022" key="SettingsEditor/0.0.1920.1040/-1080.-465.864.1496@-1080.-465.864.1496" timestamp="1595449098573" />
-    <state x="0" y="206" width="1454" height="710" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602706222427" />
-    <state x="807" y="433" key="VCS.ChangelistChooser" timestamp="1602708016614">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602708016614" />
-    <state x="846" y="434" key="VCS.EditChangelistDialog" timestamp="1602659378183">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="846" y="434" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602659378183" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597452206005">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1597452206005" />
-    <state x="791" y="141" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1595392226496">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="791" y="141" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1595392226496" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1595637409212">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1595637409212" />
-    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1603257569195">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1080.-465.864.1496@0.0.1920.1040" timestamp="1596159818876" />
-    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603257569195" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

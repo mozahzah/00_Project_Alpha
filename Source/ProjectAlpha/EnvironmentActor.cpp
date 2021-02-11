@@ -19,7 +19,7 @@ void AEnvironmentActor::BeginPlay()
 	const FOnAkPostEventCallback PostEventCallback;
 	const FString EventName;
 	AkMainComponent = FindComponentByClass<UAkComponent>();
-	auto PlayingId = AkMainComponent->PostAkEvent(LightSfxEvent, 0, PostEventCallback, EventName);
+	AkMainComponent->PostAkEvent(LightSfxEvent, 0, PostEventCallback, EventName);
 }
 
 // Called every frame

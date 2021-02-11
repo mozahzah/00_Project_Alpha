@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="97" WwiseVersion="v2019.2.6" WwiseBuild="7381">
+<WwiseDocument Type="Project" SchemaVersion="97" WwiseVersion="v2019.2.9" WwiseBuild="7459">
 	<ProjectInfo>
 		<Project Name="ProjectAlpha_WwiseProject" ID="{F3B808EC-FA1F-463C-850F-327463CBD72F}">
 			<Platforms>
@@ -31,8 +31,8 @@
 				<Property Name="GenerateSoundBankXML" Type="bool" Value="False"/>
 				<Property Name="GlobalVoiceInstancesLimit" Type="int16">
 					<ValueList>
-						<Value Platform="Windows">256</Value>
-						<Value Platform="Mac">256</Value>
+						<Value Platform="Windows">64</Value>
+						<Value Platform="Mac">64</Value>
 					</ValueList>
 				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjkzMTUiIG1hc2s9IlhTSUI1OTcyIiBlbmM9IjAiPjxsaWNl bnNlIGlkPSIxIiBuYW1lPSJXd2lzZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIxMCIg ZXhwaXJlcz0iMjAyMS0wNi0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjIxIiBuYW1lPSJN YWludGVuYW5jZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIxMCIgZXhwaXJlcz0iMjAy MS0wNi0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjIyIiBuYW1lPSJMZXZlbCBBIExpY2Vu c2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMTAiIGV4cGlyZXM9IjIwMjEtMDYtMDEi ICAvPjxsaWNlbnNlIGlkPSI2MyIgbmFtZT0iTWFzdGVyaW5nIFN1aXRlIiB0eXBl PSIxIiBwbGF0Zm9ybXM9IjEwIiBleHBpcmVzPSIyMDIwLTEyLTA1IiAgLz48cGx1 Z2luIGlkPSIxMjE4OTY5OSIgbmFtZT0iTWFzdGVyaW5nIFN1aXRlIiBsaWNlbnNl PSI2MyIgLz48L3Byb2plY3Q+|pmmMUtmHYaI1jzIG/feHkabZp/SQFglATeFV1n7 1JFxWsqFqX5N5saxvZZ65SfZWQnqSv9H65oxiCeMGTXs8jhFE0acoMAkxEdDha4g QclLgSAldHLVL5QaMLMsZd2TC955DISvF57HIBrpHBH+otoPG4gFJ1L93aB9uEFl Dd3orZrwi3HUJK/gUwKZLnX905ZfaaBjQZR5r+sq7ES/+29A8cM981SrF8QA7d37 28qjMJfP6G4oVQSWeZ12M4wxpEE05afU+1UH4BJS+xpolK7NuiKQUql/ov3NqXN/ duEkNdr6aWqHYh8wI2uI4vo/ByZH+b++Oe3f+biG2poNonw== "/>
@@ -73,8 +73,8 @@
 				</Property>
 				<Property Name="VolumeThreshold" Type="Real64">
 					<ValueList>
-						<Value Platform="Windows">-80</Value>
-						<Value Platform="Mac">-80</Value>
+						<Value Platform="Windows">-70</Value>
+						<Value Platform="Mac">-70</Value>
 					</ValueList>
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2019.2|Build=7304|VersionName=v2019.2.3|Config=Release"/>
@@ -8054,7 +8054,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="McDSP ML1" PluginType="3" CompanyID="256" PluginID="103">
+				<SharedPropertyList ClassName="" PluginType="3" CompanyID="256" PluginID="103">
 					<PropertyList>
 						<Property Name="Ceiling" Type="Real32">
 							<ValueList>
@@ -8413,7 +8413,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="McDSP FutzBox" PluginType="3" CompanyID="256" PluginID="110">
+				<SharedPropertyList ClassName="" PluginType="3" CompanyID="256" PluginID="110">
 					<PropertyList>
 						<Property Name="Balance" Type="Real32">
 							<ValueList>

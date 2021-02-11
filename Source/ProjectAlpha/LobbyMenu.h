@@ -21,7 +21,11 @@ class PROJECTALPHA_API ULobbyMenu : public UUserWidget
 	class UTextBlock* Title;
 	UPROPERTY(meta = (BindWidget))
 	class UButton* Play;
+	
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* TimerBlock;
 
+	
 	UPROPERTY(meta = (BindWidget))
 	class UButton* Quit;
 
