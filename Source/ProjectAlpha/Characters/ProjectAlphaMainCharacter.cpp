@@ -233,7 +233,7 @@ void AProjectAlphaMainCharacter::GetFocusPoint()
 			const auto ActorsDistance = FVector::Distance(ViewpointLocation, Hit.GetActor()->GetActorLocation());
 			const auto EndDistance = FVector::Distance(ViewpointLocation + ViewpointRotation.Vector() * ActorsDistance, Hit.GetActor()->GetActorLocation());
 			const auto DRatio = EndDistance / ActorsDistance;
-            const UAkRtpc* RtpcValue = nullptr;
+			const UAkRtpc* RtpcValue = nullptr;
 			if (auto AudioComponent = Hit.GetActor()->FindComponentByClass<UAkComponent>())
 			{
 				if (ActorsDistance <= 1000 && FMath::Abs(Hit.GetActor()->GetActorLocation().Z - GetActorLocation().Z) < 200)

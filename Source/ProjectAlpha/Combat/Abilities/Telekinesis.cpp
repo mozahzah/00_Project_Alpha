@@ -62,10 +62,10 @@ void UTelekinesis::ActivateTelekinesis()
 bool UTelekinesis::RayCastObjects()
 {
 	TArray<struct FHitResult> HitResults;
-    const auto Rotation = GetOwner()->GetActorRotation().Quaternion();
+	const auto Rotation = GetOwner()->GetActorRotation().Quaternion();
 	const ECollisionChannel TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-    const auto CollisionShape = FCollisionShape::MakeSphere(Radius);
-    const FCollisionQueryParams ExtraParams = FCollisionQueryParams(FName(TEXT("")), false, GetOwner());
+	const auto CollisionShape = FCollisionShape::MakeSphere(Radius);
+	const FCollisionQueryParams ExtraParams = FCollisionQueryParams(FName(TEXT("")), false, GetOwner());
 	
     GetWorld()->SweepMultiByChannel(HitResults,CharacterLocation ,CharacterLocation, Rotation, TraceChannel, CollisionShape, ExtraParams);
 	if (HitResults.Num() == 0) return false;
