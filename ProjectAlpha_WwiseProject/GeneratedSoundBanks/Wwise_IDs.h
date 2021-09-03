@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID LIGHTSFX = 3797766864U;
+        static const AkUniqueID S = 84696428U;
         static const AkUniqueID SNAP = 1022785501U;
     } // namespace EVENTS
 
@@ -36,13 +37,14 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ANGLEATDOOR = 4053556705U;
+        static const AkUniqueID DISTANCERATIO = 2605925465U;
         static const AkUniqueID LOWPASS = 1685747766U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MAIN = 3161908922U;
     } // namespace BANKS
 
     namespace BUSSES
@@ -55,6 +57,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID REFLECT = 243379636U;
         static const AkUniqueID ROOMVERB = 1572913279U;
     } // namespace AUX_BUSSES
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{89865108-FC0E-4F2F-AA2F-AF161AA4A590}" SchemaVersion="97" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
+<WwiseDocument Type="WorkUnit" ID="{89865108-FC0E-4F2F-AA2F-AF161AA4A590}" SchemaVersion="103" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" ParentDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
 	<AudioObjects>
 		<WorkUnit Name="Enemy" ID="{89865108-FC0E-4F2F-AA2F-AF161AA4A590}" OwnerID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" PersistMode="Nested">
 			<ChildrenList>
@@ -24,17 +24,17 @@
 												<XPos>0</XPos>
 												<YPos>0</YPos>
 												<Flags>5</Flags>
-												<SegmentShape>Log3</SegmentShape>
+												<SegmentShape>InvertedSCurve</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>1</XPos>
-												<YPos>35</YPos>
+												<YPos>30</YPos>
 												<Flags>0</Flags>
 												<SegmentShape>Log1</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>2</XPos>
-												<YPos>45</YPos>
+												<YPos>35</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -100,6 +100,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -131,6 +136,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_1" ID="{23D93C0D-A795-405D-8356-C2E1C825994F}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -153,6 +159,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_2" ID="{9E093F74-6DC0-4C80-8E96-2F8C61B54B4C}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -175,6 +182,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_3" ID="{4C30E2AF-00CC-4842-9495-15D993FC9371}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -197,6 +205,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_4" ID="{DC267715-4EC6-4527-9AE8-1C6DC69ADFCE}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -219,6 +228,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_5" ID="{E87BC41C-720B-4889-BA30-F77DA0400153}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -241,15 +251,25 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_Builder_Game_Footstep_Walk_Stone_6" ID="{A4F53A02-6CE1-4818-822E-723621E0A1BE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists/>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Metal" ID="{492005C6-A4A1-447E-ABBD-3D8DD0494C3F}" ShortID="393182795">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>300</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{9DA0F08F-6440-4899-BF34-881FD91BC65B}">
@@ -264,7 +284,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -295,6 +315,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_1" ID="{C98E7938-02CB-45FE-9BEB-201C978910D9}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -317,6 +338,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_2" ID="{4CD914FC-89A6-473B-92C8-46C5AB91C37D}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -339,6 +361,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_3" ID="{62CC3DB5-915E-4614-AD7D-97F301D9926D}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -361,6 +384,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_5" ID="{D488EC0F-28D5-4514-BCD7-489A1CB37B3B}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -383,6 +407,7 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_6" ID="{16C3021E-48E6-47B8-B110-5C4E03EF081D}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -405,16 +430,19 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="ESM_War_UI_Source_Hitting_Jagged_Sheet_Metal_With_Hand_8" ID="{F7DF90EC-0580-4416-9FB6-454A8ABB4A04}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists/>
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<PositioningInfo>
 						<Panner Name="" ID="{BBD6F7FE-ADF2-48BF-AB6E-3D972BCDFA6A}"/>
 					</PositioningInfo>
+					<ObjectLists/>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>

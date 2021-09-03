@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{98377CA6-B13F-4350-92B8-1036AC755A91}" SchemaVersion="97" RootDocumentID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}">
+<WwiseDocument Type="WorkUnit" ID="{98377CA6-B13F-4350-92B8-1036AC755A91}" SchemaVersion="103" RootDocumentID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" ParentDocumentID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}">
 	<Events>
 		<WorkUnit Name="MainPlayer" ID="{98377CA6-B13F-4350-92B8-1036AC755A91}" OwnerID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" PersistMode="Nested">
 			<ChildrenList>
@@ -20,6 +20,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="EnemyFootStep" ID="{C9D5A189-5EA2-4DB6-8310-EB52E636AECE}" WorkUnitID="{89865108-FC0E-4F2F-AA2F-AF161AA4A590}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="S" ID="{6EC84D15-224F-4B01-A21E-229151C0F9CB}">
+					<ChildrenList>
+						<Action Name="" ID="{4BAD04A0-D28B-4F24-96DE-D5B980FECBDE}" ShortID="937955408">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SnapSFX_01" ID="{16F38363-5935-4336-B226-408768C61B90}" WorkUnitID="{0155FFD5-DABF-407C-A2B7-CC472A6D0028}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

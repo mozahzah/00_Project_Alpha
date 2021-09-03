@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{463E07D4-61C0-4FA4-B5BC-EE99CE2A8B46}" SchemaVersion="97">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{463E07D4-61C0-4FA4-B5BC-EE99CE2A8B46}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="MyCustomEffects" ID="{1DD16708-AE89-476F-A2B4-E64A386224BC}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

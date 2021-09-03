@@ -1,0 +1,21 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2688591989	New_Acoustic_Texture			\Factory Reflect Acoustic Textures\Textures\New_Acoustic_Texture	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	859342445	MainPlayer			\Default Work Unit\Master Audio Bus\MainPlayer	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\Environment	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	243379636	Reflect			\Default Work Unit\Master Audio Bus\Reflect	
+	1572913279	RoomVerb			\Default Work Unit\Master Audio Bus\RoomVerb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	602546716	Room_Large	Wwise RoomVerb			
+	2545004126	Wwise_Reflect	Wwise Reflect			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

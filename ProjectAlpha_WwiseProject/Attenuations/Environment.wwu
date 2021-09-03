@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{2B9B6DB0-5504-4830-A322-70BD70CFF34E}" SchemaVersion="97" RootDocumentID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}">
+<WwiseDocument Type="WorkUnit" ID="{2B9B6DB0-5504-4830-A322-70BD70CFF34E}" SchemaVersion="103" RootDocumentID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}" ParentDocumentID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}">
 	<Attenuations>
 		<WorkUnit Name="Environment" ID="{2B9B6DB0-5504-4830-A322-70BD70CFF34E}" OwnerID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}" PersistMode="Nested">
 			<ChildrenList>
@@ -34,13 +34,13 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1101</XPos>
-											<YPos>-13</YPos>
+											<XPos>1070.07216</XPos>
+											<YPos>-200</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>1561.5</XPos>
-											<YPos>-18</YPos>
+											<XPos>1546.03608</XPos>
+											<YPos>-200</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>

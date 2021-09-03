@@ -2,10 +2,10 @@
 
 
 #include "ProjectAlphaGameInstance.h"
-#include "Crossair.h"
-#include "MainMenu.h"
-#include "InGameMenu.h"
-#include "LobbyMenu.h"
+#include "ProjectAlpha/UI/Crossair.h"
+#include "ProjectAlpha/UI/MainMenu.h"
+#include "ProjectAlpha/UI/InGameMenu.h"
+#include "ProjectAlpha/UI/LobbyMenu.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Blueprint/UserWidget.h"
 

@@ -1,0 +1,40 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "12",
+  "SoundbankVersion": "140",
+  "RootPaths": {
+   "ProjectRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
+   "SourceFilesRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Windows\\",
+   "SoundBanksRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\Content\\WwiseAudio\\SoundBanks\\Windows\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Windows"
+  },
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "4004168494",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "IncludedAuxBusses": [
+     {
+      "Id": "243379636",
+      "Name": "Reflect",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reflect",
+      "GUID": "{B5F34C9A-C13B-437B-8472-80EE4471E6E6}"
+     },
+     {
+      "Id": "1572913279",
+      "Name": "RoomVerb",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RoomVerb",
+      "GUID": "{BFA27B8F-057F-441B-B2DE-F8F91C9C90CA}"
+     }
+    ]
+   }
+  ]
+ }
+}

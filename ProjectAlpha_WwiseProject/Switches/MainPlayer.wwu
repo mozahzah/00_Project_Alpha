@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{78598FC1-0FC0-497E-871D-59FC4C079AE7}" SchemaVersion="97" RootDocumentID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}">
+<WwiseDocument Type="WorkUnit" ID="{78598FC1-0FC0-497E-871D-59FC4C079AE7}" SchemaVersion="103" RootDocumentID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}" ParentDocumentID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}">
 	<Switches>
 		<WorkUnit Name="MainPlayer" ID="{78598FC1-0FC0-497E-871D-59FC4C079AE7}" OwnerID="{FADF8AED-FBCD-4CD8-AD3E-F9CB628210B7}" PersistMode="Nested">
 			<ChildrenList>

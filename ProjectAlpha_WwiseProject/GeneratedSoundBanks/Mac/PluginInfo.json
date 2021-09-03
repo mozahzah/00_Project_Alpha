@@ -7,17 +7,22 @@
    {
     "Name": "Wwise RoomVerb",
     "ID": "7733251",
-    "DLL": "AkRoomVerb"
+    "DLL": "AkRoomVerb",
+    "StaticLib": "AkRoomVerbFX"
+   },
+   {
+    "Name": "Wwise Time Stretch",
+    "ID": "8519683",
+    "DLL": "AkTimeStretch",
+    "StaticLib": "AkTimeStretchFX"
    },
    {
     "Name": "System",
-    "ID": "11403271",
-    "DLL": "DefaultSink"
+    "ID": "11403271"
    },
    {
     "Name": "No Output",
-    "ID": "11862023",
-    "DLL": "DefaultSink"
+    "ID": "11862023"
    }
   ]
  }

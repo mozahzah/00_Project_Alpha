@@ -118,6 +118,10 @@
 		{
 			"Name": "AnimDistanceMatching",
 			"Enabled": true
+		},
+		{
+			"Name": "HDRIBackdrop",
+			"Enabled": true
 		}
 	]
 }

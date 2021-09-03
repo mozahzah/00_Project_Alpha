@@ -44024,53 +44024,57 @@
       <e p="README.md" t="Include" />
       <e p="Source" t="Include">
         <e p="ProjectAlpha" t="Include">
-          <e p="CombatComponent.cpp" t="Include" />
-          <e p="CombatComponent.h" t="Include" />
-          <e p="CoverSpot.cpp" t="Include" />
-          <e p="CoverSpot.h" t="Include" />
-          <e p="CoverSpotActor.cpp" t="Include" />
-          <e p="CoverSpotActor.h" t="Include" />
-          <e p="Crossair.cpp" t="Include" />
-          <e p="Crossair.h" t="Include" />
-          <e p="EnvironmentActor.cpp" t="Include" />
-          <e p="EnvironmentActor.h" t="Include" />
-          <e p="InGameMenu.cpp" t="Include" />
-          <e p="InGameMenu.h" t="Include" />
-          <e p="LobbyMenu.cpp" t="Include" />
-          <e p="LobbyMenu.h" t="Include" />
-          <e p="MainMenu.cpp" t="Include" />
-          <e p="MainMenu.h" t="Include" />
-          <e p="OcclusionManager.cpp" t="Include" />
-          <e p="OcclusionManager.h" t="Include" />
-          <e p="PreSmokeActor.cpp" t="Include" />
-          <e p="PreSmokeActor.h" t="Include" />
+          <e p="Characters" t="Include">
+            <e p="ProjectAlphaAIController.cpp" t="Include" />
+            <e p="ProjectAlphaAIController.h" t="Include" />
+            <e p="ProjectAlphaEnemyCharacter.cpp" t="Include" />
+            <e p="ProjectAlphaEnemyCharacter.h" t="Include" />
+            <e p="ProjectAlphaMainCharacter.cpp" t="Include" />
+            <e p="ProjectAlphaMainCharacter.h" t="Include" />
+          </e>
+          <e p="Combat" t="Include">
+            <e p="Abilities" t="Include">
+              <e p="SmokeScreen.cpp" t="Include" />
+              <e p="SmokeScreen.h" t="Include" />
+              <e p="Telekinesis.cpp" t="Include" />
+              <e p="Telekinesis.h" t="Include" />
+              <e p="Teleport.cpp" t="Include" />
+              <e p="Teleport.h" t="Include" />
+              <e p="Weapon.cpp" t="Include" />
+              <e p="Weapon.h" t="Include" />
+            </e>
+            <e p="CombatComponent.cpp" t="Include" />
+            <e p="CombatComponent.h" t="Include" />
+          </e>
+          <e p="OtherActors" t="Include">
+            <e p="EnvironmentActor.cpp" t="Include" />
+            <e p="EnvironmentActor.h" t="Include" />
+            <e p="PreSmokeActor.cpp" t="Include" />
+            <e p="PreSmokeActor.h" t="Include" />
+            <e p="SmokeScreenActor.cpp" t="Include" />
+            <e p="SmokeScreenActor.h" t="Include" />
+            <e p="TelekineticObjects.cpp" t="Include" />
+            <e p="TelekineticObjects.h" t="Include" />
+          </e>
           <e p="ProjectAlpha.Build.cs" t="Include" />
           <e p="ProjectAlpha.cpp" t="Include" />
           <e p="ProjectAlpha.h" t="Include" />
-          <e p="ProjectAlphaAIController.cpp" t="Include" />
-          <e p="ProjectAlphaAIController.h" t="Include" />
-          <e p="ProjectAlphaEnemyCharacter.cpp" t="Include" />
-          <e p="ProjectAlphaEnemyCharacter.h" t="Include" />
           <e p="ProjectAlphaGameInstance.cpp" t="Include" />
           <e p="ProjectAlphaGameInstance.h" t="Include" />
           <e p="ProjectAlphaGameMode.cpp" t="Include" />
           <e p="ProjectAlphaGameMode.h" t="Include" />
-          <e p="ProjectAlphaMainCharacter.cpp" t="Include" />
-          <e p="ProjectAlphaMainCharacter.h" t="Include" />
-          <e p="SmokeScreen.cpp" t="Include" />
-          <e p="SmokeScreen.h" t="Include" />
-          <e p="SmokeScreenActor.cpp" t="Include" />
-          <e p="SmokeScreenActor.h" t="Include" />
-          <e p="Telekinesis.cpp" t="Include" />
-          <e p="Telekinesis.h" t="Include" />
-          <e p="TelekineticObjects.cpp" t="Include" />
-          <e p="TelekineticObjects.h" t="Include" />
-          <e p="Teleport.cpp" t="Include" />
-          <e p="Teleport.h" t="Include" />
-          <e p="TextActor.cpp" t="Include" />
-          <e p="TextActor.h" t="Include" />
-          <e p="Weapon.cpp" t="Include" />
-          <e p="Weapon.h" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Crossair.cpp" t="Include" />
+            <e p="Crossair.h" t="Include" />
+            <e p="InGameMenu.cpp" t="Include" />
+            <e p="InGameMenu.h" t="Include" />
+            <e p="LobbyMenu.cpp" t="Include" />
+            <e p="LobbyMenu.h" t="Include" />
+            <e p="MainMenu.cpp" t="Include" />
+            <e p="MainMenu.h" t="Include" />
+            <e p="TextActor.cpp" t="Include" />
+            <e p="TextActor.h" t="Include" />
+          </e>
         </e>
         <e p="ProjectAlpha.Target.cs" t="Include" />
         <e p="ProjectAlphaEditor.Target.cs" t="Include" />

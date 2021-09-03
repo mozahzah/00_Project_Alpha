@@ -16,7 +16,7 @@
     "Id": "4056684167",
     "GUID": "{759BE17C-EAD1-4047-8EF6-C7F4A953DD31}",
     "Language": "SFX",
-    "Hash": "1582525304",
+    "Hash": "3696722897",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
     "ShortName": "Master",
     "Path": "Master.bnk",
@@ -29,7 +29,7 @@
       "MaxAttenuation": "3000.000000",
       "DurationType": "OneShot",
       "DurationMin": "0.192267",
-      "DurationMax": "1.533761",
+      "DurationMax": "1.289734",
       "IncludedMemoryFiles": [
        {
         "Id": "56716675",

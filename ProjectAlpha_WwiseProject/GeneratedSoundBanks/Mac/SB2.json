@@ -1,0 +1,53 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "12",
+  "SoundbankVersion": "140",
+  "RootPaths": {
+   "ProjectRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\",
+   "SourceFilesRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\.cache\\Mac\\",
+   "SoundBanksRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac\\",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "E:\\REPOS\\UE_REPOS\\00-ProjectAlpha\\ProjectAlpha\\ProjectAlpha_WwiseProject\\GeneratedSoundBanks\\Mac"
+  },
+  "SoundBanks": [
+   {
+    "Id": "460350368",
+    "GUID": "{CBE408EF-2520-40E2-A4FE-7AFF47D3422B}",
+    "Language": "SFX",
+    "Hash": "3503724635",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB2",
+    "ShortName": "SB2",
+    "Path": "SB2.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "84696428",
+      "Name": "S",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainPlayer\\S",
+      "GUID": "{6EC84D15-224F-4B01-A21E-229151C0F9CB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.170205",
+      "DurationMax": "0.170205",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "474749295",
+        "Language": "SFX",
+        "ShortName": "Finger Snap Sound Effect.wav",
+        "Path": "SFX\\Finger Snap Sound Effect_195D8120.wem"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "4053556705",
+      "Name": "AngleAtDoor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\AngleAtDoor",
+      "GUID": "{DD51276D-1775-45FA-9C14-EFF5CA9E3578}"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}" SchemaVersion="97">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{C2C421C9-A6A7-44D2-B6AF-5502C471C363}" WorkUnitID="{4EC82D3E-CE00-45D5-B07D-5A395EEDC7C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music" ID="{FCBA2689-7292-41EB-A025-F9725C88220E}"/>
+						<Bus Name="MainPlayer" ID="{B1C00607-EB6B-4146-8339-9BDD4CCCD0F9}"/>
+						<Bus Name="Environment" ID="{1DBA1C48-74DF-4BA0-8B86-A0326952E95E}"/>
+						<AuxBus Name="RoomVerb" ID="{BFA27B8F-057F-441B-B2DE-F8F91C9C90CA}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>0</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Room" ID="{ECCDA180-C155-4A21-A73C-AE9059FC6872}" WorkUnitID="{38DFAE13-CDE6-4D79-B056-28CEC2296213}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7CA2737E-1347-4C1C-A628-63170879324A}"/>
+							</PositioningInfo>
+						</AuxBus>
+						<AuxBus Name="Reflect" ID="{B5F34C9A-C13B-437B-8472-80EE4471E6E6}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-96</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
+									<ObjectRef Name="Wwise_Reflect" ID="{37779A87-4754-4420-8175-3236FA46AA12}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
+								</Reference>
+							</ReferenceList>
+							<PositioningInfo>
+								<Panner Name="" ID="{3759C22A-16D6-4762-B1E6-69286D78B35E}"/>
+							</PositioningInfo>
+						</AuxBus>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

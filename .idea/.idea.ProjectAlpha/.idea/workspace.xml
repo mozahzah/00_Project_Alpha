@@ -9,110 +9,121 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb9beae9-e043-44e7-8e00-7d7516ba43e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/VCR_OSD_MONO_1_001.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Font/VCR_OSD_MONO_1_001_Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitch.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitchVideo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/AllGlitch_Video.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircle.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircleMedia.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchCircleMedia_Video.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitch.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitchVideo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/LineGlitch_Video.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/VHS.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/VHS_Video.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/pngfind_com-video-play-button-png-472280.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Images/videoplayback__8_.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/.idea.ProjectAlpha.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/StickySelectionHighlights.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectAlpha/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BP_ProjectAlphaAICharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_EnvironmentActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_EnvironmentActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_MainPanelWall.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Environment/BP_MainPanelWall.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/ABP_Phase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/MainCharacter/BP_ProjectAlphaMainCharacterModel.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BluePrints/Utilities/BP_TelekineticObjects.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Cinematics/Telekinesis.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Color.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_Color.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GlassLike.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ColorAndMaterials/MT_GlassLike.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/SandBox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SandBox.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Master.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Master.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Master.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_Crossair.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_InGameMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_LobbyMenu.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/BluePrints/WBP_MainMenu.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Images/GlitchLoop.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Ambience.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FingerSnap.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/FootStep.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/ItemDrop.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/LightSFX.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainMenuMusic.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/SpeechTest.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Telekinesis.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Concrete.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Distance.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Dry.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/FootStepLowPass.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/Glass.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Environment/LightSFX.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/Environment/LightSFX.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainPlayer/FootStep.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainPlayer/FootStep.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainPlayer/Snap.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Events/Default_Work_Unit/MainPlayer/Snap.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/AngleAtDoor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/AngleAtDoor.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/LowPass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Game_Parameters/Default_Work_Unit/LowPass.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/InitBank.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/BigVerb.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Bus.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Concrete.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/Glass.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/ReflectTest.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/SmallVerb.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/Material/Material-Concrete.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/Material/Material-Metal.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Acoustic_Banner.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Anechoic.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Brick.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Carpet.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Concrete.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Cork_Tiles.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Curtains.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Drywall.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Fabric.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Mountain.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Tile.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood_Bright.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Virtual_Acoustics/Factory_Reflect_Acoustic_Textures/Textures/Wood_Deep.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/RoomVerb.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Master-Mixer_Hierarchy/Default_Work_Unit/Master_Audio_Bus/RoomVerb.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/MainPlayer/Material/Material-Concrete.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/MainPlayer/Material/Material-Concrete.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/MainPlayer/Material/Material-Metal.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WwiseAudio/Switches/Default_Work_Unit/MainPlayer/Material/Material-Metal.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Enemy.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Enemy.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Environment.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/Environment.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/MainPlayer.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Actor-Mixer Hierarchy/MainPlayer.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Environment.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Attenuations/Environment.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Audio Devices/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Audio Devices/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Control Surface Sessions/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Control Surface Sessions/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Conversion Settings/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Conversion Settings/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Conversion Settings/Factory Conversion Settings.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Conversion Settings/Factory Conversion Settings.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Dynamic Dialogue/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Dynamic Dialogue/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Factory Effects.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Factory Effects.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Factory Reflect.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/Factory Reflect.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/MyCustomEffects.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Effects/MyCustomEffects.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Environment.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/Environment.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/MainPlayer.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Events/MainPlayer.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Game Parameters/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Game Parameters/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.bnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/Master.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Interactive Music Hierarchy/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Master-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Master-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Mixing Sessions/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Mixing Sessions/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Modulators/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Modulators/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Factory Reflect.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Factory Reflect.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Factory Spatial Audio.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Presets/Factory Spatial Audio.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.Mohammad.wsettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.wproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/ProjectAlpha_WwiseProject.wproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Queries/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Queries/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Queries/Factory Queries.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Queries/Factory Queries.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Soundcaster Sessions/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Soundcaster Sessions/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/States/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/States/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/MainPlayer.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Switches/MainPlayer.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Triggers/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Triggers/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Default Work Unit.wwu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Factory Reflect Acoustic Textures.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAlpha_WwiseProject/Virtual Acoustics/Factory Reflect Acoustic Textures.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/CombatComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CombatComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/CombatComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpot.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpot.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/CoverSpotActor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/Crossair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Crossair.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/Crossair.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/EnvironmentActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/EnvironmentActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/InGameMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/InGameMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/InGameMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/LobbyMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/LobbyMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/LobbyMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/MainMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/MainMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/OcclusionManager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/OcclusionManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/PreSmokeActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/PreSmokeActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/PreSmokeActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaEnemyCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaEnemyCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaMainCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaMainCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/SmokeScreen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreen.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/SmokeScreen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/SmokeScreenActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/SmokeScreenActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/SmokeScreenActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Telekinesis.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Telekinesis.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/TelekineticObjects.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/TelekineticObjects.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Teleport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Teleport.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Teleport.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/TextActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/TextActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/UI/TextActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Weapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectAlpha/Weapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Weapon.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +134,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/InputComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkQueryParameters.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Classes/Particles/ParticleSystemComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Core/Public/Logging/LogMacros.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkTypes.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Engine/Private/Collision/WorldCollision.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/Wwise/ThirdParty/include/AK/SoundEngine/Common/AkSoundEngine.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../EpicGames/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/Map.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -131,9 +154,31 @@
       <option value="$PROJECT_DIR$/Plugins/Wwise/Source/AkAudio/Private/AkGameObject.cpp" />
       <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.h" />
       <option value="$PROJECT_DIR$/Source/ProjectAlpha/EnvironmentActor.cpp" />
-      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaAIController.cpp" />
       <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaEnemyCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaMainCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/TelekineticObjects.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Telekinesis.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/UI/InGameMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/UI/LobbyMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/UI/MainMenu.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlphaGameInstance.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/SmokeScreen.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/SmokeScreen.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Telekinesis.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaAIController.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/TelekineticObjects.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Weapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Teleport.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/ProjectAlpha.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/CombatComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Combat/Abilities/Telekinesis.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaEnemyCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/OtherActors/TelekineticObjects.cpp" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaMainCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectAlpha/Characters/ProjectAlphaMainCharacter.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kyoQou0YNCMdaTtBXmjMcF3byB" />
@@ -147,7 +192,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.ProjectAlpha">
@@ -475,7 +521,39 @@
       <workItem from="1606682196579" duration="1349000" />
       <workItem from="1611504311898" duration="749000" />
       <workItem from="1612994106087" duration="16145000" />
-      <workItem from="1613014920134" duration="2125000" />
+      <workItem from="1613014920134" duration="2851000" />
+      <workItem from="1613060843359" duration="5022000" />
+      <workItem from="1613175329309" duration="1805000" />
+      <workItem from="1613237774356" duration="288000" />
+      <workItem from="1613258164777" duration="9214000" />
+      <workItem from="1613362021558" duration="528000" />
+      <workItem from="1613596032371" duration="442000" />
+      <workItem from="1613603134212" duration="72000" />
+      <workItem from="1613618195121" duration="1259000" />
+      <workItem from="1613657137270" duration="757000" />
+      <workItem from="1613661716502" duration="1374000" />
+      <workItem from="1613839678245" duration="2957000" />
+      <workItem from="1613846329461" duration="218000" />
+      <workItem from="1613930749143" duration="311000" />
+      <workItem from="1613931979649" duration="124000" />
+      <workItem from="1613932161353" duration="39000" />
+      <workItem from="1614126946184" duration="13000" />
+      <workItem from="1616028051459" duration="238000" />
+      <workItem from="1617066118823" duration="875000" />
+      <workItem from="1617145116732" duration="1451000" />
+      <workItem from="1618070131389" duration="9845000" />
+      <workItem from="1618094624116" duration="1149000" />
+      <workItem from="1618182132383" duration="482000" />
+      <workItem from="1618182660124" duration="2955000" />
+      <workItem from="1618185676797" duration="79000" />
+      <workItem from="1618186122079" duration="116000" />
+      <workItem from="1618186543130" duration="849000" />
+      <workItem from="1618270460304" duration="230000" />
+      <workItem from="1618597952281" duration="17771000" />
+      <workItem from="1618677583622" duration="139000" />
+      <workItem from="1618701999246" duration="652000" />
+      <workItem from="1618813095015" duration="1789000" />
+      <workItem from="1625102066156" duration="1920000" />
     </task>
     <servers />
   </component>
@@ -484,6 +562,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

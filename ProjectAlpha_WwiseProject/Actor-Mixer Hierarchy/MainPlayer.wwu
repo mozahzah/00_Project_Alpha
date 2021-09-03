@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{0155FFD5-DABF-407C-A2B7-CC472A6D0028}" SchemaVersion="97" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
+<WwiseDocument Type="WorkUnit" ID="{0155FFD5-DABF-407C-A2B7-CC472A6D0028}" SchemaVersion="103" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" ParentDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
 	<AudioObjects>
 		<WorkUnit Name="MainPlayer" ID="{0155FFD5-DABF-407C-A2B7-CC472A6D0028}" OwnerID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" PersistMode="Nested">
 			<ChildrenList>
@@ -23,33 +23,13 @@
 												<XPos>0</XPos>
 												<YPos>-200</YPos>
 												<Flags>5</Flags>
-											</Point>
-											<Point>
-												<XPos>75</XPos>
-												<YPos>-200</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>80</XPos>
-												<YPos>-10</YPos>
-												<Flags>0</Flags>
-												<SegmentShape>Log3</SegmentShape>
+												<SegmentShape>Exp1</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>90</XPos>
 												<YPos>0</YPos>
 												<Flags>0</Flags>
-												<SegmentShape>Exp3</SegmentShape>
-											</Point>
-											<Point>
-												<XPos>99.54488</XPos>
-												<YPos>-10</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>105</XPos>
-												<YPos>-200</YPos>
-												<Flags>0</Flags>
+												<SegmentShape>Log1</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>180</XPos>
@@ -61,7 +41,6 @@
 								</RTPC>
 							</RTPCList>
 						</Property>
-						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -73,26 +52,37 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="SnapSFX" ID="{30A970A2-418E-489C-AB53-7C52E3E24FFD}" ShortID="913865574">
+						<Sound Name="SnapSFX_01" ID="{16F38363-5935-4336-B226-408768C61B90}" ShortID="823667160">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+									<ObjectRef Name="MainPlayer" ID="{B1C00607-EB6B-4146-8339-9BDD4CCCD0F9}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Finger Snap Sound Effect" ID="{6B9FF5B9-EA97-49B5-8E5D-B581DE3E2B06}">
+								<AudioFileSource Name="Finger Snap Sound Effect" ID="{D492A2CE-B1A7-49FF-B881-0F2785A23C75}">
 									<PropertyList>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.647260273972602"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.678424657534246"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.848630136986301"/>
 									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Finger Snap Sound Effect.wav</AudioFile>
 									<MediaIDList>
@@ -101,16 +91,87 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<PositioningInfo>
-								<Panner Name="" ID="{3AFB050C-6379-48B2-BF4C-6C4366ADDB9D}"/>
+								<Panner Name="" ID="{77A5BC71-4B01-4559-911E-1DEBC39DF451}"/>
 							</PositioningInfo>
+							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Finger Snap Sound Effect" ID="{6B9FF5B9-EA97-49B5-8E5D-B581DE3E2B06}" Platform="Linked"/>
+								<ActiveSource Name="Finger Snap Sound Effect" ID="{D492A2CE-B1A7-49FF-B881-0F2785A23C75}" Platform="Linked"/>
 							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SnapSFX" ID="{30A970A2-418E-489C-AB53-7C52E3E24FFD}" ShortID="913865574">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Light" ID="{67F471F5-BB1D-4D74-B53C-04C268D4CFEA}" WorkUnitID="{2B9B6DB0-5504-4830-A322-70BD70CFF34E}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{698D6EBA-3B73-4D48-8EDF-198CFF03FD8B}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Time Stretch (Custom)" ID="{F7A766F6-5192-4428-B7E9-D004053A2B43}" ShortID="83892956" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+											<PropertyList>
+												<Property Name="TimeStretch" Type="Real32">
+													<RTPCList>
+														<RTPC Name="" ID="{50D4BAA1-1C2B-4483-A848-B322D1D36BBA}" ShortID="797413616">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="DistanceRatio" ID="{778FAB69-D2FA-4195-A6F1-4DD5730D251C}" WorkUnitID="{718270F0-495C-4142-9FE2-E770CF986392}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{05833371-54D5-4D42-AE80-20700CD5E2E1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>100</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="WindowSize" Type="int32" Value="256"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MainPlayer" ID="{B1C00607-EB6B-4146-8339-9BDD4CCCD0F9}" WorkUnitID="{B9F30F17-3CD2-45C5-96E5-1F1A517E1ABD}"/>
+								</Reference>
+							</ReferenceList>
+							<PositioningInfo>
+								<Panner Name="" ID="{55FE669E-DA66-4D82-8D0C-78378D5B9B90}"/>
+							</PositioningInfo>
+							<ObjectLists/>
 						</Sound>
 					</ChildrenList>
 					<PositioningInfo>
 						<Panner Name="" ID="{696F126B-E672-4095-8CCF-CBC137C1BDEF}"/>
 					</PositioningInfo>
+					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
