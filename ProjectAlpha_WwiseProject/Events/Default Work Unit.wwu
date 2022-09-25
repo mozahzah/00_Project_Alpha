@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" PersistMode="Standalone">
-			<ChildrenList>
-				<WorkUnit Name="MainPlayer" ID="{98377CA6-B13F-4350-92B8-1036AC755A91}" PersistMode="Reference"/>
-				<WorkUnit Name="Environment" ID="{010AEEEB-4D13-461A-8458-49D5815E2BD3}" PersistMode="Reference"/>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{8BE9AD37-EAAB-4E85-B17E-D9B0EFBD4267}" PersistMode="Standalone"/>
 	</Events>
 </WwiseDocument>

@@ -1,10 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright mozahzah.io 2022
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "ProjectAlphaEnemyCharacter.generated.h"
+
+class AWeapon;
 
 UCLASS()
 class PROJECTALPHA_API AProjectAlphaEnemyCharacter : public ACharacter
@@ -49,4 +51,11 @@ public:
 	class UAkSwitchValue* CurrentSwitch = nullptr;
 	UPROPERTY(EditAnywhere, Category = "Wwise")
 	FString SurfaceType;
+
+
+	bool bIsRotated = false;
+	FRotator NeutralRotation;
+	float CurrentTime;
+	UPROPERTY(EditAnywhere) TSubclassOf<AWeapon> WeaponClass;
+	UPROPERTY(BlueprintReadOnly) AWeapon *Weapon;
 };

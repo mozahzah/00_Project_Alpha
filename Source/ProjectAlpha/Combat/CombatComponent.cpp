@@ -1,8 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "CombatComponent.h"
-
 
 #include "ProjectAlpha/Combat/Abilities/Teleport.h"
 #include "DrawDebugHelpers.h"
@@ -14,14 +12,9 @@
 #include "ProjectAlpha/Characters/ProjectAlphaMainCharacter.h"
 #include "Particles/ParticleSystemComponent.h"
 
-// Sets default values for this component's properties
 UCombatComponent::UCombatComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	
-	// ...
 }
 
 
@@ -38,8 +31,6 @@ void UCombatComponent::BeginPlay()
 	SmokeScreen = GetOwner()->FindComponentByClass<USmokeScreen>();
 	if (!ensure(SmokeScreen)) return;
 	
-
-
 	//Input Binding
 	GetOwner()->InputComponent->BindAction(FName("ActivateTelekinesis"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateTelekinesis);
 	GetOwner()->InputComponent->BindAction(FName("ActivateWeapon"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateWeapon);
@@ -200,9 +191,8 @@ void UCombatComponent::Fire()
 	if (CurrentAbility == Abilities::Weapon)
 	{
 		if (!ensure(Weapon)) return;
-		Weapon->WeaponFire(ViewpointLocation, ViewpointRotation);
+		Weapon->WeaponFire(ViewpointRotation);
 		bCWeaponIsActive = true;
-		
 	}
 
 	if (CurrentAbility == Abilities::SmokeScreen) 
@@ -236,6 +226,7 @@ void UCombatComponent::ActivateWeapon()
 	DeactivateTeleport();
 	DeactivateTelekinesis();
 	DeactivateSmokeScreen();
+	if (!ensure(Weapon)) return;
 	Weapon = Cast<AProjectAlphaMainCharacter>(GetOwner())->Weapon;
 	CurrentAbility = Abilities::Weapon;
 }

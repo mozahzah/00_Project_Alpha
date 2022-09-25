@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" SchemaVersion="103" RootDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" ParentDocumentID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}">
+<WwiseDocument Type="WorkUnit" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Environment" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" OwnerID="{681F8354-7F3D-40E6-8D0A-8BA8AA7DC0B1}" PersistMode="Nested">
+		<WorkUnit Name="Environment" ID="{66ABD63E-FF57-4273-A317-1B38FCC3F240}" PersistMode="Standalone">
 			<ChildrenList>
-				<ActorMixer Name="EnvironmentSFX" ID="{775E89D8-FE93-4ECF-A9DB-F3D668C04FD4}" ShortID="725645629">
+				<ActorMixer Name="Ambience" ID="{775E89D8-FE93-4ECF-A9DB-F3D668C04FD4}" ShortID="725645629">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Lowpass" Type="int16">
@@ -56,7 +56,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="LightSFX" ID="{AE4EA97C-D817-469F-B5BA-060607B71895}" ShortID="631041995">
+						<Sound Name="LightBuzz_Loop" ID="{AE4EA97C-D817-469F-B5BA-060607B71895}" ShortID="631041995">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
@@ -69,17 +69,17 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Light02" ID="{93470642-CE51-484C-98D6-B15A7AB12162}">
+								<AudioFileSource Name="Env_LighBuzz" ID="{93470642-CE51-484C-98D6-B15A7AB12162}">
 									<Language>SFX</Language>
-									<AudioFile>Light02.WAV</AudioFile>
+									<AudioFile>Env_LighBuzz.WAV</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1013597397"/>
+										<MediaID ID="1013597398"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Light02" ID="{93470642-CE51-484C-98D6-B15A7AB12162}" Platform="Linked"/>
+								<ActiveSource Name="Env_LighBuzz" ID="{93470642-CE51-484C-98D6-B15A7AB12162}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -1,9 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	84696428	S			\Default Work Unit\MainPlayer\S	
-
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	4053556705	AngleAtDoor			\Default Work Unit\AngleAtDoor	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	474749295	SnapSFX_01	E:\REPOS\UE_REPOS\00-ProjectAlpha\ProjectAlpha\ProjectAlpha_WwiseProject\.cache\Mac\SFX\Finger Snap Sound Effect_A6910902.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainPlayer\MainPlayer\SnapSFX_01		30088
-

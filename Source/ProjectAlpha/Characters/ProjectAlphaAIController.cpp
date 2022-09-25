@@ -9,6 +9,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 
 
+
 void AProjectAlphaAIController::BeginPlay()
 {
     Super::BeginPlay();
@@ -17,6 +18,8 @@ void AProjectAlphaAIController::BeginPlay()
     EndLocation = GetCharacter()->GetTransform().TransformPosition(Cast<AProjectAlphaEnemyCharacter>(GetCharacter())->SecondTarget);
     TargetLocation = StartLocation;
     CurrentAIState = EAIState::Petrolling;
+
+   
 }
 
 
@@ -26,6 +29,8 @@ void AProjectAlphaAIController::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
     float Distance  =   FVector::Dist(GetPawn()->GetActorLocation(), PlayerPawn->GetActorLocation());
+
+    
     
    /* if (LineOfSightTo(PlayerPawn))
     {
@@ -53,7 +58,7 @@ void AProjectAlphaAIController::Tick(float DeltaSeconds)
     
    // if (CurrentAIState == EAIState::Petrolling)
    // {
-       PetrolArea();
+       //PetrolArea();
        
    // }
     
@@ -116,7 +121,7 @@ bool AProjectAlphaAIController::CheckForCover()
     if(GetWorld()->SweepSingleByObjectType(Hit, GetPawn()->GetActorLocation(), GetPawn()->GetActorLocation(), FQuat(),
                                            FCollisionObjectQueryParams(ObjectsToTraceAsByte), CollisionShape))
     {
-        UE_LOG(LogTemp, Warning, TEXT("Found Cover %s"), *Hit.Actor->GetName());
+        UE_LOG(LogTemp, Warning, TEXT("Found Cover %s"), *Hit.GetActor()->GetName());
         CoverLocation = Hit.GetActor()->GetActorLocation();
         return true;
     }

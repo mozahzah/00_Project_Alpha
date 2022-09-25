@@ -27,7 +27,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable)
-	void WeaponFire(FVector Start, FRotator Rotation);
+	void WeaponFire(FRotator Rotation);
 
 	float WeaponDamage = 10;
 

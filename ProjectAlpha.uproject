@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "5.0",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -23,7 +23,7 @@
 		},
 		{
 			"Name": "StaticMeshEditorExtension",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "AppleImageUtils",
@@ -47,7 +47,7 @@
 		},
 		{
 			"Name": "Spatialization",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "OculusVR",
@@ -117,11 +117,19 @@
 		},
 		{
 			"Name": "AnimDistanceMatching",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "HDRIBackdrop",
-			"Enabled": true
+			"Enabled": false
+		},
+		{
+			"Name": "RiderLink",
+			"Enabled": false
 		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor",
+		"WindowsNoEditorWin32"
 	]
 }

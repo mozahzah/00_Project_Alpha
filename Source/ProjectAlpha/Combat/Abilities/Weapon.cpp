@@ -3,7 +3,7 @@
 
 #include "Weapon.h"
 #include "Kismet/GameplayStatics.h"
-
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -27,21 +27,28 @@ void AWeapon::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void AWeapon::WeaponFire(FVector Start, FRotator Rotation)
+void AWeapon::WeaponFire(FRotator Rotation)
 {
-	FHitResult Hit;
-	FVector End = Start + Rotation.Vector()*1000000;
-    GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECollisionChannel::ECC_Visibility);
-	if (Hit.Actor != nullptr)
-	{
-		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactFX, Hit.Location, FRotator(0), FVector(1), true, EPSCPoolMethod::None, true);
-		FPointDamageEvent DamageEvent (WeaponDamage, Hit, FVector(0), nullptr);
+	TArray<FHitResult> Hits;
+	FCollisionQueryParams Params;
+	Params.bFindInitialOverlaps = true;
+	FVector End = GetActorLocation() + Rotation.Vector()*1000000;
+    GetWorld()->LineTraceMultiByChannel(Hits, GetActorLocation(), End, ECollisionChannel::ECC_Visibility, Params);
 
+	UE_LOG(LogTemp, Warning, TEXT("Hit: %s"), *Hits.Pop().GetActor()->GetName());
+
+	//UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactFX, Hits.Pop().Location, FRotator(0), FVector(1), true, EPSCPoolMethod::None, true);
+	DrawDebugLine(GetWorld(), GetActorLocation(), End, FColor::Red, false, 0.2f);
+
+	//UE_LOG(LogTemp, Warning, TEXT("HIT: %s"), *Hit.Actor->GetName());
+
+	/*if (Hit.Actor != nullptr)
+	{
+		FPointDamageEvent DamageEvent (WeaponDamage, Hit, FVector(0), nullptr);
 		AActor* Enemy = Hit.GetActor();
 		if (Enemy != nullptr)
 		{
 			Enemy->TakeDamage(WeaponDamage, DamageEvent, Cast<APawn>(GetOwner())->GetController(), this);
 		}
-	}
-
+	}*/
 }

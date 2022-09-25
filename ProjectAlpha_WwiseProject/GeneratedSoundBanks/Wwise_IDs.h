@@ -15,7 +15,6 @@ namespace AK
     {
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID LIGHTSFX = 3797766864U;
-        static const AkUniqueID S = 84696428U;
         static const AkUniqueID SNAP = 1022785501U;
     } // namespace EVENTS
 

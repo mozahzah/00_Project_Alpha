@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="103" WwiseVersion="v2021.1.0" WwiseBuild="7575">
+<WwiseDocument Type="Project" SchemaVersion="103" WwiseVersion="v2021.1.10" WwiseBuild="7883">
 	<ProjectInfo>
 		<Project Name="ProjectAlpha_WwiseProject" ID="{F3B808EC-FA1F-463C-850F-327463CBD72F}">
 			<Platforms>
-				<Platform Name="Mac" ReferencePlatform="Mac" ID="{94F22F62-89E7-4BA4-BAB5-64A33908B8D8}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{5D881BE4-DB80-4253-8437-4F64067D4BCF}"/>
 			</Platforms>
 			<LanguageList>
@@ -16,13 +15,11 @@
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
-						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
 					</ValueList>
 				</Property>
 				<Property Name="GenerateMultipleBanks" Type="bool" Value="True"/>
@@ -30,7 +27,6 @@
 				<Property Name="GlobalVoiceInstancesLimit" Type="int16">
 					<ValueList>
 						<Value Platform="Windows">64</Value>
-						<Value Platform="Mac">64</Value>
 					</ValueList>
 				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjkzMTUiIG1hc2s9IlhTSUI1OTcyIiBlbmM9IjAiPjxsaWNlbnNlIGlkPSIxIiBuYW1lPSJXd2lzZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIxMCIgZXhwaXJlcz0iMjAyMS0wNi0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjIxIiBuYW1lPSJNYWludGVuYW5jZSIgdHlwZT0iMyIgcGxhdGZvcm1zPSIxMCIgZXhwaXJlcz0iMjAyMS0wNi0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjIyIiBuYW1lPSJMZXZlbCBBIExpY2Vuc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMTAiIGV4cGlyZXM9IjIwMjEtMDYtMDEiICAvPjxsaWNlbnNlIGlkPSI2MyIgbmFtZT0iTWFzdGVyaW5nIFN1aXRlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjEwIiBleHBpcmVzPSIyMDIxLTA2LTAxIiAgLz48bGljZW5zZSBpZD0iNDkiIG5hbWU9Ild3aXNlIFJlZmxlY3QiIHR5cGU9IjEiIHBsYXRmb3Jtcz0iMTAiIGV4cGlyZXM9IjIwMjEtMDUtMjgiICAvPjxwbHVnaW4gaWQ9IjEyMTg5Njk5IiBuYW1lPSJNYXN0ZXJpbmcgU3VpdGUiIGxpY2Vuc2U9IjYzIiAvPjwvcHJvamVjdD4=|jMQSVagweXIe2CcaWNRctoiL5sKRU4wlXpN6MwaejUse3q+ETNlpDrcAvSD6FB/c3tATngz2ETdTOOug+QKFv+o2kAWdq+f9i5z3UPkcGVsIUaEhx4xiZTrME/6r9LxwTlP2xlfaRO0QtO8t+nt7XaFVyvB1mpw3UxcLUVaaYes0IA//epYbkRoWbSkv8ZRVVzSJlqBVYjdYqgaFEn0rrtTMtjLbDgPzDGBCMXa9jg8t4Wvvw/2wIYbIaqsvVF4HYEKEVGTfesENe761Ib3ZO+uXxH+HorqHsQlo43cAT6crkRbK/Ztz0deIp6qwp06SsgcytgWhaZStT4W31AgjMA=="/>
@@ -42,37 +38,31 @@
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Windows">..\Content\WwiseAudio\SoundBanks\</Value>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows">Copy Streamed Files</Value>
-						<Value Platform="Mac">Copy Streamed Files</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
-						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
-						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
-						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="VolumeThreshold" Type="Real64">
 					<ValueList>
 						<Value Platform="Windows">-70</Value>
-						<Value Platform="Mac">-70</Value>
 					</ValueList>
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2019.2|Build=7304|VersionName=v2019.2.3|Config=Release"/>
@@ -877,7 +867,7 @@
 						</Property>
 						<Property Name="GenerateMainSoundBank" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateMultipleBanks" Type="bool">
@@ -892,7 +882,7 @@
 						</Property>
 						<Property Name="GenerateSoundBankXML" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GlobalVoiceInstancesLimit" Type="int16">
@@ -8874,7 +8864,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="SoundSeed Impact" PluginType="3" CompanyID="0" PluginID="116">
+				<SharedPropertyList ClassName="" PluginType="3" CompanyID="0" PluginID="116">
 					<PropertyList>
 						<Property Name="BWAmt" Type="Real32">
 							<ValueList>
@@ -9207,7 +9197,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="SoundSeed Air Wind" PluginType="2" CompanyID="0" PluginID="119">
+				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="119">
 					<PropertyList>
 						<Property Name="AttenuationRollOff" Type="Real32">
 							<ValueList>
@@ -9356,7 +9346,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="SoundSeed Air Woosh" PluginType="2" CompanyID="0" PluginID="120">
+				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="120">
 					<PropertyList>
 						<Property Name="AttenuationRollOff" Type="Real32">
 							<ValueList>
@@ -9480,7 +9470,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Deflector" PluginType="0" CompanyID="0" PluginID="121">
+				<SharedPropertyList ClassName="" PluginType="0" CompanyID="0" PluginID="121">
 					<PropertyList>
 						<Property Name="Frequency" Type="Real32">
 							<ValueList>
@@ -9509,7 +9499,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Deflector" PluginType="0" CompanyID="0" PluginID="122">
+				<SharedPropertyList ClassName="" PluginType="0" CompanyID="0" PluginID="122">
 					<PropertyList>
 						<Property Name="Anchor" Type="bool">
 							<ValueList>
@@ -10691,7 +10681,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Wwise Reflect" PluginType="3" CompanyID="0" PluginID="171">
+				<SharedPropertyList ClassName="" PluginType="3" CompanyID="0" PluginID="171">
 					<PropertyList>
 						<Property Name="BaseTextureFrequency" Type="Real32">
 							<ValueList>

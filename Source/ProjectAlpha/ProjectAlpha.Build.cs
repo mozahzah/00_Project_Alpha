@@ -8,6 +8,5 @@ public class ProjectAlpha : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG", "AkAudio" });
-		PrivateIncludePaths.Add("E:/Wwise 2021.1.0.7575/SDK/include");
 	}
 }

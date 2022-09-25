@@ -5,12 +5,23 @@
 			<ChildrenList>
 				<Effect Name="Wwise_Reflect" ID="{37779A87-4754-4420-8175-3236FA46AA12}" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
 					<PropertyList>
-						<Property Name="MaxDistance" Type="Real32" Value="5000"/>
-						<Property Name="SpeedOfSound" Type="Real32" Value="100"/>
-						<Property Name="Wet" Type="Real32" Value="9"/>
+						<Property Name="MaxDistance" Type="Real32">
+							<ValueList>
+								<Value>5000</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SpeedOfSound" Type="Real32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wet" Type="Real32">
+							<ValueList>
+								<Value>9</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
-					<PluginData>
-	<ReflectData>
+					<PluginData><ReflectData>
 		<CurveList Version="4">
 			<CurveInfo Name="Diffraction Attenuation">
 				<Curve Name="" ID="{D8294A76-FF48-4022-909E-6A5363A86A52}">
@@ -191,8 +202,7 @@
 				</Curve>
 			</CurveInfo>
 		</CurveList>
-	</ReflectData>
-</PluginData>
+	</ReflectData></PluginData>
 				</Effect>
 			</ChildrenList>
 		</WorkUnit>

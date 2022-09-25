@@ -6,6 +6,8 @@
 #include "AIController.h"
 #include "ProjectAlphaAIController.generated.h"
 
+
+
 UENUM()
 enum EAIState
 {
@@ -23,10 +25,12 @@ protected:
 	void BeginPlay() override;
 	bool CheckForCover();
 	void Attacking();
-	UPROPERTY()
-	APawn* PlayerPawn = nullptr;
+	UPROPERTY() APawn* PlayerPawn = nullptr;
 public:
 	void Tick(float DeltaSeconds) override;
+
+	
+	
 
 private:
 	EAIState  CurrentAIState;

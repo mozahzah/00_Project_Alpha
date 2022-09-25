@@ -35,20 +35,14 @@ void AProjectAlphaMainCharacter::BeginPlay()
 	GetMesh()->HideBoneByName(FName("hair_strand2_01"), EPhysBodyOp::PBO_None);
 	GetMesh()->HideBoneByName(FName("teddy_bear_root"), EPhysBodyOp::PBO_None);
 	FActorSpawnParameters SpawnParams;
-	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
-	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("FX_Hand_L1"));
-	Weapon->SetOwner(this);
+
+	
 
 	UAkGameplayStatics::ClearBanks();
 	const FString MainBankName;
 	FLatentActionInfo LatentInfo;
 	UAkGameplayStatics::LoadInitBank();
 	UAkGameplayStatics::LoadBank(test, MainBankName, LatentInfo, GetWorld());
-
-	
-
-
-
 	
 	UGameplayStatics::GetPlayerController
 	(GetWorld(), 0)->SetAudioListenerOverride(GetMesh(),
@@ -56,8 +50,11 @@ void AProjectAlphaMainCharacter::BeginPlay()
 	
 	
 	AkMainComponent = FindComponentByClass<UAkComponent>();
-	
 
+	if (!ensure(Weapon)) return;
+	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
+	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("FX_Hand_L1"));
+	Weapon->SetOwner(this);
 }
 
 
@@ -276,6 +273,11 @@ void AProjectAlphaMainCharacter::MakeFast()
 	AkMainComponent->SetRTPCValue(rtpc, DistanceRatio, 0, TEXT("DistanceRatio"));
 	
 	//UAkGameplayStatics::PostEventAtLocation();
+}
+
+void AProjectAlphaMainCharacter::ApplyPassBy()
+{
+	
 }
 
 void AProjectAlphaMainCharacter::ApplyOcclusionAndObstruction(FHitResult Hit) 

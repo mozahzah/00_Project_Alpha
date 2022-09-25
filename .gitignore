@@ -1,6 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# Rider specific files
+.idea/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -52,10 +55,6 @@ Plugins/*/Binaries/*
 # Builds
 Build/*
 
-
-Plugins/
-Content/WwiseAudio/Media/
-
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
 Build/*/**
@@ -77,10 +76,12 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-*.wav
-Content/ImportedLibraries/
-*.prof
+# Content
+Content/*
+
+#WWISE
+.cache
 *.akd
+*.prof
 *.validationcache
-*.wem
-ProjectAlpha_WwiseProject/.cache/
+
