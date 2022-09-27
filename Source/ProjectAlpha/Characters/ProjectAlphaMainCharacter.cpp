@@ -13,12 +13,12 @@
 #include "CollisionShape.h"
 #include "AkGameObject.h"
 #include "ProjectAlphaEnemyCharacter.h"
-#include "ProjectAlpha/OtherActors/EnvironmentActor.h"
+#include "ProjectAlpha/GamePlayActors/EnvironmentActor.h"
 #include "Engine/StaticMeshActor.h"
 #include "AkGameplayTypes.h"
 #include "AkAcousticPortal.h"
 #include "AkRtpc.h"
-#include "ProjectAlpha/OtherActors/PreSmokeActor.h"
+#include "ProjectAlpha/GamePlayActors/PreSmokeActor.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 // MAIN CSTOR
@@ -51,10 +51,7 @@ void AProjectAlphaMainCharacter::BeginPlay()
 	
 	AkMainComponent = FindComponentByClass<UAkComponent>();
 
-	if (!ensure(Weapon)) return;
-	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
-	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("FX_Hand_L1"));
-	Weapon->SetOwner(this);
+
 }
 
 

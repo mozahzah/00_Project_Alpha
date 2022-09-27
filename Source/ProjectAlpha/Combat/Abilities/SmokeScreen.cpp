@@ -2,7 +2,7 @@
 
 
 #include "SmokeScreen.h"
-#include "ProjectAlpha/OtherActors/SmokeScreenActor.h"
+#include "ProjectAlpha/GamePlayActors/SmokeScreenActor.h"
 
 // Sets default values for this component's properties
 USmokeScreen::USmokeScreen()
@@ -10,14 +10,10 @@ USmokeScreen::USmokeScreen()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
-
 // Called when the game starts
 void USmokeScreen::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	
-	
 }
 
 
@@ -26,27 +22,26 @@ void USmokeScreen::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-
 	if (bSmokeIsActive) 
 	{
 		SetSmokeLocation(SmokeScreenActor);	
 	}
-	
-
-	// ...
 }
 
 void USmokeScreen::SetSmokeLocation(ASmokeScreenActor* SmokeActor) 
 {
-	auto ActorLocation = GetOwner()->GetActorLocation();
-	if (FVector::Distance(ActorLocation, CurrentLocation) >= FVector::Distance(ActorLocation, EndLocation))
+	if (const AActor* Owner = GetOwner())
 	{
-		bSmokeIsActive = false;
-	}
-	else 
-	{
-		CurrentLocation += ForwardVector * 10;
-		SmokeActor->SetActorLocation(CurrentLocation);
+		const FVector ActorLocation = Owner->GetActorLocation();
+		if (FVector::Distance(ActorLocation, CurrentLocation) >= FVector::Distance(ActorLocation, EndLocation))
+		{
+			bSmokeIsActive = false;
+		}
+		else
+		{
+			CurrentLocation += ForwardVector * 10;
+			SmokeActor->SetActorLocation(CurrentLocation);
+		}
 	}
 }
 

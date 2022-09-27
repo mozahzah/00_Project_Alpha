@@ -4,7 +4,7 @@
 #include "InGameMenu.h"
 
 
-#include "ProjectAlpha/ProjectAlphaGameInstance.h"
+#include "ProjectAlpha/GeneralGame/ProjectAlphaGameInstance.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "Kismet/GameplayStatics.h"

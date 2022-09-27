@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+
 #include "ProjectAlphaGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -14,6 +15,3 @@ class AProjectAlphaGameMode : public AGameModeBase
 public:
 	AProjectAlphaGameMode();
 };
-
-
-

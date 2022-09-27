@@ -7,7 +7,7 @@
 #include "ProjectAlpha/Combat/Abilities/Telekinesis.h"
 #include "ProjectAlpha/Combat/Abilities/Weapon.h"
 #include "ProjectAlpha/Combat/Abilities/SmokeScreen.h"
-#include "ProjectAlpha/OtherActors/PreSmokeActor.h"
+#include "ProjectAlpha/GamePlayActors/PreSmokeActor.h"
 #include "Components/InputComponent.h"
 #include "ProjectAlpha/Characters/ProjectAlphaMainCharacter.h"
 #include "Particles/ParticleSystemComponent.h"

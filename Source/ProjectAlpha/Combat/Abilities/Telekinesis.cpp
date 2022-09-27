@@ -1,7 +1,7 @@
 
 #include "Telekinesis.h"
 #include "DrawDebugHelpers.h"
-#include "ProjectAlpha/OtherActors/TelekineticObjects.h"
+#include "ProjectAlpha/GamePlayActors/TelekineticObjects.h"
 #include "Components/PrimitiveComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Kismet/KismetMathLibrary.h"

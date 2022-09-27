@@ -2,15 +2,16 @@
 
 #pragma once
 
+#include "ProjectAlpha/GamePlayActors/TelekineticObjects.h"
+
 #include "CoreMinimal.h"
-#include "ProjectAlpha/OtherActors/TelekineticObjects.h"
 #include "Components/ActorComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
+
 #include "Telekinesis.generated.h"
 
-
-class UPrimitiveComponent;
 class ATelekineticObjects;
+class UPrimitiveComponent;
 class EAbility;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )

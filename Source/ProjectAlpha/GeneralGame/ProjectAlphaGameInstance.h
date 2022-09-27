@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+
 #include "ProjectAlphaGameInstance.generated.h"
 
 class UInGameMenu;
@@ -11,9 +12,7 @@ class UCrossair;
 class UMainMenu;
 class ULobbyMenu;
 class UUserWidget;
-/**
- * 
- */
+
 UCLASS()
 class PROJECTALPHA_API UProjectAlphaGameInstance : public UGameInstance
 {

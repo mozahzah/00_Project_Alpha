@@ -58,9 +58,6 @@ public:
 	// ABILITIES
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
-	UPROPERTY(EditAnywhere) 
-	TSubclassOf<AWeapon> WeaponClass;
-
 	UPROPERTY(BlueprintReadOnly) 
 	AWeapon* Weapon;
 
