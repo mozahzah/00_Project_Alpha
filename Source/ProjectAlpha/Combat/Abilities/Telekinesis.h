@@ -2,11 +2,12 @@
 
 #pragma once
 
-#include "ProjectAlpha/GamePlayActors/TelekineticObjects.h"
-
-#include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "CoreMinimal.h" 
 #include "PhysicsEngine/PhysicsHandleComponent.h"
+
+#include "ProjectAlpha/Combat/Abilities/AbilityBase.h"
+
+#include "ProjectAlpha/OtherActors/TelekineticObjects.h"
 
 #include "Telekinesis.generated.h"
 
@@ -14,57 +15,48 @@ class ATelekineticObjects;
 class UPrimitiveComponent;
 class EAbility;
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class PROJECTALPHA_API UTelekinesis : public UActorComponent
+UCLASS()
+class PROJECTALPHA_API UAbility_Telekinesis : public UAbilityBase
 {
 	GENERATED_BODY()
 
-private:
-
-    float LevitationDelay;
-
-
 protected:
-	virtual void BeginPlay() override;
+	// Begin AbilityBase Implementation
+	void Initialize(AActor*& OwnerActor) override;
+	void Update(const float DeltaTime) override;
+	void ActivateAbility() override;
+	void DeactivateAbility() override;
+	// End AbilityBase Implementation
 
+private:
 	bool RayCastObjects();
 	void LevitateObjects(float DeltaTime);
-
 	void GetPhysicsHandler();
+	void ReleaseObjects();
 
-	EAbility* CurrentAbility;
-
-	
-
-	UPROPERTY()
+private:
+	TArray<TObjectPtr<ATelekineticObjects>> GrabbedComponents;
     TArray<FKineticObjectData> KineticObjectDataArray;
 
 	FVector CharacterLocation;
+
 	UPROPERTY()
 	float Radius = 500.f;
 
-	class UAkComponent* AkMainComponent = nullptr;
-	UPROPERTY(EditAnywhere, Category = "Wwise")
-    class UAkAudioEvent* TelekinesisEvent = nullptr;
-	int32 PlayingId;
+
 
 public:
-    UTelekinesis();
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	
-	UFUNCTION(BlueprintCallable)
-	void ActivateTelekinesis();
-	
-	UFUNCTION(BlueprintCallable)
-	void DeactivateTelekinesis();
 
-	UPROPERTY(BlueprintReadOnly)
-	bool bTelekinesisIsActive = false;
+	
+	
+	UFUNCTION(BlueprintCallable)
+
+
+	
 	
 	UPROPERTY()
-	TArray<ATelekineticObjects*> GrabbedComponents;
 
-	void ReleaseObjects();
+
 
 	UPROPERTY()
 	UPhysicsHandleComponent* PhysicsHandler = nullptr;
@@ -74,4 +66,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
     UParticleSystemComponent* MagicRightHand;
+
+	float LevitationDelay;
 };

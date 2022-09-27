@@ -12,11 +12,6 @@
 #include "AkComponent.h"
 #include "AkGameplayStatics.h"
 
-UTelekinesis::UTelekinesis()
-{
-	PrimaryComponentTick.bCanEverTick = true;
-}
-
 void UTelekinesis::BeginPlay()
 {
 	Super::BeginPlay();

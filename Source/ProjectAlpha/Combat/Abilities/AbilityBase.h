@@ -6,15 +6,27 @@
 
 #include "AbilityBase.generated.h"
 
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+UCLASS(EditInlineNew)
 class PROJECTALPHA_API UAbilityBase : public UObject 
 {
 	GENERATED_BODY()
 
-protected:
-	virtual void Initialize();
-	virtual void Update(float DeltaTime);
-
 public:
+	virtual void Initialize(AActor*& OwnerActor);
+	virtual void Update(const float DeltaTime);
+	virtual void ActivateAbility();
+	virtual void DeactivateAbility();
 
+protected:
+	UPROPERTY(Transient)
+	TObjectPtr<UAkComponent> AbilityAkComponent;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<UAkEvent> OnAbilityActived;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<UAkEvent> OnAbilityDeactived;
+
+protected:
+	TWeakObjectPtr<AActor> OwnerActor;
 };
