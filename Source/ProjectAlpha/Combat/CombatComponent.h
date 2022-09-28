@@ -4,24 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+
 #include "CombatComponent.generated.h"
 
-class UTelekinesis;
-class ATelekineticObjects;
-class UTeleport;
-class AWeapon;
-class USmokeScreen;
-class APreSmokeActor;
-
-
-UENUM()
-enum Abilities
+enum class EAbility : uint8
 {
-	None,
-	Telekinesis,
-	Teleport,
-	Weapon,
-	SmokeScreen
+	Movement,
+	Controller,
+	Ultimate,
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -30,74 +20,31 @@ class PROJECTALPHA_API UCombatComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
 	UCombatComponent();
 
-protected:
-	// Called when the game starts
+private:
 	virtual void BeginPlay() override;
+	void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	Abilities CurrentAbility;
-	bool bPreSmokeisActive = false;
-	
-	float LastFireTime;
-	void SetReticle();
-	void TelekinesisAimAt();
-	void TeleportAimAt();
-	void SmokeScreenAimAt();
-	UTelekinesis* Telekinesis = nullptr;
-	UTeleport* Teleport = nullptr;
-	USmokeScreen* SmokeScreen = nullptr;
-	AWeapon* Weapon = nullptr;
-	APreSmokeActor* PreSmoke;
-	TArray<ATelekineticObjects*> LevitatingObjects;
+	void ActivateAbility(EAbility Ability);
+	bool DeactivateCurrentAbility();
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	void AimAt();
+	// Ability Binds Section
+	void ActivateMovementAbility();
+	void ActivateControllerAbility();
+	void ActivateUltimateAbility();
+
+	// Firing Mechanics Binds Section
 	void Fire();
 	void StopFire();
 	void SecondaryFire();
 	void StopSecondaryFire();
-	bool bAddSmokeMousePressed = false;
-	bool bMinusSmokeMousePressed = false;
 
+private:
+	UPROPERTY(EditAnywhere)
+	TMap<EAbility, TObjectPtr<UAbility>> AbilityMap;
 
-	//For AimAt Method
-	FVector ViewpointLocation;
-	FRotator ViewpointRotation;
-	FVector OutHitLocation;
-	FVector EndLocation;
-	float SmokeLenght;
-
-	
-	
-
-
-
-	//Ability Activation
-	void ActivateWeapon();
-	void ActivateTelekinesis();
-	void DeactivateTelekinesis();
-	void ActivateTeleport();
-	void DeactivateTeleport();
-	void ActivateSmokeScreen();
-	void DeactivateSmokeScreen();
-	void FireSmoke();
-
-
-	
-	UPROPERTY(BlueprintReadOnly)
-    bool bCTelekinesisIsActive = false;
-	UPROPERTY(BlueprintReadOnly)
-    bool bCTeleportIsActive = false;
-	float StartTeleportTimer = 0;
-	UPROPERTY(BlueprintReadOnly)
-    bool bCWeaponIsActive = false;
-	UPROPERTY(BlueprintReadOnly)
-	bool bCSmokeIsActive = false;
-
-
-
+private:
+	TWeakObjectPtr<APlayerController> PlayerController;
+	TWeakObjectPtr<UAbility> CurrentAbility;
 };

@@ -6,22 +6,17 @@
 #include "Engine/StaticMeshActor.h"
 #include "TelekineticObjects.generated.h"
 
-USTRUCT()
 struct FKineticObjectData
 {
-	GENERATED_BODY()
-    float Distance;
-	FRotator Direction;
-	
+    float Distance = 0.0f;
+	FRotator Direction = FRotator::ZeroRotator;
 };
 
 
 class UParticleSystemComponent;
-/**
- * 
- */
+
 UCLASS()
-class PROJECTALPHA_API ATelekineticObjects : public AStaticMeshActor
+class PROJECTALPHA_API ATelekineticObject : public AStaticMeshActor
 {
 	GENERATED_BODY()
 protected:

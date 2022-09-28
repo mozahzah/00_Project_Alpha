@@ -52,45 +52,38 @@ void UTelekinesis::ActivateTelekinesis()
 		MagicLeftHand->Activate();
 		MagicRightHand->Activate();
 	}
-	
 }
-bool UTelekinesis::RayCastObjects()
+
+
+bool UAbility_Telekinesis::RayCastObjects()
 {
-	TArray<struct FHitResult> HitResults;
-	const auto Rotation = GetOwner()->GetActorRotation().Quaternion();
-	const ECollisionChannel TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-	const auto CollisionShape = FCollisionShape::MakeSphere(Radius);
-	const FCollisionQueryParams ExtraParams = FCollisionQueryParams(FName(TEXT("")), false, GetOwner());
-	
-    GetWorld()->SweepMultiByChannel(HitResults,CharacterLocation ,CharacterLocation, Rotation, TraceChannel, CollisionShape, ExtraParams);
-	if (HitResults.Num() == 0) return false;
-	for (const auto& HitResult : HitResults)
+	if (OwnerActor)
 	{
-		const auto ActorHit = HitResult.GetActor();
-		if (ActorHit)
+		if (const UWorld* World = OwnerActor->GetWorld())
 		{
-			if (!ensure(PhysicsHandler)) return false;
-			if (!ensure(HitResult.GetComponent())) return false;
-			PhysicsHandler->GrabComponentAtLocation(HitResult.GetComponent(), NAME_None, ActorHit->GetActorLocation());
-			GrabbedComponents.Add(Cast<ATelekineticObjects>(PhysicsHandler->GrabbedComponent->GetOwner()));
+			const FVector CharacterLocation = OwnerActor->GetActorLocation();
+			const FQuat Rotation = GetOwner()->GetActorRotation().Quaternion();
+			const FCollisionShape CollisionShape = FCollisionShape::MakeSphere(Radius);
+
+			TArray<FHitResult> HitResults;
+			if (GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, Rotation, TraceChannel, CollisionShape, FCollisionQueryParams()))
+			{
+				for (const FHitResult& HitResult : HitResults)
+				{
+					const ATelekineticObject* TelekineticObject = Cast<ATelekineticObject>(HitResult.GetActor());
+					if (TelekineticObject)
+					{
+						GrabbedTelekineticObjects.Add(TelekineticObject);
+						AbilityTimer = World->GetTimeSeconds();
+					}
+				}
+			}
 		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("No Hit"));
-			return false;
-		}
-	}
-	if(HitResults.Num() > 0)
-	{
-		LevitationDelay = GetWorld()->GetTimeSeconds();
-		return true;
-	}
-	else
-	{
-		return false;
 	}
 }
-void UTelekinesis::LevitateObjects(float DeltaTime)
+
+
+void UAbility_Telekinesis::LevitateObjects(const float& DeltaTime)
 {
 	if (GetWorld()->GetTimeSeconds() - LevitationDelay < 0.5) return;
 	for (uint16 i = 0 ; i < GrabbedComponents.Num() ; i++)
@@ -114,9 +107,6 @@ void UTelekinesis::DeactivateTelekinesis()
 {
 	AkMainComponent->Stop();
 	ReleaseObjects();
-	bTelekinesisIsActive = false;
-	MagicLeftHand->Deactivate();
-	MagicRightHand->Deactivate();
 }
 void UTelekinesis::ReleaseObjects()
 {
@@ -138,4 +128,40 @@ void UTelekinesis::GetPhysicsHandler()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Physics Handler Not Found"));
 	}
+}
+
+void UAbility_Telekinesis::OnInitialize()
+{
+
+}
+
+void UAbility_Telekinesis::Update(const float& DeltaTime)
+{
+	LevitateObjects(DeltaTime);
+}
+
+bool UAbility_Telekinesis::ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation)
+{
+
+}
+
+void UAbility_Telekinesis::OnActivate()
+{
+	RayCastObjects();
+}
+
+
+void UAbility_Telekinesis::OnDeactivate()
+{
+	ReleaseObjects();
+}
+
+void UAbility_Telekinesis::OnFire()
+{
+
+}
+
+void UAbility_Telekinesis::DeactivateAbility()
+{
+
 }
