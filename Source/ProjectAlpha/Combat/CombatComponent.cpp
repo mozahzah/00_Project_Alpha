@@ -2,24 +2,17 @@
 
 #include "CombatComponent.h"
 
-#include "ProjectAlpha/Combat/Abilities/Teleport.h"
-#include "DrawDebugHelpers.h"
-#include "ProjectAlpha/Combat/Abilities/Telekinesis.h"
-#include "ProjectAlpha/Combat/Abilities/Weapon.h"
-#include "ProjectAlpha/Combat/Abilities/SmokeScreen.h"
-#include "ProjectAlpha/GamePlayActors/PreSmokeActor.h"
 #include "Components/InputComponent.h"
-#include "ProjectAlpha/Characters/ProjectAlphaMainCharacter.h"
-#include "Particles/ParticleSystemComponent.h"
 
 UCombatComponent::UCombatComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bStartWithTickEnabled = true;
 
 	//Input Binding for Combat (Maybe not the best place to setup)
 	if (const AActor* Owner = GetOwner())
 	{
-		if (const UInputComponent* InputComponent = Owner->InputComponent)
+		if (UInputComponent* const InputComponent = Owner->InputComponent)
 		{
 			InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
 			InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
@@ -40,14 +33,15 @@ void UCombatComponent::BeginPlay()
 
 	if (const APawn* Pawn = Cast<APawn>(GetOwner()))
 	{
-		if (const APlayerController* PlayerController = Pawn->GetController())
+		if (APlayerController* PlayerController = Cast<APlayerController>(Pawn->GetController()))
 		{
 			this->PlayerController = PlayerController;
 		}
 	}
 
-	for (const TObjectPtr<UAbility>& Ability : AbilityMap)
+	for (const TPair<EAbilityType, TObjectPtr<UAbility>>& Elem : AbilityMap)
 	{
+		TObjectPtr<UAbility> Ability = Elem.Value;
 		if (!Ability.IsNull())
 		{
 			Ability->Initialize(GetOwner());
@@ -61,11 +55,12 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	
 	if (PlayerController.IsValid())
 	{
-		if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+		if (CurrentAbility.IsValid())
 		{
 			FVector ViewpointLocation;
 			FRotator ViewpointRotation;
 			PlayerController->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
+
 			if (CurrentAbility->ProcessLineTrace(ViewpointLocation, ViewpointRotation))
 			{
 				CurrentAbility->Update(DeltaTime);
@@ -74,24 +69,24 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	}	
 }
 
-void UCombatComponent::ActivateAbility(EAbility Ability)
+void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
 {
-	if (const TObjectPtr<UAbility>* Ability = AbilityMap.Find(Ability))
+	if (const TObjectPtr<UAbility>* Ability = AbilityMap.Find(AbilityType))
 	{
-		if (!Ability->IsNull())
+		if (Ability && !Ability->IsNull())
 		{
 			CurrentAbility = Ability->Get();
-			CurrentAbility->ActivateAbility();
+			CurrentAbility->OnActivate();
 		}
 	}
 }
 
-void UCombatComponent::DeactivateCurrentAbility()
+bool UCombatComponent::DeactivateCurrentAbility()
 {
 	bool bHasDeactivated = false;
-	if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+	if (CurrentAbility.IsValid())
 	{
-		bHasDeactivated = CurrentAbility->DeactivateAbility();
+		bHasDeactivated = CurrentAbility->OnDeactivate();
 	}
 
 	return bHasDeactivated;
@@ -103,7 +98,7 @@ void UCombatComponent::ActivateMovementAbility()
 {
 	if (DeactivateCurrentAbility())
 	{
-		ActivateAbility(EAbility::Movement);
+		ActivateAbility(EAbilityType::Movement);
 	}
 }
 
@@ -111,7 +106,7 @@ void UCombatComponent::ActivateControllerAbility()
 {
 	if (DeactivateCurrentAbility())
 	{
-		ActivateAbility(EAbility::Controller);
+		ActivateAbility(EAbilityType::Controller);
 	}
 }
 
@@ -119,7 +114,7 @@ void UCombatComponent::ActivateUltimateAbility()
 {
 	if (DeactivateCurrentAbility())
 	{
-		ActivateAbility(EAbility::Ultimate);
+		ActivateAbility(EAbilityType::Ultimate);
 	}
 }
 
@@ -127,7 +122,7 @@ void UCombatComponent::ActivateUltimateAbility()
 
 void UCombatComponent::Fire()
 {
-	if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+	if (CurrentAbility.IsValid())
 	{
 		CurrentAbility->OnFire();
 	}
@@ -135,7 +130,7 @@ void UCombatComponent::Fire()
 
 void UCombatComponent::StopFire()
 {
-	if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+	if (CurrentAbility.IsValid())
 	{
 		CurrentAbility->OnFireStop();
 	}
@@ -143,7 +138,7 @@ void UCombatComponent::StopFire()
 
 void UCombatComponent::SecondaryFire()
 {
-	if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+	if (CurrentAbility.IsValid())
 	{
 		CurrentAbility->OnSecondaryFire();
 	}
@@ -151,7 +146,7 @@ void UCombatComponent::SecondaryFire()
 
 void UCombatComponent::StopSecondaryFire()
 {
-	if (CurrentAbility.IsValid() && CurrentAbility->bAbilityIsActive)
+	if (CurrentAbility.IsValid())
 	{
 		CurrentAbility->OnSecondaryFireStop();
 	}

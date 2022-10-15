@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 
-#include "UAbility.generated.h"
+#include "Ability.generated.h"
 
 class UAkComponent;
 class UAkAudioEvent;
@@ -17,27 +17,28 @@ class PROJECTALPHA_API UAbility : public UObject
 	GENERATED_BODY()
 
 public:
-	void Initialize(const AActor*& OwnerActor);
+	void Initialize(AActor* OwnerActor);
 
-	virtual void OnInitialize();
-	virtual void Update(const float& DeltaTime);
-	virtual bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation);
-	virtual void OnActivate();
-	virtual void OnDeactivate();
+	virtual void OnInitialize() {};
+	virtual void Update(const float& DeltaTime) {};
+	virtual bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation, FVector& OuHitLocation) { return false; };
+	virtual void OnActivate() {};
+	virtual bool OnDeactivate() { return false; };
 
 	// Firing Mechanics
-	virtual void OnFire();
-	virtual void OnFireStop();
-	virtual void OnSecondaryFire();
-	virtual void OnSecondaryFireStop();
+	virtual void OnFire(const FVector& Location) {};
+	virtual void OnFireStop() {};
+	virtual void OnSecondaryFire() {};
+	virtual void OnSecondaryFireStop() {};
 
 protected:
 	UPROPERTY(Transient)
 	TObjectPtr<UAkComponent> AbilityAkComponent;
 
 	UPROPERTY(Transient)
-	TObjectPtr<UParticleSystemComponent> AbilityAkComponent;
+	TObjectPtr<UParticleSystemComponent> AbilityParticleSystemComponent;
 
+protected:
 	/*Activation delay in seconds */
 	UPROPERTY(EditAnywhere, meta =(ClampMin = "0", UIMin = "0"))
 	float ActivationDelay = 0.0f;
@@ -64,6 +65,7 @@ protected:
 
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
+
 	float AbilityTimer;
 	bool bAbilityIsActive;
 };

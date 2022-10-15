@@ -3,63 +3,61 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 
 #include "ProjectAlpha/Combat/Abilities/Ability.h"
 
 #include "Ability_SmokeScreen.generated.h"
 
-
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS()
 class PROJECTALPHA_API UAbility_SmokeScreen : public UAbility
 {
 	GENERATED_BODY()
 
-protected:
-	// Begin Ability Implementation
-	void OnInitialize() override;
-	void Update(const float DeltaTime) override;
-	bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation) override;
-	void ActivateAbility() override;
-	void OnFire() override;
-	void OnFireStop() override;
-	void DeactivateAbility() override;
-	// End Ability Implementation
-
-private:
-	void SetSmokeLocation(ASmokeScreenActor* SmokeActor);
-	void ActivateSmokeScreen(FVector SmokeLocationToSet);
-
-private:
-
-	UPROPERTY(EditAnywhere)
-	TSubclassOf<ASmokeScreenActor> SmokeActor;
-
-private:
-	FVector ForwardVector;
-	FVector CurrentLocation;
-	FVector EndLocation;
-
-	void UCombatComponent::SmokeScreenAimAt()
-	{
-		if (Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke() != nullptr)
-		{
-			if (!bPreSmokeisActive)
-			{
-				UE_LOG(LogTemp, Warning, TEXT("PreSmokeActive"));
-				bPreSmokeisActive = true;
-				const FActorSpawnParameters SpawnParameters;
-				PreSmoke = GetWorld()->SpawnActor<APreSmokeActor>(Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke(), GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), SpawnParameters);
-			}
-			PreSmoke->SetActorLocation(EndLocation);
-		}
-	}
-
-
-	if (CurrentAbility == Abilities::SmokeScreen)
-	{
-		bAddSmokeMousePressed = true;
-	}
+//protected:
+//	// Begin Ability Implementation
+//	void OnInitialize() override;
+//	void Update(const float DeltaTime) override;
+//	bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation) override;
+//	void ActivateAbility() override;
+//	void OnFire() override;
+//	void OnFireStop() override;
+//	void DeactivateAbility() override;
+//	// End Ability Implementation
+//
+//private:
+//	void SetSmokeLocation(ASmokeScreenActor* SmokeActor);
+//	void ActivateSmokeScreen(FVector SmokeLocationToSet);
+//
+//private:
+//
+//	UPROPERTY(EditAnywhere)
+//	TSubclassOf<ASmokeScreenActor> SmokeActor;
+//
+//private:
+//	FVector ForwardVector;
+//	FVector CurrentLocation;
+//	FVector EndLocation;
+//
+//	void UCombatComponent::SmokeScreenAimAt()
+//	{
+//		if (Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke() != nullptr)
+//		{
+//			if (!bPreSmokeisActive)
+//			{
+//				UE_LOG(LogTemp, Warning, TEXT("PreSmokeActive"));
+//				bPreSmokeisActive = true;
+//				const FActorSpawnParameters SpawnParameters;
+//				PreSmoke = GetWorld()->SpawnActor<APreSmokeActor>(Cast<AProjectAlphaMainCharacter>(GetOwner())->GetPreSmoke(), GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), SpawnParameters);
+//			}
+//			PreSmoke->SetActorLocation(EndLocation);
+//		}
+//	}
+//
+//
+//	if (CurrentAbility == Abilities::SmokeScreen)
+//	{
+//		bAddSmokeMousePressed = true;
+//	}
 
 	//void UCombatComponent::ActivateSmokeScreen()
 //{

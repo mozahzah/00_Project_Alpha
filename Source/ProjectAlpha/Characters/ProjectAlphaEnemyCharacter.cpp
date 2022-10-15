@@ -20,10 +20,10 @@ void AProjectAlphaEnemyCharacter::BeginPlay()
 	GetMesh()->SetRenderCustomDepth(true);
 	GetMesh()->SetCustomDepthStencilValue(2);
 
-	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
+	/*Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
 	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("hand_r"));
 	Weapon->SetActorLocation(Weapon->GetActorLocation() + FVector(-10,0,0));
-	Weapon->SetOwner(this);
+	Weapon->SetOwner(this);*/
 
 	NeutralRotation = GetActorRotation();
 }
@@ -46,7 +46,7 @@ void AProjectAlphaEnemyCharacter::Tick(float DeltaTime)
 				SetActorRotation(NeutralRotation + FRotator(0, 2, 0));
 				if (World->GetTimeSeconds() - CurrentTime > 2)
 				{
-					Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
+					//Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
 					CurrentTime = GetWorld()->GetTimeSeconds();
 					bIsRotated = true;
 				}
@@ -56,7 +56,7 @@ void AProjectAlphaEnemyCharacter::Tick(float DeltaTime)
 				SetActorRotation(NeutralRotation + FRotator(0, -2, 0));
 				if (World->GetTimeSeconds() - CurrentTime > 2)
 				{
-					Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
+					//Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
 					CurrentTime = World->GetTimeSeconds();
 					bIsRotated = false;
 				}

@@ -56,6 +56,6 @@ public:
 	bool bIsRotated = false;
 	FRotator NeutralRotation;
 	float CurrentTime;
-	UPROPERTY(EditAnywhere) TSubclassOf<AWeapon> WeaponClass;
-	UPROPERTY(BlueprintReadOnly) AWeapon *Weapon;
+	//UPROPERTY(EditAnywhere) TSubclassOf<AWeapon> WeaponClass;
+	//UPROPERTY(BlueprintReadOnly) AWeapon *Weapon;
 };

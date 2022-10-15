@@ -58,8 +58,8 @@ public:
 	// ABILITIES
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
-	UPROPERTY(BlueprintReadOnly) 
-	AWeapon* Weapon;
+	/*UPROPERTY(BlueprintReadOnly) 
+	AWeapon* Weapon;*/
 
 	UPROPERTY(EditAnywhere) 
 	UParticleSystemComponent* WeaponLeftHand = nullptr;

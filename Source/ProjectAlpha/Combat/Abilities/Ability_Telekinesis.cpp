@@ -1,134 +1,13 @@
+// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Telekinesis.h"
-#include "DrawDebugHelpers.h"
-#include "ProjectAlpha/GamePlayActors/TelekineticObjects.h"
-#include "Components/PrimitiveComponent.h"
-#include "PhysicsEngine/PhysicsHandleComponent.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "Components/AudioComponent.h"
-#include "Kismet/GameplayStatics.h"
-#include "ProjectAlpha/Characters/ProjectAlphaMainCharacter.h"
+#include "Ability_Telekinesis.h"
+
 #include "Particles/ParticleSystemComponent.h"
+
 #include "AkComponent.h"
-#include "AkGameplayStatics.h"
 
-void UTelekinesis::BeginPlay()
-{
-	Super::BeginPlay();
-	GetPhysicsHandler();
-	//GetAudioComponent();
-	AkMainComponent = GetOwner()->FindComponentByClass<UAkComponent>();
-	MagicLeftHand->AttachToComponent(Cast<ACharacter>(GetOwner())->GetMesh(), FAttachmentTransformRules::KeepRelativeTransform,FName("FX_Hand_R1"));
-	MagicRightHand->AttachToComponent(Cast<ACharacter>(GetOwner())->GetMesh(), FAttachmentTransformRules::KeepRelativeTransform,FName("FX_Hand_L1"));
-}
+#include "ProjectAlpha/GamePlayActors/LevitatingActor.h"
 
-void UTelekinesis::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	//DrawDebugSphere(
-		//GetWorld(),StartLocation, Radius, 10,FColor::Blue,
-		//true, 1.f,1, 2.f);
-
-	CharacterLocation = GetOwner()->GetActorLocation();
-
-	if (bTelekinesisIsActive == true)
-	{
-		LevitateObjects(DeltaTime);	
-	}
-	
-}
-
-void UTelekinesis::ActivateTelekinesis()
-{
-	if(bTelekinesisIsActive) return;
-	if(RayCastObjects())	
-	{
-		const FOnAkPostEventCallback PostEventCallback;
-		const FString EventName;
-		PlayingId = AkMainComponent->PostAkEvent(TelekinesisEvent, 0, PostEventCallback, EventName);
-		
-		bTelekinesisIsActive = true;
-		MagicLeftHand->Activate();
-		MagicRightHand->Activate();
-	}
-}
-
-
-bool UAbility_Telekinesis::RayCastObjects()
-{
-	if (OwnerActor)
-	{
-		if (const UWorld* World = OwnerActor->GetWorld())
-		{
-			const FVector CharacterLocation = OwnerActor->GetActorLocation();
-			const FQuat Rotation = GetOwner()->GetActorRotation().Quaternion();
-			const FCollisionShape CollisionShape = FCollisionShape::MakeSphere(Radius);
-
-			TArray<FHitResult> HitResults;
-			if (GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, Rotation, TraceChannel, CollisionShape, FCollisionQueryParams()))
-			{
-				for (const FHitResult& HitResult : HitResults)
-				{
-					const ATelekineticObject* TelekineticObject = Cast<ATelekineticObject>(HitResult.GetActor());
-					if (TelekineticObject)
-					{
-						GrabbedTelekineticObjects.Add(TelekineticObject);
-						AbilityTimer = World->GetTimeSeconds();
-					}
-				}
-			}
-		}
-	}
-}
-
-
-void UAbility_Telekinesis::LevitateObjects(const float& DeltaTime)
-{
-	if (GetWorld()->GetTimeSeconds() - LevitationDelay < 0.5) return;
-	for (uint16 i = 0 ; i < GrabbedComponents.Num() ; i++)
-	{	
-		auto GrabbedObject = GrabbedComponents[i];
-		if (GrabbedObject->bIsLevitated == false)	
-		{
-			GrabbedObject->GetStaticMeshComponent()->SetEnableGravity(false);
-			GrabbedObject->GetStaticMeshComponent()->SetSimulatePhysics(false);
-			GrabbedObject->KineticObjectData.Direction = UKismetMathLibrary::FindLookAtRotation(CharacterLocation, GrabbedObject->GetActorLocation());
-			GrabbedObject->KineticObjectData.Distance = FVector::Dist(GetOwner()->GetActorLocation(), GrabbedObject->GetActorLocation());
-			GrabbedObject->ActivateParticleSystem();
-			KineticObjectDataArray.Add(GrabbedObject->KineticObjectData);
-		}
-		GrabbedObject->SetObjectLocation(CharacterLocation, KineticObjectDataArray[i], DeltaTime);
-		GrabbedObject->bIsLevitated = true;
-	}	
-}
-
-void UTelekinesis::DeactivateTelekinesis()
-{
-	AkMainComponent->Stop();
-	ReleaseObjects();
-}
-void UTelekinesis::ReleaseObjects()
-{
-	for (uint16 i = 0 ; i < GrabbedComponents.Num(); i++)
-	{
-		auto GrabbedObject = GrabbedComponents[i];
-		PhysicsHandler->ReleaseComponent();
-		GrabbedObject->ResetObject();
-	}
-	KineticObjectDataArray.Empty();
-	GrabbedComponents.Empty();
-}
-
-void UTelekinesis::GetPhysicsHandler()
-{
-	if (!ensure(GetOwner())) return;
-	PhysicsHandler = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
-	if (!ensure(PhysicsHandler))
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Physics Handler Not Found"));
-	}
-}
 
 void UAbility_Telekinesis::OnInitialize()
 {
@@ -137,31 +16,94 @@ void UAbility_Telekinesis::OnInitialize()
 
 void UAbility_Telekinesis::Update(const float& DeltaTime)
 {
-	LevitateObjects(DeltaTime);
+	// Grabbed actor update
 }
 
-bool UAbility_Telekinesis::ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation)
+bool UAbility_Telekinesis::ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation, FVector& OutHitLocation)
 {
+	bool bHasHit = false;
+	FHitResult OutHit;
+	FVector End = ViewpointLocation + (ViewpointRotation.Vector() * MAX_FLT);
+	if (GetWorld()->LineTraceSingleByChannel(OutHit, ViewpointLocation, End, ECollisionChannel::ECC_Visibility))
+	{
+		OutHitLocation = OutHit.Location;
+		bHasHit = true;
+	}
 
+	return bHasHit;
 }
 
 void UAbility_Telekinesis::OnActivate()
 {
-	RayCastObjects();
+	if (RayCastObjects()) 
+	{
+		bAbilityIsActive = true;
+
+		if (AbilityAkComponent)
+		{
+			AbilityAkComponent->PostAkEvent(OnAbilityActivedAudioEvent, 0, FOnAkPostEventCallback(), FString());
+		}
+		
+		if (AbilityParticleSystemComponent)
+		{
+			AbilityParticleSystemComponent->Activate();
+		}
+	}
 }
 
 
-void UAbility_Telekinesis::OnDeactivate()
+bool UAbility_Telekinesis::OnDeactivate()
 {
 	ReleaseObjects();
+	bAbilityIsActive = false;
 }
 
-void UAbility_Telekinesis::OnFire()
+void UAbility_Telekinesis::OnFire(const FVector& Location)
 {
-
+	if (!LevitatingActors.IsEmpty()) 
+	{
+		if (TObjectPtr<ALevitatingActor> LevitatingActor = LevitatingActors.Pop())
+		{
+			// Shoot actor towards location
+		}
+	}
 }
 
-void UAbility_Telekinesis::DeactivateAbility()
+bool UAbility_Telekinesis::RayCastObjects()
 {
+	bool bFoundObjects = false;
+	if (OwnerActor.IsValid())
+	{
+		if (const UWorld* const World = OwnerActor->GetWorld())
+		{
+			const FVector CharacterLocation = OwnerActor->GetActorLocation();
+			const FQuat Rotation = OwnerActor->GetActorRotation().Quaternion();
+			const FCollisionShape CollisionShape = FCollisionShape::MakeSphere(TelekinesisRadius);
 
+			TArray<FHitResult> HitResults;
+			if (GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, Rotation, ECollisionChannel::ECC_GameTraceChannel1, CollisionShape, FCollisionQueryParams()))
+			{
+				for (const FHitResult& HitResult : HitResults)
+				{
+					if (TObjectPtr<ALevitatingActor> LevitatingActor = Cast<ALevitatingActor>(HitResult.GetActor()))
+					{
+						LevitatingActor->LevitationRequested(OwnerActor.Get());
+						LevitatingActors.Add(LevitatingActor);
+						bFoundObjects = true;
+					}
+				}
+			}
+		}
+	}
+
+	return bFoundObjects;
+}
+
+void UAbility_Telekinesis::ReleaseObjects()
+{
+	for (const TObjectPtr<ALevitatingActor>& LevitatingActor : LevitatingActors)
+	{
+		LevitatingActor->ResetActor();
+	}
+	LevitatingActors.Empty();
 }

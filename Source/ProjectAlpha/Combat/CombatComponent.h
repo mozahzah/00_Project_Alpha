@@ -5,16 +5,19 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 
+#include "ProjectAlpha/Combat/Abilities/Ability.h"
+
 #include "CombatComponent.generated.h"
 
-enum class EAbility : uint8
+UENUM()
+enum class EAbilityType : uint8
 {
 	Movement,
 	Controller,
 	Ultimate,
 };
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS()
 class PROJECTALPHA_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -26,7 +29,7 @@ private:
 	virtual void BeginPlay() override;
 	void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void ActivateAbility(EAbility Ability);
+	void ActivateAbility(EAbilityType Ability);
 	bool DeactivateCurrentAbility();
 
 	// Ability Binds Section
@@ -42,7 +45,7 @@ private:
 
 private:
 	UPROPERTY(EditAnywhere)
-	TMap<EAbility, TObjectPtr<UAbility>> AbilityMap;
+	TMap<EAbilityType, TObjectPtr<UAbility>> AbilityMap;
 
 private:
 	TWeakObjectPtr<APlayerController> PlayerController;

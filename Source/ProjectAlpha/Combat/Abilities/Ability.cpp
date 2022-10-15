@@ -2,7 +2,7 @@
 
 #include "ProjectAlpha/Combat/Abilities/Ability.h"
 
-void UAbility::Initialize(const AActor*& OwnerActor)
+void UAbility::Initialize(AActor* OwnerActor)
 {
 	if (OwnerActor) 
 	{
