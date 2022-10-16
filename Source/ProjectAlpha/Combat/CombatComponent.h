@@ -44,7 +44,7 @@ private:
 	void StopSecondaryFire();
 
 private:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Instanced)
 	TMap<EAbilityType, TObjectPtr<UAbility>> AbilityMap;
 
 private:

@@ -9,13 +9,20 @@ UCombatComponent::UCombatComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 	PrimaryComponentTick.bStartWithTickEnabled = true;
 
+	
+}
+
+void UCombatComponent::BeginPlay()
+{
+	Super::BeginPlay();
+
 	//Input Binding for Combat (Maybe not the best place to setup)
 	if (const AActor* Owner = GetOwner())
 	{
 		if (UInputComponent* const InputComponent = Owner->InputComponent)
 		{
-			InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
-			InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
+			//InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
+			//InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
 			InputComponent->BindAction(FName("ActivateUltimateAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateUltimateAbility);
 
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Pressed, this, &UCombatComponent::Fire);
@@ -25,11 +32,6 @@ UCombatComponent::UCombatComponent()
 			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Released, this, &UCombatComponent::StopFire);
 		}
 	}
-}
-
-void UCombatComponent::BeginPlay()
-{
-	Super::BeginPlay();
 
 	if (const APawn* Pawn = Cast<APawn>(GetOwner()))
 	{
@@ -84,7 +86,7 @@ void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
 
 bool UCombatComponent::DeactivateCurrentAbility()
 {
-	bool bHasDeactivated = false;
+	bool bHasDeactivated = true;
 	if (CurrentAbility.IsValid())
 	{
 		bHasDeactivated = CurrentAbility->OnDeactivate();

@@ -248,7 +248,12 @@ void AProjectAlphaMainCharacter::SnapFinger()
 	const FString EventName;
 	//AkMainComponent->PostAkEvent(SnapEventtwo, 0, PostEventCallback, EventName);
 	FAkAudioDevice::Get()->GetDefaultListeners();
-	AkMainComponent->PostAkEvent(SnapEvent, 0, PostEventCallback, EventName);
+
+	if (AkMainComponent)
+	{
+		AkMainComponent->PostAkEvent(SnapEvent, 0, PostEventCallback, EventName);
+	}
+
 }
 
 void AProjectAlphaMainCharacter::MakeFast()

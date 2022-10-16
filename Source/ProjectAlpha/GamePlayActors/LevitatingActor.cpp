@@ -11,7 +11,14 @@ ALevitatingActor::ALevitatingActor()
 {
     PrimaryActorTick.bCanEverTick = true;
     PrimaryActorTick.bStartWithTickEnabled = true;
+    SetMobility(EComponentMobility::Movable);
 
+    if (GetStaticMeshComponent())
+    {
+        GetStaticMeshComponent()->SetCollisionProfileName(FName(TEXT("LevitatingActor")));
+        GetStaticMeshComponent()->OnComponentHit.AddDynamic(this, &ALevitatingActor::OnHit);
+    }
+    
     AkComponent = CreateDefaultSubobject<UAkComponent>(FName(TEXT("LevitatingActor_AkComponent")), true);
     if (AkComponent)
     {
@@ -19,38 +26,22 @@ ALevitatingActor::ALevitatingActor()
     }
 }
 
-void ALevitatingActor::BeginPlay()
+void ALevitatingActor::Destroyed()
 {
-    Super::BeginPlay();
-
-    if (GetStaticMeshComponent())
-    {
-        GetStaticMeshComponent()->OnComponentHit.AddDynamic(this, &ALevitatingActor::OnHit);
-    }
-}
-
-void ALevitatingActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
-{
-    Super::EndPlay(EndPlayReason);
-
-    if (AkComponent)
-    {
-        AkComponent->DestroyComponent();
-        AkComponent = nullptr;
-    }
-
     if (GetStaticMeshComponent())
     {
         GetStaticMeshComponent()->OnComponentHit.RemoveDynamic(this, &ALevitatingActor::OnHit);
     }
+
+    Super::Destroyed();
 }
 
-void ALevitatingActor::LevitationRequested(const AActor* Actor)
+void ALevitatingActor::RequestLevitation(const AActor* RequesteeActor)
 {
     bool bSuccess = true;
-    if (Actor)
+    if (RequesteeActor)
     {
-        SourceActor = Actor;
+        SourceActor = RequesteeActor;
         CachedVectorFromSource = GetActorLocation() - SourceActor->GetActorLocation();
     }
     else
@@ -64,6 +55,12 @@ void ALevitatingActor::LevitationRequested(const AActor* Actor)
         GetStaticMeshComponent()->SetSimulatePhysics(false);
     }
 
+    MaxLevitationHeight = FMath::FRandRange(MinRandomLevitationHeight, MaxRandomLevitationHeight);
+    LevitationSpeed = FMath::FRandRange(MinRandomLevitationSpeed, MaxRandomLevitationSpeed);
+    SpringStrenght = FMath::FRandRange(MinRandomSpringStrenght, MaxRandomSpringStrenght);
+
+    CurrentLevitationHeight = 0.0f;
+    bHasReachedMaxHeight = false;
     bIsLevitated = bSuccess;
 }
 
@@ -79,21 +76,32 @@ void ALevitatingActor::Tick(float DeltaSeconds)
 
 void ALevitatingActor::ProcessLevitation(float DeltaSeconds)
 {
-    //const float Sin = (FMath::Sin((GetWorld()->GetTimeSeconds())));
     if (SourceActor.IsValid())
     {
         const FVector SourceActorLocation = SourceActor->GetActorLocation();
-        FVector CurrentLocation;
+        FVector CurrentLocation = GetActorLocation();
 
-        const float Rand = FMath::FRandRange(10, 100);
+        if (!bHasReachedMaxHeight)
+        {
+            CurrentLevitationHeight += LevitationSpeed * DeltaSeconds;
+            if (CurrentLevitationHeight > MaxLevitationHeight)
+            {
+                bHasReachedMaxHeight = true;
+            }
+        }
+        else
+        {
+            const float SinWave = (FMath::Sin((GetWorld()->GetTimeSeconds())));
+            CurrentLevitationHeight += SinWave / (FMath::IsNearlyZero(FloatingMotionRange) ? 1.0f : FloatingMotionRange);
+        }
 
-        CurrentLocation.X = FMath::FInterpTo(CurrentLocation.X, SourceActorLocation.X + Rand, DeltaSeconds, Rand);
-        CurrentLocation.Y = FMath::FInterpTo(CurrentLocation.Y, SourceActorLocation.Y + Rand, DeltaSeconds, Rand);
-        CurrentLocation.Z = FMath::FInterpTo(CurrentLocation.Z, SourceActorLocation.Z + Rand, DeltaSeconds, Rand) + FMath::FRandRange(50, 100) * DeltaSeconds;
-        CurrentLocation += CachedVectorFromSource;
+
+        CurrentLocation.X = FMath::FInterpTo(CurrentLocation.X, SourceActorLocation.X + CachedVectorFromSource.X, DeltaSeconds, SpringStrenght);
+        CurrentLocation.Y = FMath::FInterpTo(CurrentLocation.Y, SourceActorLocation.Y + CachedVectorFromSource.Y, DeltaSeconds, SpringStrenght);
+        CurrentLocation.Z = FMath::FInterpTo(CurrentLocation.Z, SourceActorLocation.Z + CachedVectorFromSource.Z + CurrentLevitationHeight, DeltaSeconds, SpringStrenght);
 
         SetActorLocation(CurrentLocation);
-        SetActorRotation(FRotator(FMath::Rand()));
+        SetActorRotation(GetActorRotation() + FRotator(FMath::FRandRange(1, 10) * DeltaSeconds));
     }
 }
 
