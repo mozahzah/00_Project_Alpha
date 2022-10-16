@@ -56,6 +56,8 @@ bool UAbility_Telekinesis::OnDeactivate()
 {
 	ReleaseObjects();
 	bAbilityIsActive = false;
+
+	return true;
 }
 
 void UAbility_Telekinesis::OnFire(const FVector& Location)

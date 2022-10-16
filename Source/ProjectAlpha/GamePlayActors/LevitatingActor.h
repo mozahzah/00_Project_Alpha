@@ -7,6 +7,9 @@
 
 #include "LevitatingActor.generated.h"
 
+class UAkAudioEvent;
+class UAkComponent;
+
 UCLASS()
 class PROJECTALPHA_API ALevitatingActor : public AStaticMeshActor
 {

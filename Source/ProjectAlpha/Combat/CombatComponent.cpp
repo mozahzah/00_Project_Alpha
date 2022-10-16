@@ -33,9 +33,9 @@ void UCombatComponent::BeginPlay()
 
 	if (const APawn* Pawn = Cast<APawn>(GetOwner()))
 	{
-		if (APlayerController* PlayerController = Cast<APlayerController>(Pawn->GetController()))
+		if (APlayerController* _PlayerController = Cast<APlayerController>(Pawn->GetController()))
 		{
-			this->PlayerController = PlayerController;
+			this->PlayerController = _PlayerController;
 		}
 	}
 
@@ -59,9 +59,10 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 		{
 			FVector ViewpointLocation;
 			FRotator ViewpointRotation;
+			FVector Out;
 			PlayerController->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
 
-			if (CurrentAbility->ProcessLineTrace(ViewpointLocation, ViewpointRotation))
+			if (CurrentAbility->ProcessLineTrace(ViewpointLocation, ViewpointRotation, Out))
 			{
 				CurrentAbility->Update(DeltaTime);
 			}
@@ -124,7 +125,7 @@ void UCombatComponent::Fire()
 {
 	if (CurrentAbility.IsValid())
 	{
-		CurrentAbility->OnFire();
+		CurrentAbility->OnFire(FVector::ZeroVector);
 	}
 }
 

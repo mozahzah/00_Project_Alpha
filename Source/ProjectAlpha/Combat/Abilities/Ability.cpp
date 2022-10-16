@@ -2,11 +2,11 @@
 
 #include "ProjectAlpha/Combat/Abilities/Ability.h"
 
-void UAbility::Initialize(AActor* OwnerActor)
+void UAbility::Initialize(AActor* _OwnerActor)
 {
-	if (OwnerActor) 
+	if (_OwnerActor)
 	{
-		this->OwnerActor = OwnerActor;
+		this->OwnerActor = _OwnerActor;
 		OnInitialize();
 	}
 }

@@ -5,7 +5,7 @@
 #include "AkGameplayStatics.h"
 #include "ProjectAlphaMainCharacter.h"
 #include "Kismet/GameplayStatics.h"
-#include "ProjectAlpha/Combat/Abilities/Weapon.h"
+//#include "ProjectAlpha/Combat/Abilities/Weapon.h"
 
 
 AProjectAlphaEnemyCharacter::AProjectAlphaEnemyCharacter()

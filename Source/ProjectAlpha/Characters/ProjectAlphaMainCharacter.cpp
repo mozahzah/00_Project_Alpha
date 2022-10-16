@@ -8,7 +8,7 @@
 #include "AudioDevice.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
-#include "ProjectAlpha/Combat/Abilities/Weapon.h"
+//#include "ProjectAlpha/Combat/Abilities/Weapon.h"
 #include "UObject/WeakObjectPtrTemplates.h"
 #include "CollisionShape.h"
 #include "AkGameObject.h"

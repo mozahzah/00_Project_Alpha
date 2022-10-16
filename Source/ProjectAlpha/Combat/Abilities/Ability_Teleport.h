@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+#include "ProjectAlpha/Combat/Abilities/Ability.h"
+
 #include "Ability_Teleport.generated.h"
 
 UCLASS()
