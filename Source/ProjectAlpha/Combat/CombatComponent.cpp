@@ -8,8 +8,6 @@ UCombatComponent::UCombatComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 	PrimaryComponentTick.bStartWithTickEnabled = true;
-
-	
 }
 
 void UCombatComponent::BeginPlay()
@@ -35,9 +33,9 @@ void UCombatComponent::BeginPlay()
 
 	if (const APawn* Pawn = Cast<APawn>(GetOwner()))
 	{
-		if (APlayerController* _PlayerController = Cast<APlayerController>(Pawn->GetController()))
+		if (APlayerController* Controller = Cast<APlayerController>(Pawn->GetController()))
 		{
-			this->PlayerController = _PlayerController;
+			PlayerController = Controller;
 		}
 	}
 
@@ -59,15 +57,7 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	{
 		if (CurrentAbility.IsValid())
 		{
-			FVector ViewpointLocation;
-			FRotator ViewpointRotation;
-			FVector Out;
-			PlayerController->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
-
-			if (CurrentAbility->ProcessLineTrace(ViewpointLocation, ViewpointRotation, Out))
-			{
-				CurrentAbility->Update(DeltaTime);
-			}
+			CurrentAbility->Update(DeltaTime);
 		}
 	}	
 }
@@ -79,7 +69,7 @@ void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
 		if (Ability && !Ability->IsNull())
 		{
 			CurrentAbility = Ability->Get();
-			CurrentAbility->OnActivate();
+			CurrentAbility->Activate();
 		}
 	}
 }
@@ -89,10 +79,9 @@ bool UCombatComponent::DeactivateCurrentAbility()
 	bool bHasDeactivated = true;
 	if (CurrentAbility.IsValid())
 	{
-		bHasDeactivated = CurrentAbility->OnDeactivate();
+		CurrentAbility->Deactivate();
+		return bHasDeactivated;
 	}
-
-	return bHasDeactivated;
 }
 
 // Ability Binds Section
@@ -127,7 +116,7 @@ void UCombatComponent::Fire()
 {
 	if (CurrentAbility.IsValid())
 	{
-		CurrentAbility->OnFire(FVector::ZeroVector);
+		CurrentAbility->Fire(FVector::ZeroVector);
 	}
 }
 
@@ -135,7 +124,7 @@ void UCombatComponent::StopFire()
 {
 	if (CurrentAbility.IsValid())
 	{
-		CurrentAbility->OnFireStop();
+		CurrentAbility->StopFire();
 	}
 }
 
@@ -143,7 +132,7 @@ void UCombatComponent::SecondaryFire()
 {
 	if (CurrentAbility.IsValid())
 	{
-		CurrentAbility->OnSecondaryFire();
+		CurrentAbility->SecondaryFire();
 	}
 }
 
@@ -151,6 +140,6 @@ void UCombatComponent::StopSecondaryFire()
 {
 	if (CurrentAbility.IsValid())
 	{
-		CurrentAbility->OnSecondaryFireStop();
+		CurrentAbility->StopSecondaryFire();
 	}
 }

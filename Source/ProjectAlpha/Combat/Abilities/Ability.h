@@ -17,28 +17,34 @@ class PROJECTALPHA_API UAbility : public UObject
 	GENERATED_BODY()
 
 public:
-	void Initialize(AActor* OwnerActor);
+	void Initialize(AActor* Actor);
+	void Activate();
+	void Update(const float& DeltaTime);
+	void Deactivate();
 
+	void Fire(const FVector& TargetLocation);
+	void StopFire();
+	void SecondaryFire();
+	void StopSecondaryFire();
+
+protected:
 	virtual void OnInitialize() {};
-	virtual void Update(const float& DeltaTime) {};
-	virtual bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation, FVector& OuHitLocation) { return false; };
 	virtual void OnActivate() {};
-	virtual bool OnDeactivate() { return false; };
+	virtual void OnUpdate(const float& DeltaTime) {};
+	virtual void OnDeactivate() {};
 
-	// Firing Mechanics
-	virtual void OnFire(const FVector& Location) {};
+	virtual void OnFire(const FVector& TargetLocation) {};
 	virtual void OnFireStop() {};
 	virtual void OnSecondaryFire() {};
 	virtual void OnSecondaryFireStop() {};
 
-protected:
+private:
 	UPROPERTY(Transient)
 	TObjectPtr<UAkComponent> AbilityAkComponent;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UParticleSystemComponent> AbilityParticleSystemComponent;
 
-protected:
 	/*Activation delay in seconds */
 	UPROPERTY(EditAnywhere, meta =(ClampMin = "0", UIMin = "0"))
 	float ActivationDelay = 0.0f;
@@ -49,23 +55,24 @@ protected:
 
 	/*Audio event that will be posted when the ability activates*/
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UAkAudioEvent> OnAbilityActivedAudioEvent;
+	TObjectPtr<UAkAudioEvent> AbilityActivatedAudioEvent;
 
 	/*Audio event that will be posted when the ability deactivates*/
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UAkAudioEvent> OnAbilityDeactivedAudioEvent;
+	TObjectPtr<UAkAudioEvent> AbilityDeactivedAudioEvent;
 
 	/*VFX event that will be played when the ability activates*/
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UParticleSystem> OnAbilityActivedVFXEvent;
+	TObjectPtr<UParticleSystem> AbilityActivatedVFXEvent;
 
 	/*VFX event that will be played when the ability deactivates*/
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UParticleSystem> OnAbilityDeactivedVFXEvent;
+	TObjectPtr<UParticleSystem> AbilityDeactivedVFXEvent;
 
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
 
+private:
 	float AbilityTimer;
 	bool bAbilityIsActive;
 };
