@@ -31,28 +31,32 @@ void UAbility::Initialize(AActor* Actor)
 			AbilityParticleSystemComponent->SetupAttachment(SceneComponent, AbilitySocketName);
 			AbilityParticleSystemComponent->RegisterComponent();
 		}
-
-		OnInitialize();
 	}
+
+	OnInitialize();
 }
 
 void UAbility::Activate()
 {
-	if (AbilityAkComponent && AbilityActivatedAudioEvent)
-	{
-		AbilityAkComponent->PostAkEvent(AbilityActivatedAudioEvent, 0, FOnAkPostEventCallback(), FString());
-	}
+	bool bSuccess = false;
+	OnActivate(bSuccess);
 
-	if (AbilityParticleSystemComponent && AbilityActivatedVFXEvent)
+	if (bSuccess)
 	{
-		AbilityParticleSystemComponent->Template = AbilityActivatedVFXEvent;
-		AbilityParticleSystemComponent->Activate();
-	}
+		if (AbilityAkComponent && AbilityActivatedAudioEvent)
+		{
+			AbilityAkComponent->PostAkEvent(AbilityActivatedAudioEvent, 0, FOnAkPostEventCallback(), FString());
+		}
 
-	OnActivate();
+		if (AbilityParticleSystemComponent && AbilityActivatedVFXEvent)
+		{
+			AbilityParticleSystemComponent->Template = AbilityActivatedVFXEvent;
+			AbilityParticleSystemComponent->Activate();
+		}
+	}
 }
 
-void UAbility::Update(const float& DeltaTime)
+void UAbility::Update(float DeltaTime)
 {
 	if (bAbilityIsActive)
 	{
@@ -81,25 +85,49 @@ void UAbility::Deactivate()
 		}
 	}
 
-	OnDeactivated();
+	OnDeactivate();
 }
 
-void UAbility::Fire(const FVector& TargetLocation)
+void UAbility::StartFire()
 {
-	OnFire(TargetLocation);
+	bFireButtonIsHeld = true;
+	OnFireStart();
 }
 
 void UAbility::StopFire()
 {
+	bFireButtonIsHeld = false;
 	OnFireStop();
 }
 
-void UAbility::SecondaryFire()
+void UAbility::StartSecondaryFire()
 {
-	OnSecondaryFire();
+	bSecondaryFireButtonHeld = true;
+	OnSecondaryFireStart();
 }
 
 void UAbility::StopSecondaryFire()
 {
+	bSecondaryFireButtonHeld = false;
 	OnSecondaryFireStop();
+}
+
+void UAbility::StartZoom()
+{
+	OnZoomStart();
+}
+
+void UAbility::StopZoom()
+{
+	OnZoomStop();
+}
+
+void UAbility::StartUnzoom()
+{
+	OnUnzoomStart();
+}
+
+void UAbility::StopUnzoom()
+{
+	OnUnzoomStop();
 }

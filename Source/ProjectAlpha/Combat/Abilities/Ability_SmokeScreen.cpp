@@ -2,64 +2,72 @@
 
 #include "Ability_SmokeScreen.h"
 
+#include "DrawDebugHelpers.h"
+
 #include "ProjectAlpha/GamePlayActors/SmokeScreenActor.h"
 
+void UAbility_SmokeScreen::OnInitialize()
+{
+	if (OwnerActor.IsValid())
+	{
+		if (const UWorld* World = OwnerActor->GetWorld())
+		{
+			MyWorld = World;
+		}
+	}
+}
 
-//// Sets default values for this component's properties
-//USmokeScreen::USmokeScreen()
-//{
-//	PrimaryComponentTick.bCanEverTick = true;
-//}
-//
-//// Called when the game starts
-//void USmokeScreen::BeginPlay()
-//{
-//	Super::BeginPlay();
-//}
-//
-//// Called every frame
-//void USmokeScreen::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-//{
-//	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-//
-//	if (bSmokeIsActive) 
-//	{
-//		SetSmokeLocation(SmokeScreenActor);	
-//	}
-//}
-//
-//void USmokeScreen::SetSmokeLocation(ASmokeScreenActor* SmokeActor) 
-//{
-//	if (const AActor* Owner = GetOwner())
-//	{
-//		const FVector ActorLocation = Owner->GetActorLocation();
-//		if (FVector::Distance(ActorLocation, CurrentLocation) >= FVector::Distance(ActorLocation, EndLocation))
-//		{
-//			bSmokeIsActive = false;
-//		}
-//		else
-//		{
-//			CurrentLocation += ForwardVector * 10;
-//			SmokeActor->SetActorLocation(CurrentLocation);
-//		}
-//	}
-//}
-//
-//void USmokeScreen::ActivateSmokeScreen(FVector SmokeLocationToSet)
-//{
-//	CurrentLocation = GetOwner()->GetActorLocation() + GetOwner()->GetActorForwardVector() * 100;
-//	ForwardVector = GetOwner()->GetActorForwardVector();
-//	FActorSpawnParameters SpawnParameters;
-//	SmokeScreenActor = GetWorld()->SpawnActor<ASmokeScreenActor>(SmokeBlueprint, CurrentLocation, GetOwner()->GetActorRotation(), SpawnParameters);
-//	EndLocation = SmokeLocationToSet;
-//	bSmokeIsActive = true;
-//}
-//
-//void USmokeScreen::DeactivateSmokeScreen()
-//{
-//	
-//}
-//
-//void UAbility_SmokeScreen::Update(const float DeltaTime)
-//{
-//}
+void UAbility_SmokeScreen::OnActivate(bool& bSuccess)
+{
+	if (OwnerActor.IsValid())
+	{
+		SmokeLocation = OwnerActor->GetActorLocation();
+		bSuccess = true;
+	}
+}
+
+void UAbility_SmokeScreen::OnUpdate(float DeltaTime)
+{
+
+	if (bFireButtonIsHeld)
+	{
+		DistanceFromPlayer += bDeployementSpeed * DeltaTime;
+	}
+	if (bSecondaryFireButtonHeld)
+	{
+		DistanceFromPlayer = FMath::Clamp(DistanceFromPlayer, 0.0f, DistanceFromPlayer -= bDeployementSpeed * DeltaTime);
+	}
+
+	if (OwnerActor.IsValid())
+	{
+		SmokeLocation = OwnerActor->GetActorLocation() + OwnerActor->GetActorForwardVector() * DistanceFromPlayer;
+	}
+
+	if (bAbilityIsActive)
+	{
+		if (MyWorld.IsValid())
+		{
+			DrawDebugCircle(MyWorld.Get(), SmokeLocation, PreSmokeWidgetSize, 6, FColor::Cyan);
+		}
+	}
+
+	if (bSmokeHasBeenDeployed)
+	{
+		// DEPLY ACTOR
+	}
+}
+
+void UAbility_SmokeScreen::OnDeactivate()
+{
+	bAbilityIsActive = false;
+	if (MyWorld.IsValid() && OwnerActor.IsValid())
+	{
+		GetWorld()->SpawnActor<ASmokeScreenActor>(SmokeScreenActor, SmokeLocation, OwnerActor->GetActorRotation(), FActorSpawnParameters());
+	}
+	DistanceFromPlayer = 0.0f;
+}
+
+void UAbility_SmokeScreen::OnFireStart()
+{
+	//bAbilityIsActive = false;
+}

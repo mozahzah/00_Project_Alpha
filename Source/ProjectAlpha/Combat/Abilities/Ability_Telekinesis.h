@@ -18,11 +18,10 @@ class PROJECTALPHA_API UAbility_Telekinesis : public UAbility
 protected:
 	// Begin Ability Implementation
 	void OnInitialize() override;
-	void Update(const float& DeltaTime) override;
-	bool ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation, FVector& OutHitLocation) override;
-	void OnActivate() override;
-	bool OnDeactivate() override;
-	void OnFire(const FVector& Location) override;
+	void OnUpdate(float DeltaTime) override;
+	void OnActivate(bool& bSuccess) override;
+	void OnDeactivate() override;
+	void OnFireStart() override;
 	// End Ability Implementation
 
 private:

@@ -4,63 +4,33 @@
 
 #include "Particles/ParticleSystemComponent.h"
 
-#include "AkComponent.h"
-
 #include "ProjectAlpha/GamePlayActors/LevitatingActor.h"
-
 
 void UAbility_Telekinesis::OnInitialize()
 {
 
 }
 
-void UAbility_Telekinesis::Update(const float& DeltaTime)
+void UAbility_Telekinesis::OnUpdate(float DeltaTime)
 {
 	// Grabbed actor update
 }
 
-bool UAbility_Telekinesis::ProcessLineTrace(const FVector& ViewpointLocation, const FRotator& ViewpointRotation, FVector& OutHitLocation)
-{
-	bool bHasHit = false;
-	FHitResult OutHit;
-	FVector End = ViewpointLocation + (ViewpointRotation.Vector() * MAX_FLT);
-	if (GetWorld()->LineTraceSingleByChannel(OutHit, ViewpointLocation, End, ECollisionChannel::ECC_Visibility))
-	{
-		OutHitLocation = OutHit.Location;
-		bHasHit = true;
-	}
-
-	return bHasHit;
-}
-
-void UAbility_Telekinesis::OnActivate()
+void UAbility_Telekinesis::OnActivate(bool& bSuccess)
 {
 	if (RayCastObjects()) 
 	{
-		bAbilityIsActive = true;
-
-		if (AbilityAkComponent)
-		{
-			AbilityAkComponent->PostAkEvent(OnAbilityActivedAudioEvent, 0, FOnAkPostEventCallback(), FString());
-		}
-		
-		if (AbilityParticleSystemComponent)
-		{
-			AbilityParticleSystemComponent->Activate();
-		}
+		bSuccess = true;
 	}
 }
 
-
-bool UAbility_Telekinesis::OnDeactivate()
+void UAbility_Telekinesis::OnDeactivate()
 {
 	ReleaseObjects();
 	bAbilityIsActive = false;
-
-	return true;
 }
 
-void UAbility_Telekinesis::OnFire(const FVector& Location)
+void UAbility_Telekinesis::OnFireStart()
 {
 	if (!LevitatingActors.IsEmpty()) 
 	{
@@ -105,7 +75,10 @@ void UAbility_Telekinesis::ReleaseObjects()
 {
 	for (const TObjectPtr<ALevitatingActor>& LevitatingActor : LevitatingActors)
 	{
-		LevitatingActor->ResetActor();
+		if (LevitatingActor)
+		{
+			LevitatingActor->ResetActor();
+		}
 	}
 	LevitatingActors.Empty();
 }

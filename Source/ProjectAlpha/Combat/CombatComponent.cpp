@@ -20,22 +20,19 @@ void UCombatComponent::BeginPlay()
 		if (UInputComponent* const InputComponent = Owner->InputComponent)
 		{
 			//InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
-			//InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
+			InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
 			InputComponent->BindAction(FName("ActivateUltimateAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateUltimateAbility);
 
-			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Pressed, this, &UCombatComponent::Fire);
+			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartFire);
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Released, this, &UCombatComponent::StopFire);
 
-			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Pressed, this, &UCombatComponent::Fire);
-			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Released, this, &UCombatComponent::StopFire);
-		}
-	}
+			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartSecondaryFire);
+			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Released, this, &UCombatComponent::StopSecondaryFire);
 
-	if (const APawn* Pawn = Cast<APawn>(GetOwner()))
-	{
-		if (APlayerController* Controller = Cast<APlayerController>(Pawn->GetController()))
-		{
-			PlayerController = Controller;
+			InputComponent->BindAction(FName(TEXT("Zoom")), EInputEvent::IE_Pressed, this, &UCombatComponent::StartZoom);
+			InputComponent->BindAction(FName(TEXT("Zoom")), EInputEvent::IE_Released, this, &UCombatComponent::StopZoom);
+			InputComponent->BindAction(FName(TEXT("Unzoom")), EInputEvent::IE_Pressed, this, &UCombatComponent::StartUnzoom);
+			InputComponent->BindAction(FName(TEXT("Unzoom")), EInputEvent::IE_Released, this, &UCombatComponent::StopUnzoom);
 		}
 	}
 
@@ -53,13 +50,11 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
-	if (PlayerController.IsValid())
+	if (CurrentAbility)
 	{
-		if (CurrentAbility.IsValid())
-		{
-			CurrentAbility->Update(DeltaTime);
-		}
-	}	
+		//TODO CHECK IF ACTIVE
+		CurrentAbility->Update(DeltaTime);
+	}
 }
 
 void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
@@ -74,13 +69,11 @@ void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
 	}
 }
 
-bool UCombatComponent::DeactivateCurrentAbility()
+void UCombatComponent::DeactivateCurrentAbility()
 {
-	bool bHasDeactivated = true;
-	if (CurrentAbility.IsValid())
+	if (CurrentAbility && !CurrentAbility->IsLocked())
 	{
 		CurrentAbility->Deactivate();
-		return bHasDeactivated;
 	}
 }
 
@@ -88,58 +81,84 @@ bool UCombatComponent::DeactivateCurrentAbility()
 
 void UCombatComponent::ActivateMovementAbility()
 {
-	if (DeactivateCurrentAbility())
-	{
-		ActivateAbility(EAbilityType::Movement);
-	}
+	DeactivateCurrentAbility();
+	ActivateAbility(EAbilityType::Movement);
 }
 
 void UCombatComponent::ActivateControllerAbility()
 {
-	if (DeactivateCurrentAbility())
-	{
-		ActivateAbility(EAbilityType::Controller);
-	}
+	DeactivateCurrentAbility();
+	ActivateAbility(EAbilityType::Controller);
 }
 
 void UCombatComponent::ActivateUltimateAbility()
 {
-	if (DeactivateCurrentAbility())
-	{
-		ActivateAbility(EAbilityType::Ultimate);
-	}
+	DeactivateCurrentAbility();
+	ActivateAbility(EAbilityType::Ultimate);
 }
 
 // Firing Mechanics Binds Section
 
-void UCombatComponent::Fire()
+void UCombatComponent::StartFire()
 {
-	if (CurrentAbility.IsValid())
+	if (CurrentAbility)
 	{
-		CurrentAbility->Fire(FVector::ZeroVector);
+		CurrentAbility->StartFire();
 	}
 }
 
 void UCombatComponent::StopFire()
 {
-	if (CurrentAbility.IsValid())
+	if (CurrentAbility)
 	{
 		CurrentAbility->StopFire();
 	}
 }
 
-void UCombatComponent::SecondaryFire()
+void UCombatComponent::StartSecondaryFire()
 {
-	if (CurrentAbility.IsValid())
+	if (CurrentAbility)
 	{
-		CurrentAbility->SecondaryFire();
+		CurrentAbility->StartSecondaryFire();
 	}
 }
 
 void UCombatComponent::StopSecondaryFire()
 {
-	if (CurrentAbility.IsValid())
+	if (CurrentAbility)
 	{
 		CurrentAbility->StopSecondaryFire();
+	}
+}
+
+void UCombatComponent::StartZoom()
+{
+	if (CurrentAbility)
+	{
+		CurrentAbility->StartZoom();
+	}
+}
+
+void UCombatComponent::StopZoom()
+{
+	if (CurrentAbility)
+	{
+		CurrentAbility->StopZoom();
+	}
+}
+
+void UCombatComponent::StartUnzoom()
+{
+	if (CurrentAbility)
+	{
+		CurrentAbility->StartUnzoom();
+	}
+}
+
+void UCombatComponent::StopUnzoom()
+{
+	if (CurrentAbility)
+	{
+		CurrentAbility->StopUnzoom();
 	}
 }

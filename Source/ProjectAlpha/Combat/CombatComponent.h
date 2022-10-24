@@ -26,11 +26,11 @@ public:
 	UCombatComponent();
 
 private:
-	virtual void BeginPlay() override;
+	void BeginPlay() override;
 	void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	void ActivateAbility(EAbilityType Ability);
-	bool DeactivateCurrentAbility();
+	void DeactivateCurrentAbility();
 
 	// Ability Binds Section
 	void ActivateMovementAbility();
@@ -38,16 +38,19 @@ private:
 	void ActivateUltimateAbility();
 
 	// Firing Mechanics Binds Section
-	void Fire();
+	void StartFire();
 	void StopFire();
-	void SecondaryFire();
+	void StartSecondaryFire();
 	void StopSecondaryFire();
+	void StartZoom();
+	void StopZoom();
+	void StartUnzoom();
+	void StopUnzoom();
 
 private:
-	UPROPERTY(EditAnywhere, Instanced)
+	UPROPERTY(EditDefaultsOnly, Instanced)
 	TMap<EAbilityType, TObjectPtr<UAbility>> AbilityMap;
 
 private:
-	TWeakObjectPtr<APlayerController> PlayerController;
-	TWeakObjectPtr<UAbility> CurrentAbility;
+	TObjectPtr<UAbility> CurrentAbility;
 };

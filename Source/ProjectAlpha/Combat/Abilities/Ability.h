@@ -19,26 +19,36 @@ class PROJECTALPHA_API UAbility : public UObject
 public:
 	void Initialize(AActor* Actor);
 	void Activate();
-	void Update(const float& DeltaTime);
+	void Update(float DeltaTime);
 	void Deactivate();
+	bool IsLocked() const { return bIsLocked; }
 
-	void Fire(const FVector& TargetLocation);
+	void StartFire();
 	void StopFire();
-	void SecondaryFire();
+	void StartSecondaryFire();
 	void StopSecondaryFire();
+	void StartZoom();
+	void StopZoom();
+	void StartUnzoom();
+	void StopUnzoom();
+
 
 protected:
 	virtual void OnInitialize() {};
-	virtual void OnActivate() {};
-	virtual void OnUpdate(const float& DeltaTime) {};
+	virtual void OnActivate(bool& bSuccess) {};
+	virtual void OnUpdate(float DeltaTime) {};
 	virtual void OnDeactivate() {};
 
-	virtual void OnFire(const FVector& TargetLocation) {};
+	virtual void OnFireStart() {};
 	virtual void OnFireStop() {};
-	virtual void OnSecondaryFire() {};
+	virtual void OnSecondaryFireStart() {};
 	virtual void OnSecondaryFireStop() {};
+	virtual void OnZoomStart() {};
+	virtual void OnZoomStop() {};
+	virtual void OnUnzoomStart() {};
+	virtual void OnUnzoomStop() {};
 
-private:
+protected:
 	UPROPERTY(Transient)
 	TObjectPtr<UAkComponent> AbilityAkComponent;
 
@@ -71,8 +81,10 @@ private:
 
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
-
-private:
 	float AbilityTimer;
 	bool bAbilityIsActive;
+	bool bIsLocked = false;
+
+	bool bFireButtonIsHeld;
+	bool bSecondaryFireButtonHeld;
 };
