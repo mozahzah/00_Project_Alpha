@@ -90,25 +90,21 @@ void UAbility::Deactivate()
 
 void UAbility::StartFire()
 {
-	bFireButtonIsHeld = true;
 	OnFireStart();
 }
 
 void UAbility::StopFire()
 {
-	bFireButtonIsHeld = false;
 	OnFireStop();
 }
 
 void UAbility::StartSecondaryFire()
 {
-	bSecondaryFireButtonHeld = true;
 	OnSecondaryFireStart();
 }
 
 void UAbility::StopSecondaryFire()
 {
-	bSecondaryFireButtonHeld = false;
 	OnSecondaryFireStop();
 }
 

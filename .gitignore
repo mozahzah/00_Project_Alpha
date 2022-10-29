@@ -4,6 +4,9 @@
 # Rider specific files
 .idea/
 
+# nvim
+nvim/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -79,9 +82,11 @@ DerivedDataCache/*
 # Content
 Content/*
 
-#WWISE
+# WWISE
 .cache
 *.akd
 *.prof
 *.validationcache
+
+
 

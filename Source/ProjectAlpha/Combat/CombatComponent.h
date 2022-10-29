@@ -46,6 +46,7 @@ private:
 	void StopZoom();
 	void StartUnzoom();
 	void StopUnzoom();
+	// HELO FROM NEOVIM
 
 private:
 	UPROPERTY(EditDefaultsOnly, Instanced)

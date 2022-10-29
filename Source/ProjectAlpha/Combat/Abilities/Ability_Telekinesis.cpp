@@ -57,11 +57,11 @@ bool UAbility_Telekinesis::RayCastObjects()
 			{
 				for (const FHitResult& HitResult : HitResults)
 				{
+					bFoundObjects = true;
 					if (TObjectPtr<ALevitatingActor> LevitatingActor = Cast<ALevitatingActor>(HitResult.GetActor()))
 					{
 						LevitatingActor->RequestLevitation(OwnerActor.Get());
-						LevitatingActors.Add(LevitatingActor);
-						bFoundObjects = true;
+						LevitatingActors.Add(LevitatingActor);	
 					}
 				}
 			}

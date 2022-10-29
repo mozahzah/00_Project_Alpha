@@ -24,7 +24,6 @@ class PROJECTALPHA_API UProjectAlphaGameInstance : public UGameInstance
 	TSubclassOf<UUserWidget> LobbyMenuClass;
 
 	
-	
 public:
 	
 	UProjectAlphaGameInstance(const FObjectInitializer & ObjectInitializer);

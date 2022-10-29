@@ -21,20 +21,29 @@ protected:
 	void OnActivate(bool& bSuccess) override;
 	void OnDeactivate() override;
 	void OnFireStart() override;
+	void OnFireStop() override;
 	// End Ability Implementation
 
 private:
 	/* The smoke screen actor to use */
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<ASmokeScreenActor> SmokeScreenActor;
+	TSubclassOf<ASmokeScreenActor> SmokeScreenActorClass;
 
 	/* Speed at which the smoke screen actor travels cm/s */
 	UPROPERTY(EditAnywhere)
-	float bDeployementSpeed = 500.f;
+	float SmokeDeployementSpeed = 500.f;
 
-	/* The size of widget used to place the smoke actor */
+	/* The smoke screen actor to use */
 	UPROPERTY(EditAnywhere)
-	float PreSmokeWidgetSize = 50.0f;
+	TSubclassOf<ASmokeScreenActor> PreSmokeScreenActorClass;
+
+	/* Speed at which the smoke screen actor travels cm/s */
+	UPROPERTY(EditAnywhere)
+	float PreSmokeSpeed = 500.f;
+
+private:
+	UPROPERTY(Transient)
+	TObjectPtr<ASmokeScreenActor> PreSmokeScreenActor;
 
 private:
 	TWeakObjectPtr<const UWorld> MyWorld;
@@ -42,4 +51,7 @@ private:
 
 	float DistanceFromPlayer;
 	FVector SmokeLocation;
+
+	//bool bFireButtonIsHeld;
+	//bool bSecondaryFireButtonHeld;
 };

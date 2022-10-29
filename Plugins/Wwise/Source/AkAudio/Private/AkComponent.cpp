@@ -585,10 +585,6 @@ void UAkComponent::UpdateSpriteTexture()
 	if (SpriteComponent)
 	{
 		SpriteComponent->SetSprite(LoadObject<UTexture2D>(NULL, TEXT("/Wwise/S_AkComponent.S_AkComponent")));
-		// BEGIN CHANGE
-		SpriteComponent->bIsScreenSizeScaled = false;
-		SpriteComponent->SetEditorScale(0.1f);
-		// END CHANGE
 	}
 }
 #endif

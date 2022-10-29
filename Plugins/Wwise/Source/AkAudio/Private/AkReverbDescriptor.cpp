@@ -139,7 +139,7 @@ void UpdateVolumeAndArea(UBodySetup* bodySetup, const FVector& scale, float& vol
 double FAkReverbDescriptor::TriangleArea(const FVector& v1, const FVector& v2, const FVector& v3)
 {
 #if UE_5_0_OR_LATER
-	double Mag = 0.0;
+	float Mag = 0.0f;
 #else
 	float Mag = 0.0f;
 #endif

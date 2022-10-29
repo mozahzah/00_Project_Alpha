@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright 
 
 #pragma once
 
@@ -7,8 +7,8 @@
 
 #include "ProjectAlphaGameMode.generated.h"
 
-UCLASS(minimalapi)
-class AProjectAlphaGameMode : public AGameModeBase
+UCLASS()
+class PROJECTALPHA_API AProjectAlphaGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 

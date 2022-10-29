@@ -22,21 +22,27 @@ void UAbility_SmokeScreen::OnActivate(bool& bSuccess)
 	if (OwnerActor.IsValid())
 	{
 		SmokeLocation = OwnerActor->GetActorLocation();
+
+		if (MyWorld.IsValid() && OwnerActor.IsValid())
+		{
+			PreSmokeScreenActor = GetWorld()->SpawnActor<ASmokeScreenActor>(PreSmokeScreenActorClass, SmokeLocation, OwnerActor->GetActorRotation(), FActorSpawnParameters());
+		}
 		bSuccess = true;
+
+		bAbilityIsActive = true;
 	}
 }
 
 void UAbility_SmokeScreen::OnUpdate(float DeltaTime)
 {
-
-	if (bFireButtonIsHeld)
+	/*if (bFireButtonIsHeld)
 	{
-		DistanceFromPlayer += bDeployementSpeed * DeltaTime;
+		DistanceFromPlayer += PreSmokeSpeed * DeltaTime;
 	}
 	if (bSecondaryFireButtonHeld)
 	{
-		DistanceFromPlayer = FMath::Clamp(DistanceFromPlayer, 0.0f, DistanceFromPlayer -= bDeployementSpeed * DeltaTime);
-	}
+		DistanceFromPlayer = FMath::Clamp(DistanceFromPlayer, 0.0f, DistanceFromPlayer -= PreSmokeSpeed * DeltaTime);
+	}*/
 
 	if (OwnerActor.IsValid())
 	{
@@ -45,29 +51,41 @@ void UAbility_SmokeScreen::OnUpdate(float DeltaTime)
 
 	if (bAbilityIsActive)
 	{
-		if (MyWorld.IsValid())
+		if (PreSmokeScreenActor)
 		{
-			DrawDebugCircle(MyWorld.Get(), SmokeLocation, PreSmokeWidgetSize, 6, FColor::Cyan);
+			UE_LOG(LogTemp, Warning, TEXT("%s"), *SmokeLocation.ToString());
+			PreSmokeScreenActor->SetActorLocation(SmokeLocation);
 		}
 	}
 
-	if (bSmokeHasBeenDeployed)
-	{
-		// DEPLY ACTOR
-	}
+	//if (!bSmokeHasBeenDeployed)
+	//{
+	//	if (PreSmokeScreenActor)
+	//	{
+	//		PreSmokeScreenActor->Destroy();
+	//	}
+
+	//	if (MyWorld.IsValid() && OwnerActor.IsValid())
+	//	{
+	//		GetWorld()->SpawnActor<ASmokeScreenActor>(SmokeScreenActorClass, SmokeLocation, OwnerActor->GetActorRotation(), FActorSpawnParameters());
+	//	}
+
+	//	bSmokeHasBeenDeployed = true;
+	//}
 }
 
 void UAbility_SmokeScreen::OnDeactivate()
 {
 	bAbilityIsActive = false;
-	if (MyWorld.IsValid() && OwnerActor.IsValid())
-	{
-		GetWorld()->SpawnActor<ASmokeScreenActor>(SmokeScreenActor, SmokeLocation, OwnerActor->GetActorRotation(), FActorSpawnParameters());
-	}
 	DistanceFromPlayer = 0.0f;
 }
 
 void UAbility_SmokeScreen::OnFireStart()
 {
-	//bAbilityIsActive = false;
+	//bFireButtonIsHeld = true;
+}
+
+void UAbility_SmokeScreen::OnFireStop()
+{
+	//bFireButtonIsHeld = false;
 }

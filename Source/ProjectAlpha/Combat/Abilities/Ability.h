@@ -84,7 +84,4 @@ protected:
 	float AbilityTimer;
 	bool bAbilityIsActive;
 	bool bIsLocked = false;
-
-	bool bFireButtonIsHeld;
-	bool bSecondaryFireButtonHeld;
 };

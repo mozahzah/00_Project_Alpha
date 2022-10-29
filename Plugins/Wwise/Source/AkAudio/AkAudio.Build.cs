@@ -193,7 +193,7 @@ public class AkAudio : ModuleRules
 			"InputCore",
 			"Projects",
 			"AudioMixer",
-        });
+		});
 
 #if UE_4_26_OR_LATER
 		PrivateDependencyModuleNames.Add("Chaos");

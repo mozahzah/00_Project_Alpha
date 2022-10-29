@@ -19,20 +19,13 @@ void UCombatComponent::BeginPlay()
 	{
 		if (UInputComponent* const InputComponent = Owner->InputComponent)
 		{
-			//InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
+			InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
 			InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
 			InputComponent->BindAction(FName("ActivateUltimateAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateUltimateAbility);
-
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartFire);
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Released, this, &UCombatComponent::StopFire);
-
 			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartSecondaryFire);
 			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Released, this, &UCombatComponent::StopSecondaryFire);
-
-			InputComponent->BindAction(FName(TEXT("Zoom")), EInputEvent::IE_Pressed, this, &UCombatComponent::StartZoom);
-			InputComponent->BindAction(FName(TEXT("Zoom")), EInputEvent::IE_Released, this, &UCombatComponent::StopZoom);
-			InputComponent->BindAction(FName(TEXT("Unzoom")), EInputEvent::IE_Pressed, this, &UCombatComponent::StartUnzoom);
-			InputComponent->BindAction(FName(TEXT("Unzoom")), EInputEvent::IE_Released, this, &UCombatComponent::StopUnzoom);
 		}
 	}
 

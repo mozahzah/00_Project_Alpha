@@ -71,11 +71,11 @@ using ReadRequestArgumentType = IAsyncReadRequest;
 // UE 5.0 typedefs
 #include "Containers/Ticker.h"
 #if UE_5_0_OR_LATER
-using FUnrealFloatVector = FVector3f;
-using FUnrealFloatVector2D = FVector2f;
-using FUnrealFloatPlane = FPlane4f;
-using FTickerDelegateHandle = FTSTicker::FDelegateHandle;
-using FCoreTickerType = FTSTicker;
+using FUnrealFloatVector = FVector;
+using FUnrealFloatVector2D = FVector2D;
+using FUnrealFloatPlane = FPlane;
+using FTickerDelegateHandle = FDelegateHandle;
+using FCoreTickerType = FTicker;
 #else
 using FUnrealFloatVector = FVector;
 using FUnrealFloatVector2D = FVector2D;
