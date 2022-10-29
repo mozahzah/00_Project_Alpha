@@ -81,7 +81,7 @@ DerivedDataCache/
 
 # Content
 Content/ImportedLibraries/
-Content/StarteContent/
+Content/StarterContent/
 
 # WWISE
 .cache
