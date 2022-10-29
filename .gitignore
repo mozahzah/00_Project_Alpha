@@ -80,7 +80,7 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 # Content
-Content/*
+Content/ImportedLibraries/
 
 # WWISE
 .cache
