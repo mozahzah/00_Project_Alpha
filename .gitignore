@@ -77,10 +77,11 @@ Intermediate/*
 Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
-DerivedDataCache/*
+DerivedDataCache/
 
 # Content
 Content/ImportedLibraries/
+Content/StarteContent/
 
 # WWISE
 .cache
