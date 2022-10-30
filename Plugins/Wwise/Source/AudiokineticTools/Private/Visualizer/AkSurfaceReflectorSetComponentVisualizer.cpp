@@ -198,7 +198,7 @@ void FAkSurfaceReflectorSetComponentVisualizer::DrawVisualization(const UActorCo
 			}
 
 #if UE_5_0_OR_LATER
-			FlashTimer += View->Family->DeltaWorldTime;
+			FlashTimer += View->Family->Time.GetDeltaWorldTimeSeconds();
 #else
 			FlashTimer += View->Family->DeltaWorldTime;
 #endif

@@ -259,7 +259,7 @@ namespace AkUnrealHelper
 		if (!ISourceControlModule::Get().IsEnabled() || SettingsHelpers::IsCheckedOut(ConfigFilename) || SettingsHelpers::CheckOutOrAddFile(ConfigFilename))
 		{
 #if UE_5_0_OR_LATER
-			ConfigObject->UpdateDefaultConfigFile();
+			ConfigObject->TryUpdateDefaultConfigFile();
 #else
 			ConfigObject->UpdateDefaultConfigFile();
 #endif

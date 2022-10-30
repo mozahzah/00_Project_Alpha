@@ -707,9 +707,9 @@ void ConvertConvexMeshToGeometryData(AkSurfIdx surfIdx, const FKConvexElem& conv
 		const auto& Vertices = convexMesh->GetVertices();
 
 		TArray<TArray<int32>> FaceIndices;
-		TArray<Chaos::TPlaneConcrete<Chaos::FReal, 3>> Planes;
-		TArray<Chaos::TVec3<Chaos::FReal>> SurfaceVertices;
-		Chaos::TAABB<Chaos::FReal, 3> LocalBoundingBox;
+		TArray<Chaos::TPlaneConcrete<Chaos::FRealSingle, 3>> Planes;
+		TArray<Chaos::TVec3<Chaos::FRealSingle>> SurfaceVertices;
+		Chaos::TAABB<Chaos::FRealSingle, 3> LocalBoundingBox;
 		Chaos::FConvexBuilder::Build(Vertices, Planes, FaceIndices, SurfaceVertices, LocalBoundingBox);
 
 

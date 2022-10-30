@@ -306,6 +306,7 @@ void FAkMixerPlatform::SubmitBuffer(const uint8* Buffer)
 	}
 }
 
+#if !UE_5_0_OR_LATER
 FName FAkMixerPlatform::GetRuntimeFormat(USoundWave* InSoundWave)
 {
 #if WITH_ENGINE
@@ -379,6 +380,7 @@ ICompressedAudioInfo* FAkMixerPlatform::CreateCompressedAudioInfo(USoundWave* In
 	return nullptr;
 #endif // WITH_ENGINE
 }
+#endif
 
 FString FAkMixerPlatform::GetDefaultDeviceName() {
 	static FString DefaultName(TEXT("Wwise Audio Mixer Device."));

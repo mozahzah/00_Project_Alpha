@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"name": "ProjectAlphaEditor Editor Win64 Development (ProjectAlpha)",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "E:\\Repos\\UnrealEngine\\ProjectAlpha\\game\\ProjectAlpha\\.vscode\\compileCommands_ProjectAlpha.json"
+		},
+		{
+			"name": "Win32",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "E:\\Repos\\UnrealEngine\\ProjectAlpha\\game\\ProjectAlpha\\.vscode\\compileCommands_Default.json"
+		}
+	]
+}

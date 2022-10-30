@@ -27,7 +27,11 @@ public:
 	FAkMixerPlatform();
 	~FAkMixerPlatform();
 
+#if UE_5_0_OR_LATER
+	virtual FString GetPlatformApi() const override { return TEXT("AkMixerPlatform"); }
+#else
 	virtual Audio::EAudioMixerPlatformApi::Type GetPlatformApi() const override { return Audio::EAudioMixerPlatformApi::Other; }
+#endif
 	virtual bool InitializeHardware() override;
 	virtual bool TeardownHardware() override;
 	virtual bool IsInitialized() const override;
@@ -40,9 +44,11 @@ public:
 	virtual bool StopAudioStream() override;
 	virtual Audio::FAudioPlatformDeviceInfo GetPlatformDeviceInfo() const override;
 	virtual void SubmitBuffer(const uint8* Buffer) override;
+#if !UE_5_0_OR_LATER
 	virtual FName GetRuntimeFormat(USoundWave* InSoundWave) override;
 	virtual bool HasCompressedAudioInfoClass(USoundWave* InSoundWave) override;
 	virtual ICompressedAudioInfo* CreateCompressedAudioInfo(USoundWave* InSoundWave) override;
+#endif
 	virtual bool SupportsRealtimeDecompression() const { return true; }
 	virtual FString GetDefaultDeviceName() override;
 	virtual FAudioPlatformSettings GetPlatformSettings() const override;
