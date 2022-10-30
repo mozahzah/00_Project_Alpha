@@ -17,7 +17,7 @@ enum class EAbilityType : uint8
 	Ultimate,
 };
 
-UCLASS()
+UCLASS(BlueprintType)
 class PROJECTALPHA_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -46,10 +46,9 @@ private:
 	void StopZoom();
 	void StartUnzoom();
 	void StopUnzoom();
-	// HELO FROM NEOVIM
 
 private:
-	UPROPERTY(EditDefaultsOnly, Instanced)
+	UPROPERTY(EditAnywhere, Instanced)
 	TMap<EAbilityType, TObjectPtr<UAbility>> AbilityMap;
 
 private:

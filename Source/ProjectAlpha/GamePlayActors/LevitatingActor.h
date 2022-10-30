@@ -36,19 +36,19 @@ private:
 
 	/* Minimum Levitation Height */
 	UPROPERTY(EditAnywhere, Category ="Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MinRandomLevitationHeight = 20;
+	float MinRandomLevitationHeight = 60;
 
 	/* Maximum Levitation Height */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MaxRandomLevitationHeight = 100;
+	float MaxRandomLevitationHeight = 120;
 
 	/* Minimum Levitation Speed */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))
-	float MinRandomLevitationSpeed = 1;
+	float MinRandomLevitationSpeed = 30;
 
 	/* Maximum Levitation Speed */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))
-	float MaxRandomLevitationSpeed = 10;
+	float MaxRandomLevitationSpeed = 60;
 
 	/* Floating Motion Range */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))

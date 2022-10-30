@@ -15,7 +15,6 @@ ALevitatingActor::ALevitatingActor()
 
     if (GetStaticMeshComponent())
     {
-        GetStaticMeshComponent()->SetCollisionProfileName(FName(TEXT("LevitatingActor")));
         GetStaticMeshComponent()->OnComponentHit.AddDynamic(this, &ALevitatingActor::OnHit);
     }
     
