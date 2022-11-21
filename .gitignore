@@ -82,12 +82,3 @@ DerivedDataCache/
 # Content
 Content/ImportedLibraries/
 Content/StarterContent/
-
-# WWISE
-.cache
-*.akd
-*.prof
-*.validationcache
-
-
-

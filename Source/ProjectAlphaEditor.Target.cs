@@ -10,5 +10,7 @@ public class ProjectAlphaEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("ProjectAlpha");
+		WindowsPlatform.PCHMemoryAllocationFactor = 2000;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 	}
 }

@@ -4,8 +4,6 @@
 
 #include "Particles/ParticleSystemComponent.h"
 
-#include "AkComponent.h"
-
 void UAbility::Initialize(AActor* Actor)
 {
 	if (Actor)
@@ -16,13 +14,6 @@ void UAbility::Initialize(AActor* Actor)
 		if (USkeletalMeshComponent* SkeletalMeshComponent = Actor->FindComponentByClass<USkeletalMeshComponent>())
 		{
 			SceneComponent = SkeletalMeshComponent;
-		}
-
-		AbilityAkComponent = NewObject<UAkComponent>(Actor, FName(TEXT("Ability_AkComponent")), EObjectFlags::RF_Transient);
-		if (AbilityAkComponent)
-		{
-			AbilityAkComponent->SetupAttachment(SceneComponent, AbilitySocketName);
-			AbilityAkComponent->RegisterComponent();
 		}
 
 		AbilityParticleSystemComponent = NewObject<UParticleSystemComponent>(Actor, FName(TEXT("Ability_ParticleSystemComponent")), EObjectFlags::RF_Transient);
@@ -43,11 +34,6 @@ void UAbility::Activate()
 
 	if (bSuccess)
 	{
-		if (AbilityAkComponent && AbilityActivatedAudioEvent)
-		{
-			AbilityAkComponent->PostAkEvent(AbilityActivatedAudioEvent, 0, FOnAkPostEventCallback(), FString());
-		}
-
 		if (AbilityParticleSystemComponent && AbilityActivatedVFXEvent)
 		{
 			AbilityParticleSystemComponent->Template = AbilityActivatedVFXEvent;
@@ -66,15 +52,6 @@ void UAbility::Update(float DeltaTime)
 
 void UAbility::Deactivate()
 {
-	if (AbilityAkComponent)
-	{
-		AbilityAkComponent->Stop();
-		if (AbilityDeactivedAudioEvent)
-		{
-			AbilityAkComponent->PostAkEvent(AbilityDeactivedAudioEvent, 0, FOnAkPostEventCallback(), FString());
-		}
-	}
-
 	if (AbilityParticleSystemComponent)
 	{
 		AbilityParticleSystemComponent->Deactivate();

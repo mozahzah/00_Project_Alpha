@@ -2,10 +2,7 @@
 
 #include "LevitatingActor.h"
 
-#include "AkGameplayStatics.h"
 #include "Particles/ParticleSystemComponent.h"
-
-#include "AkComponent.h"
 
 ALevitatingActor::ALevitatingActor()
 {
@@ -16,12 +13,6 @@ ALevitatingActor::ALevitatingActor()
     if (GetStaticMeshComponent())
     {
         GetStaticMeshComponent()->OnComponentHit.AddDynamic(this, &ALevitatingActor::OnHit);
-    }
-    
-    AkComponent = CreateDefaultSubobject<UAkComponent>(FName(TEXT("LevitatingActor_AkComponent")), true);
-    if (AkComponent)
-    {
-        AkComponent->SetupAttachment(GetRootComponent());
     }
 }
 
@@ -94,7 +85,6 @@ void ALevitatingActor::ProcessLevitation(float DeltaSeconds)
             CurrentLevitationHeight += SinWave / (FMath::IsNearlyZero(FloatingMotionRange) ? 1.0f : FloatingMotionRange);
         }
 
-
         CurrentLocation.X = FMath::FInterpTo(CurrentLocation.X, SourceActorLocation.X + CachedVectorFromSource.X, DeltaSeconds, SpringStrenght);
         CurrentLocation.Y = FMath::FInterpTo(CurrentLocation.Y, SourceActorLocation.Y + CachedVectorFromSource.Y, DeltaSeconds, SpringStrenght);
         CurrentLocation.Z = FMath::FInterpTo(CurrentLocation.Z, SourceActorLocation.Z + CachedVectorFromSource.Z + CurrentLevitationHeight, DeltaSeconds, SpringStrenght);
@@ -119,8 +109,4 @@ void ALevitatingActor::ResetActor()
 void ALevitatingActor::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
     // DO ONCE
-    if (AkComponent)
-    {
-        //AkComponent->PostAkEvent(OnHitAudioEvent, ...);
-    }
 }

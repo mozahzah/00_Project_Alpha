@@ -44,11 +44,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void OnFootStepEvent();
 
-	class UAkComponent* AkMainComponent = nullptr;
-	UPROPERTY(EditAnywhere, Category = "Wwise")
-	class UAkAudioEvent* FootStepEvent = nullptr;
-
-	class UAkSwitchValue* CurrentSwitch = nullptr;
 	UPROPERTY(EditAnywhere, Category = "Wwise")
 	FString SurfaceType;
 

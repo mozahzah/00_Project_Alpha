@@ -1,8 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "ProjectAlphaEnemyCharacter.h"
-#include "AkComponent.h"
-#include "AkGameplayStatics.h"
 #include "ProjectAlphaMainCharacter.h"
 #include "Kismet/GameplayStatics.h"
 //#include "ProjectAlpha/Combat/Abilities/Weapon.h"
@@ -16,7 +14,6 @@ AProjectAlphaEnemyCharacter::AProjectAlphaEnemyCharacter()
 void AProjectAlphaEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	AkMainComponent = FindComponentByClass<UAkComponent>();
 	GetMesh()->SetRenderCustomDepth(true);
 	GetMesh()->SetCustomDepthStencilValue(2);
 
@@ -87,9 +84,5 @@ float AProjectAlphaEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent c
 
 void AProjectAlphaEnemyCharacter::OnFootStepEvent()
 {
-	if (AkMainComponent) 
-	{
-		AkMainComponent->SetSwitch(CurrentSwitch, FString("Material"), SurfaceType);
-		AkMainComponent->PostAkEvent(FootStepEvent, 0, FOnAkPostEventCallback(), FString());
-	}
+	
 }

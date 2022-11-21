@@ -31,9 +31,6 @@ private:
 	void ProcessLevitation(float DeltaSeconds);
 
 private:
-	UPROPERTY(Transient)
-	TObjectPtr<UAkComponent> AkComponent;
-
 	/* Minimum Levitation Height */
 	UPROPERTY(EditAnywhere, Category ="Physics", meta = (ClampMin = 0, UIMin = 0))
 	float MinRandomLevitationHeight = 60;
@@ -61,10 +58,6 @@ private:
 	/* Maximum SpringStrenght */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
 	float MaxRandomSpringStrenght = 3;
-
-	/* The sound event to play when the object hits the ground */
-	UPROPERTY(EditAnywhere, Category = "Audio")
-	TObjectPtr<UAkAudioEvent> OnHitAudioEvent;
 
 private:
 	TWeakObjectPtr<const AActor> SourceActor;

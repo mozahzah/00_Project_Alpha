@@ -10,5 +10,6 @@ public class ProjectAlphaTarget : TargetRules
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("ProjectAlpha");
+		WindowsPlatform.PCHMemoryAllocationFactor = 2000;
 	}
 }

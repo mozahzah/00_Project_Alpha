@@ -6,8 +6,6 @@
 
 #include "Ability.generated.h"
 
-class UAkComponent;
-class UAkAudioEvent;
 class UParticleSystem;
 class UParticleSystemComponent;
 
@@ -21,7 +19,7 @@ public:
 	void Activate();
 	void Update(float DeltaTime);
 	void Deactivate();
-	bool IsLocked() const { return bIsLocked; }
+	bool IsLocked() const { return bIsLocked; };
 
 	void StartFire();
 	void StopFire();
@@ -50,9 +48,6 @@ protected:
 
 protected:
 	UPROPERTY(Transient)
-	TObjectPtr<UAkComponent> AbilityAkComponent;
-
-	UPROPERTY(Transient)
 	TObjectPtr<UParticleSystemComponent> AbilityParticleSystemComponent;
 
 	/*Activation delay in seconds */
@@ -62,14 +57,6 @@ protected:
 	/*Name of the socket to attach the ak component*/
 	UPROPERTY(EditAnywhere)
 	FName AbilitySocketName = FName(TEXT("body"));
-
-	/*Audio event that will be posted when the ability activates*/
-	UPROPERTY(EditAnywhere)
-	TObjectPtr<UAkAudioEvent> AbilityActivatedAudioEvent;
-
-	/*Audio event that will be posted when the ability deactivates*/
-	UPROPERTY(EditAnywhere)
-	TObjectPtr<UAkAudioEvent> AbilityDeactivedAudioEvent;
 
 	/*VFX event that will be played when the ability activates*/
 	UPROPERTY(EditAnywhere)
