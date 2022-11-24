@@ -6,16 +6,6 @@
 
 #include "ProjectAlpha/GamePlayActors/LevitatingActor.h"
 
-void UAbility_Telekinesis::OnInitialize()
-{
-
-}
-
-void UAbility_Telekinesis::OnUpdate(float DeltaTime)
-{
-	// Grabbed actor update
-}
-
 void UAbility_Telekinesis::OnActivate(bool& bSuccess)
 {
 	if (RayCastObjects()) 
@@ -32,11 +22,23 @@ void UAbility_Telekinesis::OnDeactivate()
 
 void UAbility_Telekinesis::OnFireStart()
 {
-	if (!LevitatingActors.IsEmpty()) 
+	if (OwnerController.IsValid()) 
 	{
-		if (TObjectPtr<ALevitatingActor> LevitatingActor = LevitatingActors.Pop())
+		FVector ViewpointLocation;
+		FRotator ViewpointRotation;
+		OwnerController->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
+
+		if (!LevitatingActors.IsEmpty())
 		{
-			// Shoot actor towards location
+			if (TObjectPtr<ALevitatingActor> LevitatingActor = LevitatingActors.Pop())
+			{
+				LevitatingActor->RequestFire(ViewpointRotation.Vector());
+
+				if (LevitatingActors.IsEmpty())
+				{
+					Deactivate();
+				}
+			}
 		}
 	}
 }
@@ -49,11 +51,13 @@ bool UAbility_Telekinesis::RayCastObjects()
 		if (const UWorld* const World = OwnerActor->GetWorld())
 		{
 			const FVector CharacterLocation = OwnerActor->GetActorLocation();
-			const FQuat Rotation = OwnerActor->GetActorRotation().Quaternion();
 			const FCollisionShape CollisionShape = FCollisionShape::MakeSphere(TelekinesisRadius);
 
 			TArray<FHitResult> HitResults;
-			if (GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, Rotation, ECollisionChannel::ECC_GameTraceChannel1, CollisionShape, FCollisionQueryParams()))
+			if	(World->SweepMultiByChannel(HitResults, CharacterLocation,
+				CharacterLocation,
+				FQuat(0.0f), ECollisionChannel::ECC_GameTraceChannel1, 
+				CollisionShape, FCollisionQueryParams()))
 			{
 				for (const FHitResult& HitResult : HitResults)
 				{

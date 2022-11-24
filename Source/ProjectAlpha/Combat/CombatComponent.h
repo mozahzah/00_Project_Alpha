@@ -5,17 +5,9 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 
-#include "ProjectAlpha/Combat/Abilities/Ability.h"
+#include "ProjectAlpha/Combat/Abilities/AbilityDataAsset.h"
 
 #include "CombatComponent.generated.h"
-
-UENUM()
-enum class EAbilityType : uint8
-{
-	Movement,
-	Controller,
-	Ultimate,
-};
 
 UCLASS(BlueprintType)
 class PROJECTALPHA_API UCombatComponent : public UActorComponent
@@ -42,14 +34,10 @@ private:
 	void StopFire();
 	void StartSecondaryFire();
 	void StopSecondaryFire();
-	void StartZoom();
-	void StopZoom();
-	void StartUnzoom();
-	void StopUnzoom();
 
 private:
-	UPROPERTY(EditAnywhere, Instanced)
-	TMap<EAbilityType, TObjectPtr<UAbility>> AbilityMap;
+	UPROPERTY(EditAnywhere)
+	TObjectPtr <UAbilityDataAsset> AbilityDataAsset;
 
 private:
 	TObjectPtr<UAbility> CurrentAbility;

@@ -29,13 +29,16 @@ void UCombatComponent::BeginPlay()
 		}
 	}
 
-	for (const TPair<EAbilityType, TObjectPtr<UAbility>>& Elem : AbilityMap)
+	if (AbilityDataAsset)
 	{
-		TObjectPtr<UAbility> Ability = Elem.Value;
-		if (!Ability.IsNull())
+		for (const TPair<EAbilityType, TObjectPtr<UAbility>>& Elem : AbilityDataAsset->GetAbilityMap())
 		{
-			Ability->Initialize(GetOwner());
-		}	
+			TObjectPtr<UAbility> Ability = Elem.Value;
+			if (Ability)
+			{
+				Ability->Initialize(GetOwner());
+			}
+		}
 	}
 }
 
@@ -52,12 +55,15 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 void UCombatComponent::ActivateAbility(EAbilityType AbilityType)
 {
-	if (const TObjectPtr<UAbility>* Ability = AbilityMap.Find(AbilityType))
+	if (AbilityDataAsset)
 	{
-		if (Ability && !Ability->IsNull())
+		if (const TObjectPtr<UAbility>* AbilityPtr = AbilityDataAsset->GetAbilityMap().Find(AbilityType))
 		{
-			CurrentAbility = Ability->Get();
-			CurrentAbility->Activate();
+			if (*AbilityPtr)
+			{
+				CurrentAbility = AbilityPtr->Get();
+				CurrentAbility->Activate();
+			}
 		}
 	}
 }
@@ -121,37 +127,5 @@ void UCombatComponent::StopSecondaryFire()
 	if (CurrentAbility)
 	{
 		CurrentAbility->StopSecondaryFire();
-	}
-}
-
-void UCombatComponent::StartZoom()
-{
-	if (CurrentAbility)
-	{
-		CurrentAbility->StartZoom();
-	}
-}
-
-void UCombatComponent::StopZoom()
-{
-	if (CurrentAbility)
-	{
-		CurrentAbility->StopZoom();
-	}
-}
-
-void UCombatComponent::StartUnzoom()
-{
-	if (CurrentAbility)
-	{
-		CurrentAbility->StartUnzoom();
-	}
-}
-
-void UCombatComponent::StopUnzoom()
-{
-	if (CurrentAbility)
-	{
-		CurrentAbility->StopUnzoom();
 	}
 }

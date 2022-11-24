@@ -7,8 +7,7 @@
 
 #include "LevitatingActor.generated.h"
 
-class UAkAudioEvent;
-class UAkComponent;
+class UProjectileMovementComponent;
 
 UCLASS()
 class PROJECTALPHA_API ALevitatingActor : public AStaticMeshActor
@@ -17,6 +16,7 @@ class PROJECTALPHA_API ALevitatingActor : public AStaticMeshActor
 
 public:
 	void RequestLevitation(const AActor* RequesteeActor);
+	void RequestFire(const FVector Direction);
 	void ResetActor();
 	
 protected:
@@ -33,31 +33,35 @@ private:
 private:
 	/* Minimum Levitation Height */
 	UPROPERTY(EditAnywhere, Category ="Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MinRandomLevitationHeight = 60;
+	float MinRandomLevitationHeight = 60.f;
 
 	/* Maximum Levitation Height */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MaxRandomLevitationHeight = 120;
+	float MaxRandomLevitationHeight = 120.f;
 
 	/* Minimum Levitation Speed */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))
-	float MinRandomLevitationSpeed = 30;
+	float MinRandomLevitationSpeed = 30.f;
 
 	/* Maximum Levitation Speed */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))
-	float MaxRandomLevitationSpeed = 60;
+	float MaxRandomLevitationSpeed = 60.f;
 
 	/* Floating Motion Range */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 1, UIMin = 1))
-	float FloatingMotionRange = 3;
+	float FloatingMotionRange = 3.f;
 
 	/* Minimum SpringStrenght */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MinRandomSpringStrenght = 0.1;
+	float MinRandomSpringStrenght = 0.1f;
 
 	/* Maximum SpringStrenght */
 	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
-	float MaxRandomSpringStrenght = 3;
+	float MaxRandomSpringStrenght = 3.f;
+
+	/* On Fired Length */
+	UPROPERTY(EditAnywhere, Category = "Physics", meta = (ClampMin = 0, UIMin = 0))
+	float OnFireLength = 3000.f;
 
 private:
 	TWeakObjectPtr<const AActor> SourceActor;
@@ -70,4 +74,6 @@ private:
 
 	bool bIsLevitated = false;
 	bool bHasReachedMaxHeight = false;
+
+	bool bHasBeenFired = false;
 };

@@ -6,6 +6,14 @@
 
 #include "Ability.generated.h"
 
+UENUM()
+enum class EAbilityType : uint8
+{
+	Movement,
+	Controller,
+	Ultimate,
+};
+
 class UParticleSystem;
 class UParticleSystemComponent;
 
@@ -25,11 +33,6 @@ public:
 	void StopFire();
 	void StartSecondaryFire();
 	void StopSecondaryFire();
-	void StartZoom();
-	void StopZoom();
-	void StartUnzoom();
-	void StopUnzoom();
-
 
 protected:
 	virtual void OnInitialize() {};
@@ -41,10 +44,6 @@ protected:
 	virtual void OnFireStop() {};
 	virtual void OnSecondaryFireStart() {};
 	virtual void OnSecondaryFireStop() {};
-	virtual void OnZoomStart() {};
-	virtual void OnZoomStop() {};
-	virtual void OnUnzoomStart() {};
-	virtual void OnUnzoomStop() {};
 
 protected:
 	UPROPERTY(Transient)
@@ -68,6 +67,7 @@ protected:
 
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
+	TWeakObjectPtr<AController> OwnerController;
 	float AbilityTimer;
 	bool bAbilityIsActive;
 	bool bIsLocked = false;

@@ -17,8 +17,6 @@ class PROJECTALPHA_API UAbility_Telekinesis : public UAbility
 
 protected:
 	// Begin Ability Implementation
-	void OnInitialize() override;
-	void OnUpdate(float DeltaTime) override;
 	void OnActivate(bool& bSuccess) override;
 	void OnDeactivate() override;
 	void OnFireStart() override;
@@ -32,6 +30,10 @@ private:
 	/* Radius for casting */
 	UPROPERTY(EditAnywhere)
 	float TelekinesisRadius = 500.0f;
+
+	/* Fire Line Trace Length */
+	UPROPERTY(EditAnywhere)
+	float FireTraceLength = 5000.0f;
 
 private:
 	TArray<TObjectPtr<ALevitatingActor>> LevitatingActors;

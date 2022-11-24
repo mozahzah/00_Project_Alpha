@@ -2,6 +2,7 @@
 
 #include "ProjectAlpha/Combat/Abilities/Ability.h"
 
+#include "GameFramework/Character.h"
 #include "Particles/ParticleSystemComponent.h"
 
 void UAbility::Initialize(AActor* Actor)
@@ -9,7 +10,11 @@ void UAbility::Initialize(AActor* Actor)
 	if (Actor)
 	{
 		OwnerActor = Actor;
-		
+		if (const ACharacter* const Character = Cast<ACharacter>(Actor)) 
+		{
+			OwnerController = Character->GetController();
+		}
+
 		USceneComponent* SceneComponent = Actor->GetRootComponent();
 		if (USkeletalMeshComponent* SkeletalMeshComponent = Actor->FindComponentByClass<USkeletalMeshComponent>())
 		{
@@ -83,24 +88,4 @@ void UAbility::StartSecondaryFire()
 void UAbility::StopSecondaryFire()
 {
 	OnSecondaryFireStop();
-}
-
-void UAbility::StartZoom()
-{
-	OnZoomStart();
-}
-
-void UAbility::StopZoom()
-{
-	OnZoomStop();
-}
-
-void UAbility::StartUnzoom()
-{
-	OnUnzoomStart();
-}
-
-void UAbility::StopUnzoom()
-{
-	OnUnzoomStop();
 }

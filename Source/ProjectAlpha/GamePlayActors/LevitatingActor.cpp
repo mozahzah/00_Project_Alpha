@@ -2,6 +2,8 @@
 
 #include "LevitatingActor.h"
 
+#include "DrawDebugHelpers.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 
 ALevitatingActor::ALevitatingActor()
@@ -54,6 +56,18 @@ void ALevitatingActor::RequestLevitation(const AActor* RequesteeActor)
     bIsLevitated = bSuccess;
 }
 
+void ALevitatingActor::RequestFire(const FVector Direction)
+{
+	ResetActor();
+
+	const FVector Velocity = GetActorLocation() + Direction * OnFireLength;
+	if (GetStaticMeshComponent()) 
+	{
+		GetStaticMeshComponent()->SetPhysicsLinearVelocity(Velocity);
+		DrawDebugLine(GetWorld(), GetActorLocation(), Velocity, FColor::Red, true, 1.f, 1000.f, 2.f);
+	}
+}
+
 void ALevitatingActor::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
@@ -81,7 +95,7 @@ void ALevitatingActor::ProcessLevitation(float DeltaSeconds)
         }
         else
         {
-            const float SinWave = (FMath::Sin((GetWorld()->GetTimeSeconds())));
+            const float SinWave = (FMath::Sin((GetWorld() ? GetWorld()->GetTimeSeconds() : 1.0f)));
             CurrentLevitationHeight += SinWave / (FMath::IsNearlyZero(FloatingMotionRange) ? 1.0f : FloatingMotionRange);
         }
 
@@ -90,7 +104,7 @@ void ALevitatingActor::ProcessLevitation(float DeltaSeconds)
         CurrentLocation.Z = FMath::FInterpTo(CurrentLocation.Z, SourceActorLocation.Z + CachedVectorFromSource.Z + CurrentLevitationHeight, DeltaSeconds, SpringStrenght);
 
         SetActorLocation(CurrentLocation);
-        SetActorRotation(GetActorRotation() + FRotator(FMath::FRandRange(1, 10) * DeltaSeconds));
+        SetActorRotation(GetActorRotation() + FRotator(FMath::FRandRange(1.0f, 10.0f) * DeltaSeconds));
     }
 }
 
@@ -108,5 +122,5 @@ void ALevitatingActor::ResetActor()
 
 void ALevitatingActor::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-    // DO ONCE
+	UE_LOG(LogTemp, Warning, TEXT("HIT"));
 }
