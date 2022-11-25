@@ -1,4 +1,4 @@
-// Copyright 
+// Copyright 2023 mozahzah. All Rights Reserved. 
 
 #include "ProjectAlpha.h"
 

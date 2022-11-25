@@ -1,4 +1,4 @@
-// Copyright mozahzah.io 2022
+// Copyright 2023 mozahzah. All Rights Reserved.
 
 #pragma once
 

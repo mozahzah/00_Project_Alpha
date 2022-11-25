@@ -1,4 +1,4 @@
-// COPYRIGHT
+// Copyright 2023 mozahzah. All Rights Reserved.
 
 #include "ProjectAlpha/Combat/Abilities/Ability.h"
 
