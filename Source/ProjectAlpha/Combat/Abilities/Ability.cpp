@@ -15,15 +15,20 @@ void UAbility::Initialize(AActor* Actor)
 			OwnerController = Character->GetController();
 		}
 
-		USceneComponent* SceneComponent = Actor->GetRootComponent();
-		if (USkeletalMeshComponent* SkeletalMeshComponent = Actor->FindComponentByClass<USkeletalMeshComponent>())
+		if (USkeletalMeshComponent* SkeletalMeshComp = Actor->FindComponentByClass<USkeletalMeshComponent>())
 		{
-			SceneComponent = SkeletalMeshComponent;
+			SkeletalMeshComponent = SkeletalMeshComp;
 		}
 
 		AbilityParticleSystemComponent = NewObject<UParticleSystemComponent>(Actor, FName(TEXT("Ability_ParticleSystemComponent")), EObjectFlags::RF_Transient);
 		if (AbilityParticleSystemComponent)
 		{
+			USceneComponent* SceneComponent = Actor->GetRootComponent();
+			if (SkeletalMeshComponent.IsValid()) 
+			{
+				SceneComponent = SkeletalMeshComponent.Get();
+			}
+
 			AbilityParticleSystemComponent->SetupAttachment(SceneComponent, AbilitySocketName);
 			AbilityParticleSystemComponent->RegisterComponent();
 		}
@@ -44,6 +49,11 @@ void UAbility::Activate()
 			AbilityParticleSystemComponent->Template = AbilityActivatedVFXEvent;
 			AbilityParticleSystemComponent->Activate();
 		}
+
+		if (SkeletalMeshComponent.IsValid() && AnimationMontage) 
+		{
+			SkeletalMeshComponent->PlayAnimation(AnimationMontage, bAnimLooping);
+		}
 	}
 }
 
@@ -60,11 +70,6 @@ void UAbility::Deactivate()
 	if (AbilityParticleSystemComponent)
 	{
 		AbilityParticleSystemComponent->Deactivate();
-		if (AbilityDeactivedVFXEvent)
-		{
-			AbilityParticleSystemComponent->Template = AbilityDeactivedVFXEvent;
-			AbilityParticleSystemComponent->Activate();
-		}
 	}
 
 	OnDeactivate();

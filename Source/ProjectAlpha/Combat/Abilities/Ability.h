@@ -14,6 +14,7 @@ enum class EAbilityType : uint8
 	Ultimate,
 };
 
+class UAnimMontage;
 class UParticleSystem;
 class UParticleSystemComponent;
 
@@ -49,10 +50,6 @@ protected:
 	UPROPERTY(Transient)
 	TObjectPtr<UParticleSystemComponent> AbilityParticleSystemComponent;
 
-	/*Activation delay in seconds */
-	UPROPERTY(EditAnywhere, meta =(ClampMin = "0", UIMin = "0"))
-	float ActivationDelay = 0.0f;
-
 	/*Name of the socket to attach the ak component*/
 	UPROPERTY(EditAnywhere)
 	FName AbilitySocketName = FName(TEXT("body"));
@@ -61,9 +58,13 @@ protected:
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<UParticleSystem> AbilityActivatedVFXEvent;
 
-	/*VFX event that will be played when the ability deactivates*/
+	/*Animation Montage to play for this ability*/
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UParticleSystem> AbilityDeactivedVFXEvent;
+	TObjectPtr<UAnimMontage> AnimationMontage;
+
+	/*If the animation montage is looping*/
+	UPROPERTY(EditAnywhere)
+	bool bAnimLooping = false;
 
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
@@ -71,4 +72,7 @@ protected:
 	float AbilityTimer;
 	bool bAbilityIsActive;
 	bool bIsLocked = false;
+
+private:
+	TWeakObjectPtr<USkeletalMeshComponent> SkeletalMeshComponent;
 };
