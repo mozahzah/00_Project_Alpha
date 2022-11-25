@@ -1,103 +1,85 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Ability_Teleport.h"
 
+#include "DrawDebugHelpers.h"
 
+void UAbility_Teleport::OnActivate(bool& bSuccess)
+{
+	bSuccess = true;
+	bAbilityIsActive = true;
+}
 
-// Sets default values for this component's properties
-//UTeleport::UTeleport()
-//{
-//	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-//	// off to improve performance if you don't need them.
-//	PrimaryComponentTick.bCanEverTick = true;
-//
-//	// ...
-//}
-//
-//
-//// Called when the game starts
-//void UTeleport::BeginPlay()
-//{
-//	Super::BeginPlay();
-//	TeleportStartParticleSystem->AttachToComponent(Cast<ACharacter>(GetOwner())->GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("neck_01"));
-//	TeleportEndParticleSystem->AttachToComponent(Cast<ACharacter>(GetOwner())->GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("neck_01"));
-//		
-//}
-//
-//
-//// Called every frame
-//void UTeleport::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-//{
-//	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-//
-//	if (bWeHaveTeleported) 
-//	{
-//		Cast<ACharacter>(GetOwner())->DisableInput(Cast<APlayerController>(Cast<ACharacter>(GetOwner())->GetController()));
-//		
-//		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (1 * 0.5))
-//		{
-//			Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(false);
-//			SpawnPlayer(TeleportDestination);
-//			Cast<AProjectAlphaMainCharacter>(GetOwner())->AddControllerYawInput(-285 * DeltaTime);
-//		}
-//		if (GetWorld()->GetTimeSeconds() - StartTeleportTime > (1.5 * 0.5))
-//		{
-//			Cast<ACharacter>(GetOwner())->GetMesh()->SetVisibility(true);
-//			GetWorld()->GetWorldSettings()->SetTimeDilation(1);
-//			bWeHaveTeleported = false;
-//			Cast<ACharacter>(GetOwner())->EnableInput(Cast<APlayerController>(Cast<ACharacter>(GetOwner())->GetController()));
-//		}
-//	}
-//}
-//
-//void UTeleport::Teleport(FVector Destination)
-//{
-//	bTeleportIsActive = true;
-//	GetWorld()->GetWorldSettings()->SetTimeDilation(0.5);
-//	TeleportEndParticleSystem->Deactivate();
-//	TeleportStartParticleSystem->Activate();
-//	StartTeleportTime = GetWorld()->GetTimeSeconds();
-//	TeleportDestination = Destination;
-//	bWeHaveTeleported = true;
-//}
-//
-//void UTeleport::SpawnPlayer(FVector Destination)
-//{
-//	if (!ensure(GetOwner())) return;	
-//	GetOwner()->SetActorLocation(Destination);
-//	TeleportStartParticleSystem->Deactivate();
-//	TeleportEndParticleSystem->Activate();
-//	bTeleportIsActive = false;
-//}
-//
-//
-//
-//
-//
-//void UTeleport::ActivateTeleport(FVector Destination)
-//{
-//	/*GEngine->AddOnScreenDebugMessage
-//    (
-//        1,
-//        3.f,
-//        FColor::Green,
-//        TEXT("Teleport Active")
-//    );*/
-//	return;
-//	
-//}
-//void UTeleport::DeactivateTeleport()
-//{
-//	/*GEngine->AddOnScreenDebugMessage
-//    (
-//        1,
-//        3.f,
-//        FColor::Green,
-//        TEXT("Teleport Inactive")
-//    );*/
-//	bTeleportIsActive = false;
-//}
-//
+void UAbility_Teleport::OnUpdate(float DeltaTime)
+{
+	ProcessLineTrace();
 
+	if (bIsTeleporting) 
+	{
+		if (Timer > TeleportTime)
+		{
+			Teleport();
+		}
 
+		Timer += DeltaTime;
+	}
+}
+
+void UAbility_Teleport::OnDeactivate()
+{
+	bIsTeleporting = false;
+	Timer = 0.0f;
+}
+
+void UAbility_Teleport::OnFireStart()
+{
+	bIsLocked = true;
+	bIsTeleporting = true;
+	if (OwnerActor.IsValid())
+	{
+		OwnerActor->DisableInput(Cast<APlayerController>(OwnerController.Get()));
+	}
+}
+
+void UAbility_Teleport::ProcessLineTrace()
+{
+	//Line trace 1
+	if (OwnerController.IsValid())
+	{
+		if (const UWorld* const World = OwnerController->GetWorld())
+		{
+			FVector ViewpointLocation;
+			FRotator ViewpointRotation;
+			OwnerController->GetPlayerViewPoint(ViewpointLocation, ViewpointRotation);
+
+			FVector Start = ViewpointLocation;
+			FVector End = ViewpointLocation + ViewpointRotation.Vector() * TeleportMaxLineTrace;
+
+			FHitResult HitResult;
+			if (World->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_Visibility))
+			{
+				CurrentTeleportLocation = HitResult.Location;
+			}
+			else
+			{
+				//Line trace 2
+				if (World->LineTraceSingleByChannel(HitResult, End, End.DownVector * MAX_FLT, ECollisionChannel::ECC_Visibility))
+				{
+					CurrentTeleportLocation = HitResult.Location;
+				}
+			}
+
+			DrawDebugSphere(World, CurrentTeleportLocation, 8.f, 8, FColor::Blue, false, 0.1f, 10, 1.0f);
+		}
+	}
+}
+
+void UAbility_Teleport::Teleport()
+{
+	if (OwnerActor.Get()) 
+	{
+		OwnerActor->SetActorLocation(CurrentTeleportLocation);
+		OwnerActor->EnableInput(Cast<APlayerController>(OwnerController.Get()));
+	}
+	Deactivate();
+}

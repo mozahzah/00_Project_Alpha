@@ -2,7 +2,6 @@
 
 #include "LevitatingActor.h"
 
-#include "DrawDebugHelpers.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 
@@ -28,12 +27,12 @@ void ALevitatingActor::Destroyed()
     Super::Destroyed();
 }
 
-void ALevitatingActor::RequestLevitation(const AActor* RequesteeActor)
+void ALevitatingActor::RequestLevitation(const AActor* RequestedActor)
 {
     bool bSuccess = true;
-    if (RequesteeActor)
+    if (RequestedActor)
     {
-        SourceActor = RequesteeActor;
+        SourceActor = RequestedActor;
         CachedVectorFromSource = GetActorLocation() - SourceActor->GetActorLocation();
     }
     else
@@ -64,7 +63,6 @@ void ALevitatingActor::RequestFire(const FVector Direction)
 	if (GetStaticMeshComponent()) 
 	{
 		GetStaticMeshComponent()->SetPhysicsLinearVelocity(Velocity);
-		DrawDebugLine(GetWorld(), GetActorLocation(), Velocity, FColor::Red, true, 1.f, 1000.f, 2.f);
 	}
 }
 
@@ -82,6 +80,7 @@ void ALevitatingActor::ProcessLevitation(float DeltaSeconds)
 {
     if (SourceActor.IsValid())
     {
+		bHasHit = false;
         const FVector SourceActorLocation = SourceActor->GetActorLocation();
         FVector CurrentLocation = GetActorLocation();
 
@@ -122,5 +121,9 @@ void ALevitatingActor::ResetActor()
 
 void ALevitatingActor::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	UE_LOG(LogTemp, Warning, TEXT("HIT"));
+	if (!bHasHit) 
+	{
+		bHasHit = true;
+		UE_LOG(LogTemp, Warning, TEXT("HIT"));
+	}
 }

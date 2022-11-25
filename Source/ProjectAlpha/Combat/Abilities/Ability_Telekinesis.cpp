@@ -34,6 +34,7 @@ void UAbility_Telekinesis::OnFireStart()
 			{
 				LevitatingActor->RequestFire(ViewpointRotation.Vector());
 
+				/* When the last object is popped we deactivate the ability */
 				if (LevitatingActors.IsEmpty())
 				{
 					Deactivate();

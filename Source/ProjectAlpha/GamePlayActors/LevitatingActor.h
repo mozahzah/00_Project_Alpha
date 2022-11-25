@@ -15,7 +15,7 @@ class PROJECTALPHA_API ALevitatingActor : public AStaticMeshActor
 	GENERATED_BODY()
 
 public:
-	void RequestLevitation(const AActor* RequesteeActor);
+	void RequestLevitation(const AActor* RequestedActor);
 	void RequestFire(const FVector Direction);
 	void ResetActor();
 	
@@ -74,6 +74,5 @@ private:
 
 	bool bIsLevitated = false;
 	bool bHasReachedMaxHeight = false;
-
-	bool bHasBeenFired = false;
+	bool bHasHit = false;
 };
