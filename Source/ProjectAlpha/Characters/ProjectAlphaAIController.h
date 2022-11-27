@@ -4,50 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+
 #include "ProjectAlphaAIController.generated.h"
 
-
-
-UENUM()
-enum EAIState
-{
-	Attacking,
-	Suspicious,
-	Petrolling
-};
+class AProjectAlphaEnemyCharacter;
 
 UCLASS()
 class PROJECTALPHA_API AProjectAlphaAIController : public AAIController
 {
 	GENERATED_BODY()
 
-protected: 
-	void BeginPlay() override;
-	bool CheckForCover();
-	void Attacking();
-	UPROPERTY() APawn* PlayerPawn = nullptr;
-public:
+protected:
 	void Tick(float DeltaSeconds) override;
-
-	
-	
+	void OnPossess(APawn* InPawn) override;
 
 private:
-	EAIState  CurrentAIState;
+	void PatrolArea(float DeltaSeconds);
 
-	void PetrolArea();
-
-
-	FVector StartLocation;
-	FVector EndLocation;
-	FVector TargetLocation;
-	FVector CoverLocation;
-
-
-	FVector LastPlayerLocation;
-	float TimeLastSeen;
-
-	void MoveToCover(FVector CoverLocation);
-	
-	
+private:
+	TWeakObjectPtr<AProjectAlphaEnemyCharacter> EnemyCharacter;
+	float Timer;
+	bool bIsMoving;
 };

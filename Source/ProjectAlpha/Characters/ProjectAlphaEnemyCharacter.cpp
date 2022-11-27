@@ -1,88 +1,34 @@
 // Copyright 2023 mozahzah. All Rights Reserved.
 
 #include "ProjectAlphaEnemyCharacter.h"
-#include "ProjectAlphaMainCharacter.h"
-#include "Kismet/GameplayStatics.h"
-//#include "ProjectAlpha/Combat/Abilities/Weapon.h"
 
-
-AProjectAlphaEnemyCharacter::AProjectAlphaEnemyCharacter()
-{
-	PrimaryActorTick.bCanEverTick = true;
-}
-
-void AProjectAlphaEnemyCharacter::BeginPlay()
-{
-	Super::BeginPlay();
-	GetMesh()->SetRenderCustomDepth(true);
-	GetMesh()->SetCustomDepthStencilValue(2);
-
-	/*Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass);
-	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, FName("hand_r"));
-	Weapon->SetActorLocation(Weapon->GetActorLocation() + FVector(-10,0,0));
-	Weapon->SetOwner(this);*/
-
-	NeutralRotation = GetActorRotation();
-}
-
-void AProjectAlphaEnemyCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-	if (bIsDead)
-	{
-		GetController()->StopMovement();
-		SetActorEnableCollision(false);
-	}
-
-	if (const UWorld* const World = GetWorld())
-	{
-		if (World->GetTimeSeconds() - CurrentTime > 1)
-		{
-			if (bIsRotated == false)
-			{
-				SetActorRotation(NeutralRotation + FRotator(0, 2, 0));
-				if (World->GetTimeSeconds() - CurrentTime > 2)
-				{
-					//Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
-					CurrentTime = GetWorld()->GetTimeSeconds();
-					bIsRotated = true;
-				}
-			}
-			else
-			{
-				SetActorRotation(NeutralRotation + FRotator(0, -2, 0));
-				if (World->GetTimeSeconds() - CurrentTime > 2)
-				{
-					//Weapon->WeaponFire(GetOwner()->GetActorForwardVector().Rotation() + FRotator(2, 0, 0));
-					CurrentTime = World->GetTimeSeconds();
-					bIsRotated = false;
-				}
-			}
-		}
-	}
-}
-
-float AProjectAlphaEnemyCharacter::GetHealthPercent()
-{
-	return Health / 100.0f;
-}
+#include "AIController.h"
 
 float AProjectAlphaEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	Health -= DamageAmount;
-
-	if (FMath::IsNearlyZero(Health))
+	CurrentHealth -= DamageAmount;
+	if (FMath::IsNearlyZero(CurrentHealth))
 	{
-		bIsDead = true;
-		UE_LOG(LogTemp, Warning, TEXT("%i"), bIsDead);
-		return 0;
+		if (AController* const CharController = GetController()) 
+		{
+			CharController->StopMovement();
+		}
+		SetActorEnableCollision(false);
 	}
 
-	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	return DamageAmount;
+	return Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 }
 
-void AProjectAlphaEnemyCharacter::OnFootStepEvent()
+#if WITH_EDITOR
+void AProjectAlphaEnemyCharacter::PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent)
 {
-	
+	if (PropertyChangedEvent.Property && 
+		PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(AProjectAlphaEnemyCharacter, MaxHealth))
+	{
+		if (CurrentHealth > MaxHealth) 
+		{
+			CurrentHealth = MaxHealth;
+		}
+	}
 }
+#endif

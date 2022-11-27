@@ -1,138 +1,81 @@
 // Copyright 2023 mozahzah. All Rights Reserved.
 
-
 #include "ProjectAlphaAIController.h"
 
+#include "ProjectAlpha/Characters/ProjectAlphaEnemyCharacter.h"
 
-#include "ProjectAlphaEnemyCharacter.h"
-#include "Kismet/GameplayStatics.h"
-#include "GameFramework/CharacterMovementComponent.h"
-
-
-
-void AProjectAlphaAIController::BeginPlay()
+namespace AIControllerUtil
 {
-    Super::BeginPlay();
-    PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-    StartLocation = GetCharacter()->GetTransform().TransformPosition(Cast<AProjectAlphaEnemyCharacter>(GetCharacter())->FirstTarget);
-    EndLocation = GetCharacter()->GetTransform().TransformPosition(Cast<AProjectAlphaEnemyCharacter>(GetCharacter())->SecondTarget);
-    TargetLocation = StartLocation;
-    CurrentAIState = EAIState::Petrolling;
-
-   
+	static constexpr float DistanceBuffer = 5.f;
 }
-
-
-
 
 void AProjectAlphaAIController::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
-    float Distance  =   FVector::Dist(GetPawn()->GetActorLocation(), PlayerPawn->GetActorLocation());
-
     
-    
-   /* if (LineOfSightTo(PlayerPawn))
-    {
-        CurrentAIState = EAIState::Attacking;
-        if (Distance >= 3000)
-        {
-            StopMovement();
-            CurrentAIState = EAIState::Suspicious; 
-        }
-        else
-        {
-            if (CheckForCover())
-            {
-                MoveToCover(CoverLocation);
-            }
-            else
-            {
-                Attacking();
-            }
-            
-        }
-        LastPlayerLocation = PlayerPawn->GetActorLocation();
-        return;
-    }*/
-    
-   // if (CurrentAIState == EAIState::Petrolling)
-   // {
-       //PetrolArea();
-       
-   // }
-    
-   /* else if (!LineOfSightTo(PlayerPawn))
-    {
-        CurrentAIState = Suspicious;
-        ClearFocus(EAIFocusPriority::Gameplay);
-        if (FVector::Dist(GetPawn()->GetActorLocation(), LastPlayerLocation) <= 100)
-        {
-            StopMovement();
-            if (GetWorld()->GetTimeSeconds() - TimeLastSeen >= 5)
-            {
-                CurrentAIState = EAIState::Petrolling;
-            }
-        }
-        else
-        {
-            MoveToLocation(LastPlayerLocation);
-            TimeLastSeen = GetWorld()->GetTimeSeconds();
-        }
-    }*/
+	if (EnemyCharacter.Get())
+	{
+		switch (EnemyCharacter->GetCurrentAIState())
+		{
+			case EAIState::Patrolling:
+			{
+				PatrolArea(DeltaSeconds);
+				break;
+			}
+			case EAIState::Suspicious:
+			{
+				// TODO
+				break;
+			}
+			case EAIState::Attacking:
+			{
+				// TODO
+				break;
+			}
+		}
+	}
 }
 
-void AProjectAlphaAIController::Attacking()
+void AProjectAlphaAIController::OnPossess(APawn* InPawn)
 {
-    GetCharacter()->GetCharacterMovement()->MaxWalkSpeed = 400;
-    SetFocus(PlayerPawn);
-    MoveToActor(PlayerPawn, 200);
-    LastPlayerLocation = PlayerPawn->GetActorLocation();
-    TimeLastSeen = GetWorld()->GetTimeSeconds();
-    // todo if in shoot range shoot()
+	if (AProjectAlphaEnemyCharacter* const EnemyChar = Cast<AProjectAlphaEnemyCharacter>(InPawn)) 
+	{
+		EnemyCharacter = EnemyChar;
+	}
 }
 
-void AProjectAlphaAIController::PetrolArea()
+void AProjectAlphaAIController::PatrolArea(float DeltaSeconds)
 {
-    GetCharacter()->GetCharacterMovement()->MaxWalkSpeed = 150;
-    ClearFocus(EAIFocusPriority::Gameplay);
-    CurrentAIState = EAIState::Petrolling;
-    
-    if (FVector::Distance(TargetLocation, GetPawn()->GetActorLocation()) <= 100)
-    {
-        FVector Swap = StartLocation;
-        StartLocation = EndLocation;
-        EndLocation = Swap;
-        TargetLocation = StartLocation;
-    }
-    MoveToLocation(TargetLocation);
-
-}
-
-bool AProjectAlphaAIController::CheckForCover()
-{
-    FHitResult Hit;
-    FCollisionObjectQueryParams CollisionParams;
-    const auto CollisionShape = FCollisionShape::MakeSphere(20000);
-    TEnumAsByte<EObjectTypeQuery> ObjectToTrace = EObjectTypeQuery::ObjectTypeQuery7;
-    TArray<TEnumAsByte<EObjectTypeQuery> > ObjectsToTraceAsByte;
-    ObjectsToTraceAsByte.Add(ObjectToTrace);
-            
-    if(GetWorld()->SweepSingleByObjectType(Hit, GetPawn()->GetActorLocation(), GetPawn()->GetActorLocation(), FQuat(),
-                                           FCollisionObjectQueryParams(ObjectsToTraceAsByte), CollisionShape))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Found Cover %s"), *Hit.GetActor()->GetName());
-        CoverLocation = Hit.GetActor()->GetActorLocation();
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-void AProjectAlphaAIController::MoveToCover(FVector CoverLocationToSet)
-{
-    GetCharacter()->GetCharacterMovement()->MaxWalkSpeed = 400;
-    MoveToLocation(CoverLocationToSet);
+	if (EnemyCharacter.IsValid())
+	{
+		if (!EnemyCharacter->GetPatrolNodes().IsEmpty() && EnemyCharacter->CurrentPatrolNodeIndex < EnemyCharacter->GetPatrolNodes().Num())
+		{
+			const FVector CharacterLocation = GetCharacter() ? GetCharacter()->GetActorLocation() : FVector::ZeroVector;
+			if (FVector::Dist(CharacterLocation, EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex]) < AIControllerUtil::DistanceBuffer)
+			{
+				bIsMoving = false;
+				if (Timer > EnemyCharacter->GetTimeAtPatrolNode())
+				{
+					EnemyCharacter->CurrentPatrolNodeIndex = (EnemyCharacter->CurrentPatrolNodeIndex + 1) % EnemyCharacter->GetPatrolNodes().Num();
+					Timer = 0.0f;
+				}
+				else
+				{
+					Timer += DeltaSeconds;
+				}
+			}
+			else
+			{
+				if (!bIsMoving) 
+				{
+					const FVector Location = EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex];
+					EPathFollowingRequestResult::Type MoveResult = MoveToLocation(Location);
+					if (MoveResult == EPathFollowingRequestResult::RequestSuccessful) 
+					{
+						bIsMoving = true;
+					}
+				}
+			}
+		}
+	}
 }

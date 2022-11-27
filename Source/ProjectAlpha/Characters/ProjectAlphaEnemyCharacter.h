@@ -4,53 +4,58 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+
 #include "ProjectAlphaEnemyCharacter.generated.h"
 
-class AWeapon;
+UENUM()
+enum class EAIState : uint8
+{
+	Attacking,
+	Suspicious,
+	Patrolling
+};
 
 UCLASS()
 class PROJECTALPHA_API AProjectAlphaEnemyCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-public:
-	AProjectAlphaEnemyCharacter();
-
 protected:
-	virtual void BeginPlay() override;
-
-public:	
-	virtual void Tick(float DeltaTime) override;
-
-
-	// AI PETROL AREA
-	UPROPERTY(EditAnywhere, Meta = (MakeEditWidget = true))
-    FVector FirstTarget;
-
-	UPROPERTY(EditAnywhere, Meta = (MakeEditWidget = true))
-    FVector SecondTarget;
-
-	UPROPERTY(EditAnywhere)
-    float Health = 100.f;
-
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
-	
-    UFUNCTION(BlueprintPure)
-	float GetHealthPercent();
+#if WITH_EDITOR
+	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	bool bIsDead = false;
+public:
+	const TArray<FVector>& GetPatrolNodes() const { return PatrolNodes; }
+	float GetTimeAtPatrolNode() const { return TimeAtPatrolNode; }
+	EAIState GetCurrentAIState() const { return CurrentAIState; }
 
-	UFUNCTION(BlueprintCallable)
-	void OnFootStepEvent();
+public:
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const { return CurrentHealth / MaxHealth; };
 
-	UPROPERTY(EditAnywhere, Category = "Wwise")
-	FString SurfaceType;
+private:
+	/*Starting AI State*/
+	UPROPERTY(EditAnywhere)
+	EAIState CurrentAIState = EAIState::Patrolling;
 
+	/*Simple AI Patrol Path Nodes*/
+	UPROPERTY(EditAnywhere, Meta = (MakeEditWidget = true))
+	TArray<FVector> PatrolNodes;
 
-	bool bIsRotated = false;
-	FRotator NeutralRotation;
-	float CurrentTime;
-	//UPROPERTY(EditAnywhere) TSubclassOf<AWeapon> WeaponClass;
-	//UPROPERTY(BlueprintReadOnly) AWeapon *Weapon;
+	/*Time to spend when at a patrol node location*/
+	UPROPERTY(EditAnywhere)
+	float TimeAtPatrolNode = 2.f;
+
+	/*Max Health*/
+	UPROPERTY(EditAnywhere)
+	float MaxHealth = 100.f;
+
+	/*Current Health*/
+	UPROPERTY(VisibleAnywhere)
+    float CurrentHealth = 100.f;
+
+public:
+	int16 CurrentPatrolNodeIndex = 0;
 };
