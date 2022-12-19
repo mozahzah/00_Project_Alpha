@@ -22,6 +22,8 @@ void UCombatComponent::BeginPlay()
 			InputComponent->BindAction(FName("ActivateMovementAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateMovementAbility);
 			InputComponent->BindAction(FName("ActivateControllerAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateControllerAbility);
 			InputComponent->BindAction(FName("ActivateUltimateAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::ActivateUltimateAbility);
+			InputComponent->BindAction(FName("DeactivateAbility"), EInputEvent::IE_Pressed, this, &UCombatComponent::DeactivateCurrentAbility);
+
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartFire);
 			InputComponent->BindAction(FName("Fire"), EInputEvent::IE_Released, this, &UCombatComponent::StopFire);
 			InputComponent->BindAction(FName("SecondaryFire"), EInputEvent::IE_Pressed, this, &UCombatComponent::StartSecondaryFire);
@@ -46,9 +48,8 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
-	if (CurrentAbility)
+	if (CurrentAbility && CurrentAbility->IsActive())
 	{
-		//TODO CHECK IF ACTIVE
 		CurrentAbility->Update(DeltaTime);
 	}
 }

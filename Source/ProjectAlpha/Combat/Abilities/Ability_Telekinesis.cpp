@@ -17,7 +17,6 @@ void UAbility_Telekinesis::OnActivate(bool& bSuccess)
 void UAbility_Telekinesis::OnDeactivate()
 {
 	ReleaseObjects();
-	bAbilityIsActive = false;
 }
 
 void UAbility_Telekinesis::OnFireStart()

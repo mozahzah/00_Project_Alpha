@@ -7,7 +7,6 @@
 void UAbility_Teleport::OnActivate(bool& bSuccess)
 {
 	bSuccess = true;
-	bAbilityIsActive = true;
 }
 
 void UAbility_Teleport::OnUpdate(float DeltaTime)
@@ -27,6 +26,7 @@ void UAbility_Teleport::OnUpdate(float DeltaTime)
 
 void UAbility_Teleport::OnDeactivate()
 {
+	bIsLocked = false;
 	bIsTeleporting = false;
 	Timer = 0.0f;
 }

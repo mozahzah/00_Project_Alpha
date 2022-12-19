@@ -29,6 +29,7 @@ public:
 	void Update(float DeltaTime);
 	void Deactivate();
 	bool IsLocked() const { return bIsLocked; };
+	bool IsActive() const { return bAbilityIsActive; };
 
 	void StartFire();
 	void StopFire();
@@ -66,13 +67,17 @@ protected:
 	UPROPERTY(EditAnywhere)
 	bool bAnimLooping = false;
 
+	/*If the ability requires a lock when activated*/
+	UPROPERTY(EditAnywhere)
+	bool bIsLocked = false;
+
 protected:
 	TWeakObjectPtr<AActor> OwnerActor;
 	TWeakObjectPtr<AController> OwnerController;
 	float AbilityTimer;
-	bool bAbilityIsActive;
-	bool bIsLocked = false;
 
 private:
 	TWeakObjectPtr<USkeletalMeshComponent> SkeletalMeshComponent;
+
+	bool bAbilityIsActive;
 };

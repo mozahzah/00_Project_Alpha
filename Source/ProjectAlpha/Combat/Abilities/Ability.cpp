@@ -54,6 +54,8 @@ void UAbility::Activate()
 		{
 			SkeletalMeshComponent->PlayAnimation(AnimationMontage, bAnimLooping);
 		}
+
+		bAbilityIsActive = true;
 	}
 }
 
@@ -71,6 +73,7 @@ void UAbility::Deactivate()
 	{
 		AbilityParticleSystemComponent->Deactivate();
 	}
+	bAbilityIsActive = false;
 
 	OnDeactivate();
 }
