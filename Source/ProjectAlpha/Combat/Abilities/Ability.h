@@ -35,7 +35,7 @@ public:
 	void StartSecondaryFire();
 	void StopSecondaryFire();
 
-protected:
+private:
 	virtual void OnInitialize() {};
 	virtual void OnActivate(bool& bSuccess) {};
 	virtual void OnUpdate(float DeltaTime) {};

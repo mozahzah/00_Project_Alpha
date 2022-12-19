@@ -6,7 +6,7 @@
 
 namespace AIControllerUtil
 {
-	static constexpr float DistanceBuffer = 5.f;
+	static constexpr float DistanceBuffer = 100.0f;
 }
 
 void AProjectAlphaAIController::Tick(float DeltaSeconds)
@@ -42,6 +42,8 @@ void AProjectAlphaAIController::OnPossess(APawn* InPawn)
 	{
 		EnemyCharacter = EnemyChar;
 	}
+
+	Super::OnPossess(InPawn);
 }
 
 void AProjectAlphaAIController::PatrolArea(float DeltaSeconds)
@@ -50,10 +52,10 @@ void AProjectAlphaAIController::PatrolArea(float DeltaSeconds)
 	{
 		if (!EnemyCharacter->GetPatrolNodes().IsEmpty() && EnemyCharacter->CurrentPatrolNodeIndex < EnemyCharacter->GetPatrolNodes().Num())
 		{
-			const FVector CharacterLocation = GetCharacter() ? GetCharacter()->GetActorLocation() : FVector::ZeroVector;
-			if (FVector::Dist(CharacterLocation, EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex]) < AIControllerUtil::DistanceBuffer)
+			const FVector CharacterLocation = EnemyCharacter->GetActorLocation();
+			const float DistanceToNode = FVector::DistSquared2D(CharacterLocation, EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex]);
+			if (DistanceToNode < FMath::Square(AIControllerUtil::DistanceBuffer))
 			{
-				bIsMoving = false;
 				if (Timer > EnemyCharacter->GetTimeAtPatrolNode())
 				{
 					EnemyCharacter->CurrentPatrolNodeIndex = (EnemyCharacter->CurrentPatrolNodeIndex + 1) % EnemyCharacter->GetPatrolNodes().Num();
@@ -66,15 +68,8 @@ void AProjectAlphaAIController::PatrolArea(float DeltaSeconds)
 			}
 			else
 			{
-				if (!bIsMoving) 
-				{
-					const FVector Location = EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex];
-					EPathFollowingRequestResult::Type MoveResult = MoveToLocation(Location);
-					if (MoveResult == EPathFollowingRequestResult::RequestSuccessful) 
-					{
-						bIsMoving = true;
-					}
-				}
+				const FVector Location = EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex];
+				EPathFollowingRequestResult::Type MoveResult = MoveToLocation(Location);
 			}
 		}
 	}

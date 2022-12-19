@@ -2,7 +2,14 @@
 
 #include "ProjectAlphaEnemyCharacter.h"
 
+#include "GameFramework/NavMovementComponent.h"
+
 #include "AIController.h"
+
+AProjectAlphaEnemyCharacter::AProjectAlphaEnemyCharacter()
+{
+	NavMovementComponent = CreateDefaultSubobject<UNavMovementComponent>(FName(TEXT("NavMovementComponent")));
+}
 
 float AProjectAlphaEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {

@@ -7,6 +7,8 @@
 
 #include "ProjectAlphaEnemyCharacter.generated.h"
 
+class UNavMovementComponent;
+
 UENUM()
 enum class EAIState : uint8
 {
@@ -19,6 +21,8 @@ UCLASS()
 class PROJECTALPHA_API AProjectAlphaEnemyCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+	AProjectAlphaEnemyCharacter();
 
 protected:
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
@@ -36,6 +40,10 @@ public:
 	float GetHealthPercent() const { return CurrentHealth / MaxHealth; };
 
 private:
+	/*Navigation Movement Component*/
+	UPROPERTY(EditDefaultsOnly)
+	TObjectPtr<UNavMovementComponent> NavMovementComponent;
+
 	/*Starting AI State*/
 	UPROPERTY(EditAnywhere)
 	EAIState CurrentAIState = EAIState::Patrolling;
