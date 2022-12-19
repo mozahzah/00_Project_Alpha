@@ -60,16 +60,21 @@ void AProjectAlphaAIController::PatrolArea(float DeltaSeconds)
 				{
 					EnemyCharacter->CurrentPatrolNodeIndex = (EnemyCharacter->CurrentPatrolNodeIndex + 1) % EnemyCharacter->GetPatrolNodes().Num();
 					Timer = 0.0f;
+					bIsMoving = false;
 				}
 				else
 				{
 					Timer += DeltaSeconds;
 				}
 			}
-			else
+			else if(!bIsMoving)
 			{
 				const FVector Location = EnemyCharacter->GetPatrolNodes()[EnemyCharacter->CurrentPatrolNodeIndex];
 				EPathFollowingRequestResult::Type MoveResult = MoveToLocation(Location);
+				if (MoveResult == EPathFollowingRequestResult::RequestSuccessful)
+				{
+					bIsMoving = true;
+				}
 			}
 		}
 	}

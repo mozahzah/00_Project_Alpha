@@ -24,4 +24,5 @@ private:
 private:
 	TWeakObjectPtr<AProjectAlphaEnemyCharacter> EnemyCharacter;
 	float Timer;
+	bool bIsMoving;
 };
