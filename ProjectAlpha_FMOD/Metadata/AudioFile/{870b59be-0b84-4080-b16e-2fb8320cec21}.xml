@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{870b59be-0b84-4080-b16e-2fb8320cec21}">
+		<property name="assetPath">
+			<value>Footfalls/ffs_concrete_04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.22560090702947846</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96415fc5-8884-4209-ae8a-d9911694cef4}</destination>
+		</relationship>
+	</object>
+</objects>

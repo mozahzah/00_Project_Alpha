@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{facbff9f-eda5-49c4-9526-277f159aa632}">
+		<property name="name">
+			<value>SFX</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{b2ae449f-caaf-4da9-a9fc-91fc95ebb78b}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{f0299076-529b-4d98-95dd-c27879d323a6}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{3af4b440-1095-4cac-8c02-92cc33141206}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{b2ae449f-caaf-4da9-a9fc-91fc95ebb78b}">
+		<relationship name="effects">
+			<destination>{1916eccd-2e97-4d4f-a7fa-7e7d6061801a}</destination>
+			<destination>{36f6158f-2201-412a-954c-87429d13175c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{f0299076-529b-4d98-95dd-c27879d323a6}" />
+	<object class="MultibandEqEffect" id="{1916eccd-2e97-4d4f-a7fa-7e7d6061801a}">
+		<relationship name="automators">
+			<destination>{e3137d20-52eb-4bde-bee8-227656955d28}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{36f6158f-2201-412a-954c-87429d13175c}" />
+	<object class="Automator" id="{e3137d20-52eb-4bde-bee8-227656955d28}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>frequencyA</value>
+		</property>
+	</object>
+</objects>
