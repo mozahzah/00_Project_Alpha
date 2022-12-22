@@ -14,6 +14,7 @@ class PROJECTALPHA_API AProjectAlphaMainCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
+public:
 	AProjectAlphaMainCharacter();
 
 protected:

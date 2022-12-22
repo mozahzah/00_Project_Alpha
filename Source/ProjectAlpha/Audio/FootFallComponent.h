@@ -68,19 +68,19 @@ public:
 	int32 CurrentFootStepIndex = 0;
 };
 
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+UCLASS(meta=(BlueprintSpawnableComponent))
 class PROJECTALPHA_API UFootFallComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:
+	UFootFallComponent();
 	const FFootFallComponentData& GetFootFallComponentData() const {return FootFallComponentData;}
 
 private:
-	UFootFallComponent();
-	virtual void BeginPlay() override;
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
-	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	void BeginPlay() override;
+	void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	void UpdateMovementDirection();
 	bool IsFootInFront(EFootFallFoot Foot);

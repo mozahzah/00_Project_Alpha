@@ -18,7 +18,7 @@ class FMODSTUDIO_API UFMODAudioComponentTrackerSubsystem : public UTickableWorld
 	TStatId GetStatId() const override { return TStatId(); };
 
 public:
-	TArray<TWeakObjectPtr<UFMODAudioComponent>> GetFMODAudioComponents() { return FMODAudioComponents; }
+	TArray<TWeakObjectPtr<UFMODAudioComponent>> GetFMODAudioComponents() const { return FMODAudioComponents; }
 	void AddFMODAudioComponent(UFMODAudioComponent* FMODAudioComponent);
 	void RemoveFMODAudioComponent(UFMODAudioComponent* FMODAudioComponent);
 
