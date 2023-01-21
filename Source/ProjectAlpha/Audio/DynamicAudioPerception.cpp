@@ -53,11 +53,11 @@ void UDynamicAudioPerception::ProcessDynamicAudioPerception()
 			if (FMODAudioComponent.IsValid())
 			{
 				const FVector FMODAudioComponentLocation = FMODAudioComponent->GetComponentLocation();
-				const float DistanceToComponent = FVector::DistSquared(ViewpointLocation, FMODAudioComponentLocation);
-				const float DistanceAwayFromComponent = FVector::DistSquared(ViewpointLocation + ViewpointRotation.Vector() * DistanceToComponent, FMODAudioComponentLocation);
-				const float DistanceRatio = 1.0f - (DistanceAwayFromComponent / (DistanceToComponent * 2.0f));
+				const FVector VectorToComponent = (FMODAudioComponentLocation - ViewpointLocation).GetSafeNormal();
+				const float Angle = FMath::RadiansToDegrees(FMath::Acos(FVector::DotProduct(VectorToComponent, ViewpointRotation.Vector())));
+				const float AngleRatio = 1.0f - (Angle / 180.0f);
 
-				FMODAudioComponent->SetParameter(ParameterName, DistanceRatio);
+				FMODAudioComponent->SetParameter(ParameterName, AngleRatio);
 			}
 		}
 	}
