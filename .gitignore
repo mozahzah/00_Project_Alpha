@@ -80,5 +80,7 @@ Plugins/*/Intermediate/*
 DerivedDataCache/
 
 # Content
-Content/ImportedLibraries/
-Content/StarterContent/
+Content/*
+Config/*
+Plugins/*
+ProjectAlpha_FMOD/*
