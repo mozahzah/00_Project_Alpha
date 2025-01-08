@@ -87,3 +87,4 @@ Content/*
 Config/*
 Plugins/*
 ProjectAlpha_FMOD/*
+*.uproject
